@@ -15,34 +15,44 @@ Rawi AI uses a 9-class Jordanian landmark object detection dataset.
 - Images: 9,224
 - Task: Object Detection
 - Classes: 9
-Preprocessing
+
+The dataset is versioned and maintained on Roboflow.
+
+[Access the dataset on Google Drive](https://drive.google.com/drive/folders/1pDovvJ5REy389dnDrNwFO1loHhx2XX0j?usp=sharing)
+
+## Preprocessing
 
 The dataset was preprocessed using Roboflow.
 
-Preprocessing
-Auto-Orient: Applied
-Resize: Stretch to 640x640
-Grayscale: Applied
-Augmentations
-Outputs per training example: 3
-Flip: Horizontal
-Crop: 0% Minimum Zoom, 20% Maximum Zoom
-Rotation: -15° to +15°
-Grayscale: Applied to 15% of images
-Hue: -15° to +15°
-Exposure: -10% to +10%
-Blur: Up to 3px
-Noise: Up to 1% of pixels
-Mosaic: Applied
-Bounding Box Augmentations
-Flip: Horizontal
-Crop: 0% Minimum Zoom, 20% Maximum Zoom
-Rotation: -15° to +15°
-Brightness: -15% to +15%
-Exposure: -10% to +10%
-Blur: Up to 2.5px
-Noise: Up to 0.1% of pixels
+### Preprocessing
+
+- Auto-Orient: Applied
+- Resize: Stretch to 640x640
+- Grayscale: Applied
+
+### Augmentations
+
+- Outputs per training example: 3
+- Flip: Horizontal
+- Crop: 0% Minimum Zoom, 20% Maximum Zoom
+- Rotation: -15° to +15°
+- Grayscale: Applied to 15% of images
+- Hue: -15° to +15°
+- Exposure: -10% to +10%
+- Blur: Up to 3px
+- Noise: Up to 1% of pixels
+- Mosaic: Applied
+
+### Bounding Box Augmentations
+
+- Flip: Horizontal
+- Crop: 0% Minimum Zoom, 20% Maximum Zoom
+- Rotation: -15° to +15°
+- Brightness: -15% to +15%
+- Exposure: -10% to +10%
+- Blur: Up to 2.5px
+- Noise: Up to 0.1% of pixels
 
 ## Project Status
 
-Under development —  2026
+Under development — 2026
