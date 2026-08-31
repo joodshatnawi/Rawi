@@ -18,13 +18,13 @@ The system identifies a Jordanian landmark from an image and provides the user w
 
 # Dataset
 
-Rawi AI uses a 9-class Jordanian landmark object detection dataset.
+Rawi AI uses a 11-class Jordanian landmark object detection dataset.
 
 - Platform: Roboflow
 - Version: v2
 - Images: 9,224
 - Task: Object Detection
-- Classes: 9
+- Classes: 11
 
 The dataset is versioned and maintained on Roboflow.
 
