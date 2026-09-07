@@ -1,0 +1,10 @@
+streamlit
+ultralytics
+groq
+edge-tts
+python-dotenv
+Pillow
+numpy
+faiss-cpu
+sentence-transformers
+torch
