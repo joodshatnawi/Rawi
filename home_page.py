@@ -77,7 +77,7 @@ def page_home(rawi):
                     lon,
                     info,
                     detected_class,
-                    #fun_fact
+                    fun_fact
                 ) = rawi.analyze(
                     image_path,
                     selected_language,
@@ -99,7 +99,7 @@ def page_home(rawi):
                     "info": info,
                     "language": selected_language,
                     "length": story_length,
-                    #"fun_fact": fun_fact,
+                    "fun_fact": fun_fact,
                 }
 
                 st.session_state.page = "result"
