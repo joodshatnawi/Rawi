@@ -606,13 +606,14 @@
         "lon": 35.5732
       },
       "info": {
-        "Established": "1985",
-        "Governorate": "Madaba",
-        "Reserve_Type": "Biosphere Reserve",
-        "Lowest_Point": "410 m below sea level",
-        "Biodiversity": "More than 300 plant genera",
-        "Best_Time": "Summer for water trails",
-        "Activities": "Hiking, canyoning, swimming, ziplining"
+        "established": "1985",
+        "governorate": "Madaba",
+        "reserve_Type": "Biosphere Reserve",
+        "lowest_Point": "410 m below sea level",
+        "biodiversity": "More than 300 plant genera",
+        "best_time": "Summer for water trails",
+        "activities": "Hiking, canyoning, swimming, ziplining",
+        "unesco":"No"
       },
       "fun_facts": [
         "تُعد محمية الموجب أخفض محمية طبيعية في العالم.",
@@ -623,7 +624,7 @@
         "يضم الوادي عددًا من المسارات المائية التي تجمع بين المشي والسباحة والمغامرة."
       ],
       "eras": {
-        "Copper_Age":[ "ت[شير الأدلة الأثرية إلى أن منطقة وادي الموجب كانت مأهولة منذ العصر النحاسي."],
+        "Copper_Age":[ "تشير الأدلة الأثرية إلى أن منطقة وادي الموجب كانت مأهولة منذ العصر النحاسي."],
         "Moabite": ["كان الوادي جزءًا من الحدود الشمالية لمملكة مؤاب وذُكر في مسلة ميشع."],
         "Roman": ["استخدم الرومان المنطقة والطرق المحيطة بالوادي لحماية القوافل والحركة التجارية والعسكرية."],
         "Modern": ["أُنشئت محمية الموجب للمحيط الحيوي عام 1985 وأصبحت من أهم مواقع السياحة البيئية في الأردن."]
@@ -666,11 +667,11 @@
         "lon": 35.6836
       },
       "info": {
-        "Governorate": "Irbid",
-        "Ancient_Name": "Gadara",
-        "Historical_Significance": "One of the cities of the Decapolis",
-        "Best_Time": "Spring and Autumn",
-        "Visit_Time": "2-3 Hours"
+        "governorate": "Irbid",
+        "ancient_name": "Gadara",
+        "historical_significance": "One of the cities of the Decapolis",
+        "best_time": "Spring and Autumn",
+        "visit_time": "2-3 Hours"
       },
       "fun_facts": [
         "الاسم القديم لأم قيس هو جدارا.",
