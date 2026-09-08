@@ -270,5 +270,5 @@ class RAWI:
             longitude,
             info,
             detected_class,
-           # fun_fact
+            fun_fact
         )
