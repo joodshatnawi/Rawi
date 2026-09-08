@@ -251,7 +251,7 @@ class RAWI:
         )
 
         # Generate Fun Fact
-        #fun_fact = self.generate_fun_fact(detected_class)
+        fun_fact = self.generate_fun_fact(detected_class)
 
         # Generate audio narration
         audio = self.generate_audio(story, language)

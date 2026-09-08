@@ -78,10 +78,10 @@ def result_page():
     # ---------------- Landmark Information ----------------
     st.subheader("📋 Information")
  
-    #info = data["info"]
-    #selected_language = data["language"]
-    #labels = info_labels[selected_language]
-    #unesco = labels[info["unesco"]]
+    info = data["info"]
+    selected_language = data["language"]
+    labels = info_labels[selected_language]
+    unesco = labels[info["unesco"]]
 
     #c1, c2 = st.columns(2)
 
@@ -97,10 +97,10 @@ def result_page():
    # st.divider()
     
 
-#st.subheader("🎲 Fun Fact")
+    st.subheader("🎲 Fun Fact")
 
-#if st.button("🎲 Show Fun Fact"):
- #   st.success(data["fun_fact"])
+    if st.button("🎲 Show Fun Fact"):
+        st.success(data["fun_fact"])
 
     # ---------------- Ask Rawi AI ----------------
     st.markdown("### Have More Questions?")
