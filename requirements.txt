@@ -1,5 +1,5 @@
 streamlit
-ultralytics
+ultralytics==8.4.143
 opencv-python-headless==5.0.0.93
 groq
 edge-tts
