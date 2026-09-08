@@ -9,3 +9,5 @@ numpy
 faiss-cpu
 sentence-transformers
 torch
+folium
+streamlit-folium
