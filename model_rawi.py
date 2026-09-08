@@ -204,7 +204,11 @@ class RAWI:
 
         return audio_file
 
-
+    # ---------------- Generate Fun Fact ----------------
+    def generate_fun_fact(self, detected_class):
+        fun_facts = self.facts[detected_class]["fun_facts"]
+        return random.choice(fun_facts)           
+    
 
 
 
