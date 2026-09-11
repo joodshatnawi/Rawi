@@ -83,18 +83,18 @@ def result_page():
     labels = info_labels[selected_language]
     unesco = labels[info["unesco"]]
 
-    #c1, c2 = st.columns(2)
+    c1, c2 = st.columns(2)
 
-    #with c1:
-       # st.metric(labels["built"], info["built"])
-      #  st.metric(labels["unesco"], unesco)
-     #   st.metric(labels["best_time"], info["best_time"])
+    with c1:
+       st.metric(labels["built"], info["built"])
+       st.metric(labels["unesco"], unesco)
+       st.metric(labels["best_time"], info["best_time"])
 
-    #with c2:
-      #  st.metric(labels["governorate"], info["governorate"])
-     #   st.metric(labels["visit_time"], info["visit_time"])
+    with c2:
+        st.metric(labels["governorate"], info["governorate"])
+        st.metric(labels["visit_time"], info["visit_time"])
 
-   # st.divider()
+    st.divider()
     
 
     st.subheader("🎲 Fun Fact")
