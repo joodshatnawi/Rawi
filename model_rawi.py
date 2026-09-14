@@ -8,13 +8,16 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 import random
+from rag import retrieve_context as rag_retrieve_context
+
 
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 facts_path = os.path.join(BASE_DIR, "data","facts.json")
 PROMPT_DIR = os.path.join(BASE_DIR, "prompts")
 STORY_PROMPT_PATH = os.path.join(PROMPT_DIR, "story_generation.md")
-
+QUERY_REWRITING_PROMPT_PATH=os.path.join(PROMPT_DIR,"query_rewriting.md")
+ANSWER_GENERATION_PROMPT_PATH=os.path.join(PROMPT_DIR,"answer_generation.md")
 
 class RAWI:
     def __init__(self):
@@ -208,13 +211,206 @@ class RAWI:
     def generate_fun_fact(self, detected_class):
         fun_facts = self.facts[detected_class]["fun_facts"]
         return random.choice(fun_facts)           
-    
+
+    # ---------------- Rewrite Question ----------------
+    def rewrite_question(
+        self,
+        detected_class,
+        language,
+        question,
+        history=None
+    ):
+        if history is None:
+            history = []
+
+        history_text = ""
+
+        for item in history[-5:]:
+            if any(x in item["answer"] for x in [
+                "لا أملك معلومات كافية",
+                "don't have enough information",
+                "pas suffisamment d'informations"
+            ]):
+                continue
+
+            history_text += (
+                f"المستخدم: {item['question']}\n"
+                f"المساعد: {item['answer']}\n\n"
+            )
+
+        with open(
+            QUERY_REWRITING_PROMPT_PATH,
+            "r",
+            encoding="utf-8"
+        ) as f:
+            system_prompt = f.read()
+
+        prompt_text = f"""
+    Conversation History:
+
+    {history_text}
+
+    Current Detected Landmark:
+
+    {detected_class}
+
+    Current User Question:
+
+    {question}
+    """
+        completion = self.client.chat.completions.create(
+            model="openai/gpt-oss-20b",
+            messages=[
+                {
+                    "role": "system",
+                    "content": system_prompt
+                },
+                {
+                    "role": "user",
+                    "content": prompt_text
+                }
+            ],
+            temperature=0,
+            max_tokens=200,
+            reasoning_effort="low"
+        )
+
+        rewritten_question = completion.choices[0].message.content
+
+        if rewritten_question:
+            rewritten_question = rewritten_question.strip()
+
+        if not rewritten_question:
+            return question
+
+        return rewritten_question
+
+    # ---------------- Retrieve Context ----------------
+    def retrieve_context(self, detected_class, question, k=8):
+        return rag_retrieve_context(
+                detected_class,
+                question,
+                k=k
+            )    
+
+    # ---------------- Generate Answer ----------------
+    def generate_answer(self, detected_class, language, question, history=None):
+
+        landmark = self.facts[detected_class]
+        landmark_name = landmark["name"][language]
+
+        if history is None:
+            history = []
+
+        history_text = ""
+
+        for item in history[-5:]:
+            history_text += (
+                f"المستخدم: {item['question']}\n"
+                f"المساعد: {item['answer']}\n\n"
+            )
+        needs_rewrite = False
+
+        if history:
+            follow_up_words = [
+                "هو", "هي", "هذا", "هذه", "ذلك", "تلك",
+                "له", "لها", "هناك",
+                "شو", "وشو", "وين", "كيف", "ليش", "متى", "مين",
+                "it", "he", "she", "they", "this", "that", "its",
+                "what about", "where is", "how", "why", "when"
+            ]
+
+            needs_rewrite = any(
+                word in question.lower()
+                for word in follow_up_words
+            )
+
+        if needs_rewrite:
+            rewritten_question = self.rewrite_question(
+                detected_class,
+                language,
+                question,
+                history
+            )
+        else:
+            rewritten_question = question
+        
+        # ---------------- Retrieve Context ----------------
+
+        context_list = self.retrieve_context(
+            detected_class,
+            rewritten_question,
+            k=4
+        )
+
+        # ---------------- No Context ----------------
+
+        if not context_list:
+
+            if language == "العربية":
+                return "عذرًا، لا أملك معلومات كافية للإجابة."
+
+            elif language == "English":
+                return "Sorry, I don't have enough information to answer this question."
+
+            else:
+                return "Désolé, je n'ai pas suffisamment d'informations pour répondre."
+
+        context = "\n\n".join(
+            f"- {chunk['text']}"
+            for chunk in context_list
+        )
+
+        # ---------------- System Prompt ----------------
+
+        with open(
+            ANSWER_GENERATION_PROMPT_PATH,
+            "r",
+            encoding="utf-8"
+        ) as f:
+            system_prompt = f.read()
+
+        # ---------------- User Prompt ----------------
+
+        prompt = f"""
+        Current landmark:
+        {landmark_name}
+
+        Retrieved information:
+        {context}
+
+        Requested language:
+        {language}
+
+        User question:
+        {rewritten_question}
+        """
+        # ---------------- Generate Answer ----------------
+        completion = self.client.chat.completions.create(
+        model="openai/gpt-oss-20b",
+        messages=[
+            {
+                "role": "system",
+                "content": system_prompt
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=0,
+        max_tokens=500,
+        reasoning_effort="low"
+    )
 
 
+        answer = completion.choices[0].message.content
 
+        if not answer:
+            return "عذرًا، لا أملك معلومات كافية للإجابة."
+        answer = answer.strip()
 
-            # ---------------- Analyze  ----------------
-   
+        return answer
     def analyze(self, image_path, language, story_length):
         # Detect landmark
         result = self.detect_landmark(image_path)
