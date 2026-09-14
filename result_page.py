@@ -86,7 +86,7 @@ def result_page():
     c1, c2 = st.columns(2)
 
     with c1:
-       st.metric(labels["built"], info["built"])
+       st.metric(labels["built"], info.get("built", "Not available"))
        st.metric(labels["unesco"], unesco)
        st.metric(labels["best_time"], info["best_time"])
 
