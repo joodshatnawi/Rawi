@@ -15,6 +15,33 @@ st.set_page_config(
     page_icon="🏛️",
     layout="wide"
 )
+# ---------------- Sidebar ----------------
+with st.sidebar:
+
+    st.image(
+        "rawi_logo.svg.png",
+        use_container_width= True
+    )
+    st.divider()
+    # ---------------- Supported Landmarks ----------------
+    st.markdown("### Landmarks You Can Recognize")
+    landmarks = [
+                "Ajloun Castle",
+        "Al-Maghtas",
+        "Dead Sea",
+        "Jerash",
+        "Karak Castle",
+        "Petra",
+        "Qasr Amra",
+        "Umm Al-Jimal",
+        "Umm Qais",
+        "Wadi Mujib",
+        "Wadi Rum"
+    ]
+    for landmark in landmarks:
+        st.markdown(f"• **{landmark}**")
+
+
 # ---------------- Initialize Rawi ----------------
 @st.cache_resource
 def load_rawi():
