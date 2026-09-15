@@ -12,13 +12,30 @@ def page_home(rawi):
     st.divider()
 
 
-    # ---------------- Upload Image ----------------
+    # ---------------- Image Source  ----------------
     st.markdown("### Discover a Landmark")
-
-    upload_data = st.file_uploader(
-        "Choose an image:",
-        type=["jpg", "jpeg", "png", "webp"]
+    image_source = st.radio(
+        "Choose how you want to provide the image:",
+        ["Upload Image", "Take a Photo"],
+        horizontal=True
     )
+    # ---------------- Upload Image ----------------
+
+    upload_data = None
+
+    if image_source == "Upload Image":
+
+        upload_data = st.file_uploader(
+            "Choose an image:",
+            type=["jpg", "jpeg", "png", "webp"]
+        )
+    # ---------------- Take Photo ----------------
+    
+    else:
+
+        upload_data = st.camera_input(
+            "Take a photo of the landmark"
+        )
 
     # ---------------- If Image Exists ----------------
     if upload_data is not None:
