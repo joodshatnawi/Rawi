@@ -28,7 +28,7 @@ Rawi AI uses a 11-class Jordanian landmark object detection dataset.
 
 The dataset is versioned and maintained on Roboflow.
 
-[Access the dataset on Google Drive](https://drive.google.com/drive/folders/1pDovvJ5REy389dnDrNwFO1loHhx2XX0j?usp=sharing)
+[Access the dataset on Google Drive](https://drive.google.com/drive/folders/125WV31OeE_1U5Kpo0FNKJXV-awV5un_x?usp=sharing)
 
 
 ## Preprocessing
