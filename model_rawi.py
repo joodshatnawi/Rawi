@@ -93,9 +93,32 @@ class RAWI:
     @staticmethod
     def load_client():
         return Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+    # ---------------- Story Cache ----------------
+    def load_story_cache(self):
+        cache_path = "stories_cache.json"
+
+        if not os.path.exists(cache_path):
+            return {}
+
+        with open(cache_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    def save_story_cache(self, cache):
+        cache_path = "stories_cache.json"
+
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=4)
+    
     # ---------------- Generate Story ----------------
     def generate_story(self, detected_class, language, story_length):
 
+        # ---------------- Cache  ----------------
+        cache = self.load_story_cache()
+        cache_key = f"{detected_class}_{language}_{story_length}"
+
+        if cache_key in cache:
+            return cache[cache_key]["story"]
         # ---------------- Load Facts ----------------
         landmark = self.facts[detected_class]
 
@@ -225,15 +248,22 @@ class RAWI:
         )
         story_text = completion.choices[0].message.content
 
-        print("DEBUG Groq response:", completion)
-        print("DEBUG story content:", repr(story_text))
-
         if story_text is None or not story_text.strip():
             raise ValueError("Groq returned an empty story.")
-            story_text = story_text.strip()
+        story_text = story_text.strip()
+
+        cache[cache_key] = {
+            "landmark": detected_class,
+            "language": language,
+            "length": story_length,
+            "story": story_text,
+            "model": "openai/gpt-oss-120b"
+        }
+
+        self.save_story_cache(cache)
 
         return story_text
-
+    
     # ---------------- Generate Audio ----------------
     @staticmethod
     def generate_audio(story_text, language):
