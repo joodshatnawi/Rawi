@@ -68,11 +68,9 @@ for landmark in landmarks:
     "Um_Qais": "umm_qays"
 }
 
-def retrieve_context(landmark, question, k=5):
-    
+def retrieve_context(landmark, question, k=10):
+
     rag_landmark = LANDMARK_MAP.get(landmark, landmark)
-    print("Requested landmark:", landmark)
-    print("RAG landmark:", rag_landmark)
 
     db = indices[rag_landmark]
     index = db["index"]
@@ -91,6 +89,7 @@ def retrieve_context(landmark, question, k=5):
     # 2. Retrieve candidates
     # =========================
     search_k = len(chunks)
+
     scores, faiss_indices = index.search(
         query_embedding,
         search_k
@@ -172,6 +171,19 @@ def retrieve_context(landmark, question, k=5):
         "موآب",
         "عمون",
         "الرومان",
+        "بنى",
+        "بنيت",
+        "بناء",
+        "بُني",
+        "بُنيت",
+        "أسس",
+        "أسست",
+        "تأسس",
+        "تأسست",
+        "أنشأ",
+        "أنشئت",
+        "قصة",
+        "قصتها",
 
         # English
         "history",
@@ -180,15 +192,66 @@ def retrieve_context(landmark, question, k=5):
         "ancient",
         "roman",
         "moab",
-        "ammon"
+        "ammon",
+        "built",
+        "founded",
+        "established",
+        "constructed",
+        "story"
+    ]
+
+    facts_keywords = [
+        # Arabic
+        "حقائق",
+        "حقيقة",
+        "معلومات",
+        "مهم",
+        "مهمة",
+        "الأشياء المهمة",
+
+        # English
+        "facts",
+        "fact",
+        "information"
+    ]
+
+    landmarks_keywords = [
+        # Arabic
+        "معالم",
+        "معلم",
+        "أماكن",
+        "مكان",
+        "الأماكن",
+
+        # English
+        "landmarks",
+        "landmark",
+        "places",
+        "place"
+    ]
+
+    entrance_keywords = [
+        # Arabic
+        "مدخل",
+        "المدخل",
+        "مدخلها",
+
+        # English
+        "entrance"
     ]
 
     location_keywords = [
         # Arabic
         "أين يقع",
+        "أين تقع",
+        "وين يقع",
+        "وين تقع",
         "أين توجد",
+        "وين توجد",
+        "وين موجودة",
         "موقع",
         "يقع",
+        "تقع",
 
         # English
         "where",
@@ -201,19 +264,34 @@ def retrieve_context(landmark, question, k=5):
         # Arabic
         "زيارة",
         "يزور",
-        "متى",
         "أفضل وقت",
         "وقت الزيارة",
         "موسم",
+        "أعمل",
+        "اعمل",
+        "أقدر أعمل",
+        "اقدر اعمل",
+        "أنشطة",
+        "نشاطات",
+        "نشاط",
+        "فعاليات",
+        "أزور",
+        "ازور",
+        "أستكشف",
+        "استكشف",
+        "الدير",
 
         # English
         "visit",
         "visiting",
-        "when",
         "best time",
         "season",
-        "seasonal"
+        "seasonal",
+        "things to do",
+        "activities",
+        "activity"
     ]
+
 
     # =========================
     # 5. Detect intent
@@ -231,6 +309,18 @@ def retrieve_context(landmark, question, k=5):
         word in q for word in history_keywords
     )
 
+    is_facts_question = any(
+        word in q for word in facts_keywords
+    )
+
+    is_landmarks_question = any(
+        word in q for word in landmarks_keywords
+    )
+
+    is_entrance_question = any(
+        word in q for word in entrance_keywords
+    )
+
     is_location_question = any(
         word in q for word in location_keywords
     )
@@ -245,7 +335,6 @@ def retrieve_context(landmark, question, k=5):
 
     if is_route_question:
 
-        # Actual trail/path names in Wadi Mujib
         trail_names = [
             "مسار البدن",
             "مسار الهيدان",
@@ -263,8 +352,6 @@ def retrieve_context(landmark, question, k=5):
             if subsection in trail_names:
                 route_candidates.append(candidate)
 
-        # If enough actual trails were found,
-        # use only those results.
         if len(route_candidates) >= k:
 
             route_candidates.sort(
@@ -274,7 +361,6 @@ def retrieve_context(landmark, question, k=5):
 
             return route_candidates[:k]
 
-        # Otherwise return all detected trail candidates
         if route_candidates:
 
             route_candidates.sort(
@@ -284,7 +370,6 @@ def retrieve_context(landmark, question, k=5):
 
             return route_candidates[:k]
 
-        # Fallback
         candidates.sort(
             key=lambda x: x["score"],
             reverse=True
@@ -321,7 +406,49 @@ def retrieve_context(landmark, question, k=5):
         )
 
     # =========================
-    # 9. Location question
+    # 9. Entrance question
+    # =========================
+
+    elif is_entrance_question:
+
+        candidates.sort(
+            key=lambda x: (
+                x.get("subsection") == "السيق",
+                x["section"] == "Landmarks_Details",
+                x["score"]
+            ),
+            reverse=True
+        )
+    # =========================
+    # 10. Facts question
+    # =========================
+
+    elif is_facts_question:
+
+        candidates.sort(
+            key=lambda x: (
+                x["section"] == "Facts",
+                x["score"]
+            ),
+            reverse=True
+        )
+
+    # =========================
+    # 11. Landmarks question
+    # =========================
+
+    elif is_landmarks_question:
+
+        candidates.sort(
+            key=lambda x: (
+                x["section"] == "Landmarks",
+                x["score"]
+            ),
+            reverse=True
+        )
+
+    # =========================
+    # 12. Location question
     # =========================
 
     elif is_location_question:
@@ -335,7 +462,7 @@ def retrieve_context(landmark, question, k=5):
         )
 
     # =========================
-    # 10. Tourism question
+    # 13. Tourism question
     # =========================
 
     elif is_tourism_question:
@@ -353,7 +480,7 @@ def retrieve_context(landmark, question, k=5):
         )
 
     # =========================
-    # 11. General question
+    # 14. General question
     # =========================
 
     else:
@@ -363,5 +490,15 @@ def retrieve_context(landmark, question, k=5):
             reverse=True
         )
 
-    return candidates[:k]
+    # =========================
+    # 15. Return top results
+    # =========================
 
+    for i, candidate in enumerate(candidates[:k], 1):
+        print(f"\n[{i}]")
+        print("Section:", candidate["section"])
+        print("Subsection:", candidate.get("subsection"))
+        print("Score:", candidate["score"])
+        print("Text:", candidate["text"])
+
+    return candidates[:k]
