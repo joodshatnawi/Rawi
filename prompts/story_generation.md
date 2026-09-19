@@ -12,7 +12,8 @@ Rules:
 * Transform the provided facts into a natural spoken narration for a visitor.
 * Do not write like Wikipedia, a database, or a formal report.
 * Do not create fictional events, characters, dialogue, or stories.
-* Select the most relevant facts according to the requested story length.
+* Select only the facts that can fit naturally within the requested word range.
+* If the selected facts exceed the requested word range, remove the least important facts rather than exceeding the maximum word count.
 * Never sacrifice factual accuracy to make the story more engaging.
 * Avoid repeating the same fact.
 * Make the narration coherent and easy to follow.
@@ -24,7 +25,9 @@ Rules:
 * If a fact is unclear, simplify its wording without adding an interpretation or explanation.
 * Do not turn a general fact into a more specific claim.
 * Do not add descriptive details unless they are explicitly supported by the provided facts.
-
+* Do not explain, interpret, justify, or expand a fact beyond what is explicitly stated. If a fact only names a place, object, person, activity, event, or feature, mention it without adding a reason, purpose, effect, reputation, symbolism, or interpretation unless that information is explicitly provided.
+* Preserve proper names, place names, landmark names, historical names, dates, numbers, and technical terms exactly in meaning when translating.
+* Do not narrow, broaden, reinterpret, or replace a fact with a different or approximate term during translation. If the source uses a specific geographical, historical, cultural, or technical term, preserve the same scope and meaning in the requested language.
 
 ## Arabic Prompt
 
@@ -74,7 +77,7 @@ Start with this welcome:
 
 {welcome}
 
-Tell a short and engaging story about {landmark_name}.
+Tell an engaging story about {landmark_name}.
 * Do not present the facts as a sequence of disconnected information. Organize the selected facts into a narrative with a natural beginning, middle, and ending. Use smooth transitions between ideas to create a coherent and engaging flow, while preserving the exact meaning of each fact and without inventing new connections or events.
 
 Use ONLY the following facts:
@@ -103,7 +106,6 @@ Rules:
 * Do not include notes or text inside parentheses.
 * End with a short and natural sentence encouraging the visitor to explore the site, without adding any new information.
 * Follow the requested word count strictly.
-* If the selected length is Long, elaborate naturally using the provided facts instead of adding new information.
 
 ## French Prompt
 
@@ -113,7 +115,7 @@ Commencez par ce message de bienvenue :
 
 {welcome}
 
-Puis racontez une histoire courte et captivante sur {landmark_name}.
+Puis racontez une histoire captivante sur {landmark_name}.
 * Ne présentez pas les informations comme une suite de faits indépendants. Organisez les informations sélectionnées dans un récit avec un début, un développement et une fin naturels. Utilisez des transitions fluides entre les idées afin de créer un récit cohérent et captivant, tout en préservant exactement le sens de chaque information et sans inventer de nouveaux liens ou événements.
 
 Utilisez UNIQUEMENT les informations suivantes :
@@ -142,4 +144,3 @@ Règles :
 * N'ajoutez pas de remarques ou de texte entre parenthèses.
 * Terminez par une phrase courte et naturelle qui encourage le visiteur à continuer à découvrir le lieu, sans ajouter de nouvelle information.
 * Respectez strictement la longueur demandée.
-* Si la longueur sélectionnée est Long, développez naturellement à partir des informations fournies sans ajouter de nouveaux faits.
