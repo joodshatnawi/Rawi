@@ -88,11 +88,10 @@ def result_page():
     with c1:
        st.metric(labels["built"], info.get("built", "Not available"))
        st.metric(labels["unesco"], unesco)
-       st.metric(labels["best_time"], info["best_time"])
-
+       st.metric(labels["best_time"], info.get("best_time","Not available"))
     with c2:
         st.metric(labels["governorate"], info["governorate"])
-        st.metric(labels["visit_time"], info["visit_time"])
+        st.metric(labels["visit_time"], info.get("visit_time","Not available"))
 
     st.divider()
     
