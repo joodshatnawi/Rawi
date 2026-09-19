@@ -225,10 +225,12 @@ class RAWI:
         )
         story_text = completion.choices[0].message.content
 
+        print("DEBUG Groq response:", completion)
+        print("DEBUG story content:", repr(story_text))
+
         if story_text is None or not story_text.strip():
             raise ValueError("Groq returned an empty story.")
-
-        story_text = story_text.strip()
+            story_text = story_text.strip()
 
         return story_text
 
