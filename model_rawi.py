@@ -111,22 +111,71 @@ class RAWI:
         # ---------------- Length Instructions ----------------
         length_instruction = {
             "العربية": {
-                "Short": "اكتب قصة قصيرة جدًا ومركزة.",
-                "Medium": "اكتب قصة متوسطة الطول ومتوازنة.",
-                "Long": "اكتب قصة طويلة ومفصلة مع الالتزام بالحقائق المتوفرة فقط."
+                "Short": (
+                    "اكتب قصة قصيرة بين 70 و80 كلمة، ويفضل أن تكون قريبة من 75 كلمة. "
+                    "يشمل عدد الكلمات المقدمة والخاتمة. "
+                    "اختر فقط المعلومات التي يمكن عرضها بشكل طبيعي ضمن هذا النطاق. "
+                    "إذا تجاوزت المعلومات المختارة الحد الأعلى، احذف المعلومات الأقل أهمية بدلًا من تجاوز 80 كلمة."
+                ),
+                "Medium": (
+                    "اكتب قصة متوسطة بين 110 و130 كلمة، ويفضل أن تكون قريبة من 120 كلمة. "
+                    "يشمل عدد الكلمات المقدمة والخاتمة. "
+                    "اختر فقط المعلومات التي يمكن عرضها بشكل طبيعي ضمن هذا النطاق. "
+                    "إذا تجاوزت المعلومات المختارة الحد الأعلى، احذف المعلومات الأقل أهمية بدلًا من تجاوز 130 كلمة."
+                ),
+                "Long": (
+                    "اكتب قصة طويلة بين 160 و190 كلمة، ويفضل أن تكون قريبة من 175 كلمة. "
+                    "يشمل عدد الكلمات المقدمة والخاتمة. "
+                    "استخدم عددًا أكبر من المعلومات المهمة المتاحة، لكن لا تحاول تضمين جميع المعلومات. "
+                    "إذا تجاوزت المعلومات المختارة 190 كلمة، احذف المعلومات الأقل أهمية بدلًا من تجاوز الحد الأعلى. "
+                    "لا تضف أي معلومات غير موجودة في الحقائق."
+                )
             },
+
             "English": {
-                "Short": "Write a very short and focused story.",
-                "Medium": "Write a medium-length and balanced story.",
-                "Long": "Write a longer and more detailed story using only the provided facts."
+                "Short": (
+                    "Write a short story between 70 and 80 words, preferably close to 75 words. "
+                    "The word count includes the opening and closing. "
+                    "Select only facts that can fit naturally within this range. "
+                    "If the selected information exceeds the upper limit, remove the least important facts instead of exceeding 80 words."
+                ),
+                "Medium": (
+                    "Write a medium-length story between 110 and 130 words, preferably close to 120 words. "
+                    "The word count includes the opening and closing. "
+                    "Select only facts that can fit naturally within this range. "
+                    "If the selected information exceeds the upper limit, remove the least important facts instead of exceeding 130 words."
+                ),
+                "Long": (
+                    "Write a long story between 160 and 190 words, preferably close to 175 words. "
+                    "The word count includes the opening and closing. "
+                    "Use more important provided facts, but do not try to include all available facts. "
+                    "If the selected information exceeds 190 words, remove the least important facts instead of exceeding the upper limit. "
+                    "Do not add any information that is not supported by the facts."
+                )
             },
+
             "Français": {
-                "Short": "Écrivez une histoire très courte et concise.",
-                "Medium": "Écrivez une histoire de longueur moyenne et équilibrée.",
-                "Long": "Écrivez une histoire plus longue et détaillée en utilisant uniquement les informations fournies."
+                "Short": (
+                    "Écrivez une histoire courte entre 70 et 80 mots, de préférence proche de 75 mots. "
+                    "Le nombre de mots comprend l'introduction et la conclusion. "
+                    "Sélectionnez uniquement les informations qui peuvent être présentées naturellement dans cette limite. "
+                    "Si les informations sélectionnées dépassent la limite supérieure, supprimez les informations les moins importantes au lieu de dépasser 80 mots."
+                ),
+                "Medium": (
+                    "Écrivez une histoire de longueur moyenne entre 110 et 130 mots, de préférence proche de 120 mots. "
+                    "Le nombre de mots comprend l'introduction et la conclusion. "
+                    "Sélectionnez uniquement les informations qui peuvent être présentées naturellement dans cette limite. "
+                    "Si les informations sélectionnées dépassent la limite supérieure, supprimez les informations les moins importantes au lieu de dépasser 130 mots."
+                ),
+                "Long": (
+                    "Écrivez une histoire longue entre 160 et 190 mots, de préférence proche de 175 mots. "
+                    "Le nombre de mots comprend l'introduction et la conclusion. "
+                    "Utilisez davantage d'informations importantes fournies, mais n'essayez pas d'inclure toutes les informations disponibles. "
+                    "Si les informations sélectionnées dépassent 190 mots, supprimez les informations les moins importantes au lieu de dépasser la limite supérieure. "
+                    "N'ajoutez aucune information qui ne soit pas confirmée par les faits."
+                )
             }
         }
-
         selected_length_instruction = length_instruction[language][story_length]
 
         # ---------------- Select Language Prompt ----------------
@@ -159,7 +208,7 @@ class RAWI:
 
         # ---------------- Groq ----------------
         completion = self.client.chat.completions.create(
-            model="openai/gpt-oss-20b",
+            model="openai/gpt-oss-120b",
             messages=[
                 {
                     "role": "system",
@@ -171,7 +220,7 @@ class RAWI:
                 }
             ],
             temperature=0.2,
-            max_tokens=1000,
+            max_tokens=2000,
             reasoning_effort="low"
         )
         story_text = completion.choices[0].message.content
@@ -276,7 +325,6 @@ class RAWI:
         )
 
         rewritten_question = completion.choices[0].message.content
-
         if rewritten_question:
             rewritten_question = rewritten_question.strip()
 
@@ -403,14 +451,13 @@ class RAWI:
         reasoning_effort="low"
     )
 
-
         answer = completion.choices[0].message.content
 
         if not answer:
             return "عذرًا، لا أملك معلومات كافية للإجابة."
         answer = answer.strip()
-
         return answer
+
     def analyze(self, image_path, language, story_length):
         # Detect landmark
         result = self.detect_landmark(image_path)
