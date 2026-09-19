@@ -356,6 +356,7 @@
     "built": "1st Century BC",
     "governorate": "Mafraq",
     "unesco": "Yes",
+    "unesco_year":"2024",
     "best_time": "March - May",
     "visit_time": "1-2 Hours"
   },
@@ -482,6 +483,7 @@
     "built": "Roman & Byzantine Period",
     "governorate": "Balqa",
     "unesco": "Yes",
+    "unesco_year":"2015",
     "best_time": "October - April",
     "visit_time": "2-3 Hours"
   },
@@ -547,6 +549,7 @@
     "built": "Early 8th Century AD",
     "governorate": "Zarqa",
     "unesco": "Yes",
+    "unesco_year":"1985",
     "best_time": "October - April",
     "visit_time": "1-2 Hours"
   },
@@ -606,12 +609,13 @@
         "lon": 35.5732
       },
       "info": {
-        "established": "1985",
+        "built": "1985",
         "governorate": "Madaba",
         "reserve_Type": "Biosphere Reserve",
         "lowest_Point": "410 m below sea level",
         "biodiversity": "More than 300 plant genera",
         "best_time": "Summer for water trails",
+        "visit_time":"Half Day",
         "activities": "Hiking, canyoning, swimming, ziplining",
         "unesco":"No"
       },
@@ -667,6 +671,7 @@
         "lon": 35.6836
       },
       "info": {
+        "built": "4th Century BC",
         "governorate": "Irbid",
         "ancient_name": "Gadara",
         "historical_significance": "One of the cities of the Decapolis",
