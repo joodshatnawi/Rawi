@@ -48,7 +48,7 @@ def page_home(rawi):
         st.image(
             img,
             caption="Your Landmark",
-            use_container_width=True
+            width="stretch"
         )
 
 
