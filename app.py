@@ -20,7 +20,7 @@ with st.sidebar:
 
     st.image(
         "rawi_logo.svg.png",
-        use_container_width= True
+        width="stretch"
     )
     st.divider()
     # ---------------- Supported Landmarks ----------------
