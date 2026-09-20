@@ -105,7 +105,7 @@ def result_page():
     st.markdown("### Have More Questions?")
     st.write("Ask Rawi AI anything about this landmark.")
 
-    if st.button("💬 Ask Rawi AI", use_container_width=True):
+    if st.button("💬 Ask Rawi AI", width="stretch"):
         st.session_state.page = "chat"
         st.rerun()
 
