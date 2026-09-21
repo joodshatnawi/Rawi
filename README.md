@@ -100,6 +100,41 @@ Rawi uses a YOLO11m object detection model to identify Jordanian landmarks from 
 
 The trained model supports 11 landmark classes and provides the detected landmark and confidence score to the rest of the system.
 
+## Model Evaluation
+
+The final YOLO11m model was evaluated on a validation set of 750 images
+containing 750 object instances.
+
+| Metric | Score |
+|---|---:|
+| Precision | 92.7% |
+| Recall | 90.8% |
+| mAP@50 | 96.5% |
+| mAP@50-95 | 96.3% |
+
+### Per-Class mAP@50
+
+| Landmark | mAP@50 |
+|---|---:|
+| Ajloun Castle | 92.4% |
+| Al-Maghtas | 96.6% |
+| Dead Sea | 99.0% |
+| Jerash | 97.7% |
+| Karak Castle | 95.0% |
+| Petra | 98.6% |
+| Qasr Amra | 96.6% |
+| Umm Al-Jimal | 96.2% |
+| Umm Qais | 93.7% |
+| Wadi Mujib | 96.0% |
+| Wadi Rum | 99.1% |
+
+### Confusion Matrix
+
+The normalized confusion matrix shows the classification behavior
+across the 11 landmark classes and highlights the main confusion
+patterns and missed detections.
+
+![YOLO11m Confusion Matrix](path/to/confusion_matrix_normalized.png)
 ### Story Generation
 
 Rawi generates tourism stories based on verified landmark facts.
