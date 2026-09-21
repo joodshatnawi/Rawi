@@ -494,11 +494,5 @@ def retrieve_context(landmark, question, k=10):
     # 15. Return top results
     # =========================
 
-    for i, candidate in enumerate(candidates[:k], 1):
-        print(f"\n[{i}]")
-        print("Section:", candidate["section"])
-        print("Subsection:", candidate.get("subsection"))
-        print("Score:", candidate["score"])
-        print("Text:", candidate["text"])
 
     return candidates[:k]

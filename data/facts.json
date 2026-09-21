@@ -40,13 +40,29 @@
     "visit_time": "3-5 Hours"
   },
 
-  "fun_facts": [
+  "fun_facts": {
+  "العربية": [
     "سميت البتراء بالمدينة الوردية بسبب لون الصخور التي نحتت فيها.",
     "اختيرت عام 2007 كإحدى عجائب الدنيا السبع الجديدة.",
     "كان الأنباط من أمهر المهندسين في إدارة المياه داخل الصحراء.",
     "الخزنة ليست كنزًا حقيقيًا كما اعتقد البعض قديمًا، بل هي واجهة لمبنى أثري.",
-    "يزور البتراء ملايين السياح من مختلف أنحاء العالم كل عام."
+    "تستقبل البتراء زوارًا من مختلف أنحاء العالم."
   ],
+  "English": [
+    "Petra is known as the Rose City because of the color of its rock formations.",
+    "Petra was chosen as one of the New Seven Wonders of the World in 2007.",
+    "The Nabataeans were highly skilled engineers in managing water in the desert.",
+    "The Treasury is not a real treasure chamber, as some once believed, but the facade of an ancient building.",
+    "Petra welcomes visitors from around the world."
+  ],
+  "Français": [
+    "Pétra est connue sous le nom de ville rose en raison de la couleur de ses formations rocheuses.",
+    "Pétra a été choisie comme l’une des sept nouvelles merveilles du monde en 2007.",
+    "Les Nabatéens étaient des ingénieurs très compétents dans la gestion de l’eau dans le désert.",
+    "Le Khazneh n’est pas un véritable trésor, comme certains le pensaient autrefois, mais la façade d’un ancien bâtiment.",
+    "Pétra accueille des visiteurs du monde entier."
+  ]
+},
 
   "eras": {
     "Nabataean": [
@@ -106,13 +122,29 @@
     "visit_time": "2-4 Hours"
   },
 
-  "fun_facts": [
+  "fun_facts": {
+  "العربية": [
     "يطلق على جرش لقب مدينة الألف عمود.",
     "تضم واحدة من أجمل الساحات البيضاوية الرومانية في العالم.",
     "لا تزال بعض أعمدة شارع الأعمدة قائمة منذ ما يقارب ألفي عام.",
     "يستضيف المسرح الجنوبي عروضًا موسيقية خلال مهرجان جرش.",
     "تعد جرش من أكثر المدن الرومانية اكتمالًا خارج إيطاليا."
   ],
+  "English": [
+    "Jerash is known as the City of a Thousand Columns.",
+    "It features one of the most impressive Roman oval plazas in the world.",
+    "Some columns along the Cardo are still standing after nearly two thousand years.",
+    "The South Theater hosts musical performances during the Jerash Festival.",
+    "Jerash is considered one of the best-preserved Roman cities outside Italy."
+  ],
+  "Français": [
+    "Jerash est surnommée la ville aux mille colonnes.",
+    "Elle abrite l’une des plus impressionnantes places ovales romaines au monde.",
+    "Certaines colonnes de la rue à colonnades sont encore debout après près de deux mille ans.",
+    "Le théâtre sud accueille des spectacles musicaux pendant le festival de Jerash.",
+    "Jerash est considérée comme l’une des villes romaines les mieux conservées hors d’Italie."
+  ]
+},
 
   "eras": {
     "Hellenistic": [
@@ -174,14 +206,29 @@
     "visit_time": "2-3 Hours"
   },
 
-  "fun_facts": [
+  "fun_facts": {
+  "العربية": [
     "يمكن رؤية مناطق واسعة من شمال الأردن وفلسطين في الأيام الصافية من أعلى القلعة.",
     "اعتمدت القلعة على نظام متطور لتجميع مياه الأمطار داخل خزانات حجرية.",
     "تضم القلعة أربعة أبراج رئيسية ترتبط بممرات دفاعية.",
     "تحيط بها غابات البلوط والصنوبر التي تشتهر بها محافظة عجلون.",
     "تعد من أهم القلاع الإسلامية التي بنيت في عهد صلاح الدين الأيوبي."
   ],
-
+  "English": [
+    "On clear days, wide areas of northern Jordan and Palestine can be seen from the top of the castle.",
+    "The castle used an advanced system for collecting rainwater in stone cisterns.",
+    "The castle has four main towers connected by defensive passages.",
+    "The castle is surrounded by the oak and pine forests for which Ajloun Governorate is known.",
+    "It is one of the important Islamic castles built during the time of Saladin."
+  ],
+  "Français": [
+    "Par temps clair, on peut voir de vastes régions du nord de la Jordanie et de la Palestine depuis le sommet du château.",
+    "Le château utilisait un système avancé de collecte des eaux de pluie dans des citernes en pierre.",
+    "Le château possède quatre tours principales reliées par des passages défensifs.",
+    "Le château est entouré des forêts de chênes et de pins qui font la renommée du gouvernorat d’Ajloun.",
+    "Il compte parmi les importantes forteresses islamiques construites à l’époque de Saladin."
+  ]
+},
   "eras": {
     "Ayyubid": [
       "بنيت القلعة عام 1184م بأمر من صلاح الدين الأيوبي وعلى يد قائده عز الدين أسامة."
@@ -239,13 +286,29 @@
     "best_time": "October - April",
     "visit_time": "Half Day - Full Day"
 },
-  "fun_facts": [
+"fun_facts": {
+  "العربية": [
     "يُعرف وادي رم عالميًا باسم وادي القمر.",
     "صُورت فيه أفلام عالمية مثل The Martian وDune وLawrence of Arabia.",
     "تعود بعض النقوش الصخرية فيه إلى أكثر من 12 ألف عام.",
     "يمكن مشاهدة مجرة درب التبانة بوضوح في الليالي الصافية.",
     "يعد من أفضل أماكن التخييم الصحراوي في الشرق الأوسط."
   ],
+  "English": [
+    "Wadi Rum is internationally known as the Valley of the Moon.",
+    "International films such as The Martian, Dune, and Lawrence of Arabia were filmed there.",
+    "Some of its rock inscriptions date back more than 12,000 years.",
+    "The Milky Way can be clearly seen on clear nights.",
+    "It is one of the notable desert camping destinations in the Middle East."
+  ],
+  "Français": [
+    "Le Wadi Rum est connu dans le monde entier sous le nom de vallée de la Lune.",
+    "Des films internationaux tels que The Martian, Dune et Lawrence of Arabia y ont été tournés.",
+    "Certaines de ses inscriptions rupestres datent de plus de 12 000 ans.",
+    "La Voie lactée peut être clairement observée lors des nuits dégagées.",
+    "C’est l’une des destinations réputées pour le camping dans le désert au Moyen-Orient."
+  ]
+},
 
   "eras": {
     "Prehistoric": [
@@ -298,13 +361,29 @@
     "visit_time": "Half Day"
   },
 
-  "fun_facts": [
+ "fun_facts": {
+  "العربية": [
     "لا تستطيع الأسماك العيش في البحر الميت بسبب ملوحته العالية.",
     "يمكن لمعظم الزوار الطفو بسهولة فوق مياهه.",
     "يستخدم طينه الطبيعي في العديد من المنتجات العلاجية والتجميلية.",
     "يُعد أخفض نقطة على سطح الكرة الأرضية.",
     "يزداد تركيز الأملاح فيه مع مرور الوقت بسبب عدم وجود مخرج طبيعي للمياه."
   ],
+  "English": [
+    "Fish cannot survive in the Dead Sea because of its extremely high salinity.",
+    "Most visitors can float easily on its waters.",
+    "Its natural mud is used in many therapeutic and cosmetic products.",
+    "It is the lowest point on the Earth's surface.",
+    "Its salt concentration increases over time because it has no natural outlet."
+  ],
+  "Français": [
+    "Les poissons ne peuvent pas survivre dans la mer Morte en raison de sa très forte salinité.",
+    "La plupart des visiteurs peuvent facilement flotter sur ses eaux.",
+    "Sa boue naturelle est utilisée dans de nombreux produits thérapeutiques et cosmétiques.",
+    "C’est le point le plus bas de la surface terrestre.",
+    "La concentration en sels augmente avec le temps en raison de l’absence d’écoulement naturel."
+  ]
+},
 
   "eras": {
     "Natural": [
@@ -360,15 +439,29 @@
     "best_time": "March - May",
     "visit_time": "1-2 Hours"
   },
-
-  "fun_facts": [
+"fun_facts": {
+  "العربية": [
     "تُعرف أم الجمال باسم الواحة السوداء بسبب لون حجارتها البازلتية.",
     "تضم أكثر من 150 مبنى أثريًا لا تزال أجزاء كبيرة منها قائمة.",
     "اعتمد سكانها على نظام هندسي متطور لحصاد مياه الأمطار.",
     "تحتوي على أكثر من 15 كنيسة تعود إلى العصر البيزنطي.",
     "أصبحت سابع موقع أردني يُدرج على قائمة التراث العالمي لليونسكو عام 2024."
   ],
-
+  "English": [
+    "Umm Al-Jimal is known as the Black Oasis because of its dark basalt stone buildings.",
+    "It contains more than 150 archaeological structures, many of which are still standing in part.",
+    "Its inhabitants relied on an advanced system for harvesting rainwater.",
+    "The site contains more than 15 churches dating to the Byzantine period.",
+    "It became the seventh Jordanian site to be inscribed on the UNESCO World Heritage List in 2024."
+  ],
+  "Français": [
+    "Umm Al-Jimal est connue sous le nom d’oasis noire en raison de ses bâtiments en pierre basaltique sombre.",
+    "Le site compte plus de 150 structures archéologiques, dont beaucoup sont encore partiellement conservées.",
+    "Ses habitants utilisaient un système avancé de collecte des eaux de pluie.",
+    "Le site compte plus de 15 églises datant de la période byzantine.",
+    "Il est devenu le septième site jordanien inscrit sur la Liste du patrimoine mondial de l’UNESCO en 2024."
+  ]
+},
   "eras": {
     "Nabataean": [
       "بدأت أم الجمال كمستوطنة نبطية على طريق التجارة القديم."
@@ -426,14 +519,29 @@
     "visit_time": "2-3 Hours"
   },
 
-  "fun_facts": [
+"fun_facts": {
+  "العربية": [
     "بُنيت القلعة فوق نتوء صخري منحها موقعًا دفاعيًا قويًا.",
     "تحيط بها خنادق دفاعية عميقة من جهتين.",
     "تضم ممرات وقاعات واسعة تحت مستوى الأرض.",
     "يحتوي جزء من القلعة اليوم على متحف للآثار.",
     "كانت من أهم القلاع التي شهدت الصراع بين الصليبيين وصلاح الدين الأيوبي."
   ],
-
+  "English": [
+    "The castle was built on a rocky promontory that gave it a strong defensive position.",
+    "Deep defensive ditches surround the castle on two sides.",
+    "It contains extensive passages and halls below ground level.",
+    "Part of the castle now houses an archaeological museum.",
+    "It was one of the important castles involved in the conflict between the Crusaders and Saladin."
+  ],
+  "Français": [
+    "Le château a été construit sur un éperon rocheux qui lui offrait une position défensive stratégique.",
+    "De profonds fossés défensifs entourent le château sur deux côtés.",
+    "Il possède de vastes passages et salles situés sous le niveau du sol.",
+    "Une partie du château abrite aujourd’hui un musée archéologique.",
+    "Il compte parmi les importantes forteresses liées au conflit entre les Croisés et Saladin."
+  ]
+},
   "eras": {
     "Crusader": [
       "بدأ بناء القلعة بين عامي 1139 و1142م خلال الفترة الصليبية."
@@ -488,13 +596,29 @@
     "visit_time": "2-3 Hours"
   },
 
-  "fun_facts": [
+"fun_facts": {
+  "العربية": [
     "يُعد المغطس أحد أهم مواقع الحج المسيحي في العالم.",
     "أعيد فتح الموقع أمام الزوار عام 2002 بعد سنوات طويلة من الإغلاق.",
     "يزور الموقع آلاف الحجاج سنويًا للاحتفال بعيد الغطاس.",
     "يضم الموقع آثار كنائس وأديرة وبرك معمودية يزيد عمرها على 1500 عام.",
     "أدرج على قائمة التراث العالمي لليونسكو عام 2015."
   ],
+  "English": [
+    "Bethany Beyond the Jordan is one of the most important Christian pilgrimage sites in the world.",
+    "The site was reopened to visitors in 2002 after many years of closure.",
+    "Thousands of pilgrims visit the site each year to celebrate Epiphany.",
+    "The site contains remains of churches, monasteries, and baptism pools that are more than 1,500 years old.",
+    "It was inscribed on the UNESCO World Heritage List in 2015."
+  ],
+  "Français": [
+    "Béthanie au-delà du Jourdain est l’un des principaux sites de pèlerinage chrétien au monde.",
+    "Le site a été rouvert aux visiteurs en 2002 après de nombreuses années de fermeture.",
+    "Des milliers de pèlerins visitent le site chaque année pour célébrer l’Épiphanie.",
+    "Le site conserve les vestiges d’églises, de monastères et de bassins baptismaux datant de plus de 1 500 ans.",
+    "Il a été inscrit sur la Liste du patrimoine mondial de l’UNESCO en 2015."
+  ]
+},
 
   "eras": {
     "Roman": [
@@ -554,14 +678,29 @@
     "visit_time": "1-2 Hours"
   },
 
-  "fun_facts": [
+"fun_facts": {
+  "العربية": [
     "يشتهر قصر عمرة برسوماته الجدارية النادرة التي تغطي معظم جدرانه وأسقفه.",
     "يضم واحدة من أقدم الرسوم الفلكية المعروفة في العمارة الإسلامية.",
     "كان القصر جزءًا من مجمع صحراوي يضم بئرًا ونظامًا لرفع المياه.",
     "يُعد من أشهر القصور الصحراوية الأموية في الأردن.",
     "أدرج على قائمة التراث العالمي لليونسكو عام 1985."
   ],
-
+  "English": [
+    "Qasr Amra is famous for its rare frescoes covering many of its walls and ceilings.",
+    "It contains one of the oldest known astronomical paintings in Islamic architecture.",
+    "The palace was part of a desert complex that included a well and a water-lifting system.",
+    "It is one of the best-known Umayyad desert castles in Jordan.",
+    "It was inscribed on the UNESCO World Heritage List in 1985."
+  ],
+  "Français": [
+    "Qasr Amra est célèbre pour ses fresques rares qui couvrent une grande partie de ses murs et plafonds.",
+    "Il abrite l’une des plus anciennes représentations astronomiques connues dans l’architecture islamique.",
+    "Le palais faisait partie d’un complexe désertique comprenant un puits et un système de remontée d’eau.",
+    "C’est l’un des palais désertiques omeyyades les plus connus de Jordanie.",
+    "Il a été inscrit sur la Liste du patrimoine mondial de l’UNESCO en 1985."
+  ]
+},
   "eras": {
     "Umayyad": [
       "شُيد القصر في أوائل القرن الثامن الميلادي ليكون مقرًا للاستراحة والصيد، ويُعد من أبرز إنجازات العمارة الأموية."
@@ -619,14 +758,32 @@
         "activities": "Hiking, canyoning, swimming, ziplining",
         "unesco":"No"
       },
-      "fun_facts": [
-        "تُعد محمية الموجب أخفض محمية طبيعية في العالم.",
-        "يصل فرق الارتفاع داخل المحمية إلى نحو 1300 متر.",
-        "يُعد الوعل النوبي من أبرز الحيوانات التي تعيش في منحدرات الموجب.",
-        "يمر وادي الموجب ضمن مسار مهم لهجرة الطيور بين إفريقيا وأوروبا.",
-        "يُعرف الوادي تاريخيًا باسم نهر أرنون.",
-        "يضم الوادي عددًا من المسارات المائية التي تجمع بين المشي والسباحة والمغامرة."
-      ],
+"fun_facts": {
+  "العربية": [
+    "تُعد محمية الموجب أخفض محمية طبيعية في العالم.",
+    "يصل فرق الارتفاع داخل المحمية إلى نحو 1300 متر.",
+    "يُعد الوعل النوبي من أبرز الحيوانات التي تعيش في منحدرات الموجب.",
+    "يمر وادي الموجب ضمن مسار مهم لهجرة الطيور بين إفريقيا وأوروبا.",
+    "يُعرف الوادي تاريخيًا باسم نهر أرنون.",
+    "يضم الوادي عددًا من المسارات المائية التي تجمع بين المشي والسباحة والمغامرة."
+  ],
+  "English": [
+    "Mujib Biosphere Reserve is the lowest nature reserve in the world.",
+    "The reserve has an elevation difference of about 1,300 meters.",
+    "The Nubian ibex is one of the notable animals living on the slopes of Wadi Mujib.",
+    "Wadi Mujib lies along an important bird migration route between Africa and Europe.",
+    "The valley was historically known as the Arnon River.",
+    "The valley has several water trails combining hiking, swimming, and adventure."
+  ],
+  "Français": [
+    "La réserve de biosphère de Mujib est la réserve naturelle la plus basse du monde.",
+    "Le dénivelé à l’intérieur de la réserve atteint environ 1 300 mètres.",
+    "Le bouquetin de Nubie est l’un des animaux remarquables qui vivent sur les pentes du Wadi Mujib.",
+    "Le Wadi Mujib se trouve sur une importante voie de migration des oiseaux entre l’Afrique et l’Europe.",
+    "La vallée était historiquement connue sous le nom de rivière Arnon.",
+    "La vallée propose plusieurs parcours aquatiques combinant randonnée, baignade et aventure."
+  ]
+},
       "eras": {
         "Copper_Age":[ "تشير الأدلة الأثرية إلى أن منطقة وادي الموجب كانت مأهولة منذ العصر النحاسي."],
         "Moabite": ["كان الوادي جزءًا من الحدود الشمالية لمملكة مؤاب وذُكر في مسلة ميشع."],
@@ -679,15 +836,35 @@
         "visit_time": "2-3 Hours",
         "unesco":"No"
       },
-      "fun_facts": [
-        "الاسم القديم لأم قيس هو جدارا.",
-        "ارتبطت جدارا بالحياة الثقافية والفكرية في العصور القديمة.",
-        "وصف الشاعر ميلاغروس جدارا بأنها تشبه أثينا، في إشارة إلى مكانتها الثقافية.",
-        "توجد في الموقع عبارة أرابيوس التذكارية التي تذكّر الزائر بفناء الحياة وضرورة الاستمتاع بها.",
-        "تمثل أم قيس طبقات تاريخية متعاقبة من المدينة اليونانية والرومانية إلى الآثار البيزنطية والقرية العثمانية.",
-        "يجمع الموقع بين الآثار والمناظر الطبيعية والتجارب السياحية المحلية.",
-        "اختيرت أم قيس من بين 136 قرية مرشحة ضمن مبادرة أفضل القرى السياحية لعام 2022."
-      ],
+"fun_facts": {
+  "العربية": [
+    "الاسم القديم لأم قيس هو جدارا.",
+    "ارتبطت جدارا بالحياة الثقافية والفكرية في العصور القديمة.",
+    "وصف الشاعر ميلاغروس جدارا بأنها تشبه أثينا، في إشارة إلى مكانتها الثقافية.",
+    "توجد في الموقع عبارة أرابيوس التذكارية التي تذكّر الزائر بفناء الحياة وضرورة الاستمتاع بها.",
+    "تمثل أم قيس طبقات تاريخية متعاقبة من المدينة اليونانية والرومانية إلى الآثار البيزنطية والقرية العثمانية.",
+    "يجمع الموقع بين الآثار والمناظر الطبيعية والتجارب السياحية المحلية.",
+    "اختيرت أم قيس من بين 136 قرية مرشحة ضمن مبادرة أفضل القرى السياحية لعام 2022."
+  ],
+  "English": [
+    "The ancient name of Umm Qays was Gadara.",
+    "Gadara was associated with cultural and intellectual life in antiquity.",
+    "The poet Meleager described Gadara as resembling Athens, highlighting its cultural importance.",
+    "The site contains a commemorative inscription by Arabius reminding visitors of the transience of life and the importance of enjoying it.",
+    "Umm Qays represents successive historical layers, from the Greek and Roman city to Byzantine remains and the Ottoman village.",
+    "The site combines archaeological remains, natural landscapes, and local tourism experiences.",
+    "Umm Qays was selected from among 136 villages nominated for the Best Tourism Villages initiative in 2022."
+  ],
+  "Français": [
+    "L’ancien nom d’Umm Qays était Gadara.",
+    "Gadara était associée à la vie culturelle et intellectuelle de l’Antiquité.",
+    "Le poète Méléagre décrivait Gadara comme ressemblant à Athènes, soulignant ainsi son importance culturelle.",
+    "Le site possède une inscription commémorative d’Arabios rappelant aux visiteurs le caractère éphémère de la vie et l’importance d’en profiter.",
+    "Umm Qays présente plusieurs couches historiques, de la ville grecque et romaine aux vestiges byzantins et au village ottoman.",
+    "Le site combine vestiges archéologiques, paysages naturels et expériences touristiques locales.",
+    "Umm Qays a été sélectionnée parmi 136 villages candidats à l’initiative des Meilleurs Villages Touristiques en 2022."
+  ]
+},
       "eras": {
         "Greek": ["ازدهرت جدارا ضمن البيئة الثقافية اليونانية وارتبطت بالحياة الأدبية والفكرية."],
         "Roman": ["أصبحت جدارا إحدى مدن الديكابولس وشهدت تطورًا عمرانيًا وثقافيًا كبيرًا مع إنشاء الشوارع والمسارح والحمامات والمنشآت العامة."],

@@ -289,8 +289,8 @@ class RAWI:
         return audio_file
 
     # ---------------- Generate Fun Fact ----------------
-    def generate_fun_fact(self, detected_class):
-        fun_facts = self.facts[detected_class]["fun_facts"]
+    def generate_fun_fact(self, detected_class,language):
+        fun_facts = self.facts[detected_class]["fun_facts"][language]
         return random.choice(fun_facts)           
 
     # ---------------- Rewrite Question ----------------
@@ -530,7 +530,7 @@ class RAWI:
         )
 
         # Generate Fun Fact
-        fun_fact = self.generate_fun_fact(detected_class)
+        fun_fact = self.generate_fun_fact(detected_class,language)
 
         # Generate audio narration
         audio = self.generate_audio(story, language)
