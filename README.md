@@ -134,7 +134,8 @@ The normalized confusion matrix shows the classification behavior
 across the 11 landmark classes and highlights the main confusion
 patterns and missed detections.
 
-![YOLO11m Confusion Matrix](path/to/confusion_matrix_normalized.png)
+![YOLO11m Confusion Matrix](evaluation/confusion_matrix_normalized.png)
+
 ### Story Generation
 
 Rawi generates tourism stories based on verified landmark facts.
