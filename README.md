@@ -1,414 +1,624 @@
-# Rawi AI
+# Rawi AI - The Jordanian Digital Storyteller
 
-AI-powered digital storyteller for exploring Jordanian landmarks.
+**AI-powered smart tourist guide for exploring Jordanian landmarks.**
+
+Rawi AI is an AI-powered tourism application designed to help visitors discover and explore Jordanian landmarks through computer vision, generative AI, Retrieval-Augmented Generation (RAG), multilingual support, and text-to-speech.
+
+The system identifies a landmark from an input image, provides an AI-generated tourism story, presents factual visitor information, and allows users to ask questions through Rawi Chat.
+
+---
 
 ## Project Overview
 
-Rawi AI is an AI-powered tourism project designed to help users discover and explore Jordanian landmarks through:
+Rawi AI integrates multiple AI technologies into a single tourism-oriented application:
 
-* Image recognition
+* Image recognition using YOLO11m
 * AI-generated tourism stories
-* Multilingual support
+* Multilingual support in Arabic, English, and French
 * Retrieval-Augmented Generation (RAG)
-* Conversational query rewriting
+* Conversational question answering
+* Query rewriting
 * Text-to-speech (TTS)
+* Interactive maps and landmark locations
 * Landmark facts and visitor information
-* Interactive maps and tourism information
+* Hybrid story generation using cached and dynamically generated stories
 
-The system identifies a Jordanian landmark from an input image and provides an interactive tourism experience based on the available knowledge and verified landmark facts.
+The system is designed to provide visitors with an interactive digital guide that combines landmark recognition, factual information, contextual storytelling, and conversational assistance.
 
-## Main System Flow
+---
+
+## Supported Jordanian Landmarks
+
+Rawi AI currently recognizes 11 Jordanian landmarks:
+
+1. Ajloun Castle
+2. Al-Maghtas
+3. Dead Sea
+4. Jerash
+5. Karak Castle
+6. Petra
+7. Qasr Amra
+8. Umm Al-Jimal
+9. Umm Qais
+10. Wadi Mujib
+11. Wadi Rum
+
+---
+
+## System Workflow
 
 ```text
-Input Image
-     ↓
+User
+  |
+  v
+Upload / Capture Image
+  |
+  v
 YOLO11m Landmark Detection
-     ↓
-Detected Jordanian Landmark
-     ↓
-┌───────────────────────────────┐
-│                               │
-│  Story Generation             │
-│  Hybrid Story Cache           │
-│                               │
-│  Rawi Chat                    │
-│  Query Rewriting → RAG → LLM  │
-│                               │
-└───────────────────────────────┘
-     ↓
-Story / Answer / TTS / Facts / Map
+  |
+  v
+Detected Landmark
+  |
+  +-------------------------+
+  |                         |
+  v                         v
+Landmark Information    Story Generation
+                              |
+                        +-----+-----+
+                        |           |
+                        v           v
+                     Cache      GPT-OSS 120B
+  |                         |
+  +------------+------------+
+               |
+               v
+          Result Page
+               |
+       +-------+-------+-------+
+       |               |       |
+       v               v       v
+     Story           Facts    Map
+       |
+       v
+      TTS
+       |
+       v
+    Audio Guide
+
+
+Rawi Chat
+    |
+    v
+User Question
+    |
+    v
+Query Rewriting
+    |
+    v
+FAISS Retrieval
+    |
+    v
+Retrieved Context
+    |
+    v
+GPT-OSS 20B
+    |
+    v
+Generated Answer
 ```
 
-aset Split
+---
+
+## Object Detection
+
+Rawi AI uses a YOLO11m object detection model to identify Jordanian landmarks from input images.
+
+The trained model contains:
+
+* **20,038,513 parameters**
+* **67.8 GFLOPs**
+* **50 training epochs**
+* **Tesla T4 GPU**
+* Approximately **5.27 hours** of training time
+
+The model detects the landmark present in the input image and returns the corresponding landmark class and detection confidence.
+
+---
+
+## Dataset
+
+The Rawi AI object detection dataset contains **14,494 images** and **38,186 object instances** across 11 Jordanian landmark classes.
 
 | Split      |     Images | Object Instances |
 | ---------- | ---------: | ---------------: |
-| Train      |     10,787 |           31,253 |
-| Validation |        739 |              770 |
-| Test       |        471 |              482 |
-| **Total**  | **11,997** |       **32,505** |
+| Train      |     12,990 |           36,682 |
+| Validation |        941 |              941 |
+| Test       |        563 |              563 |
+| **Total**  | **14,494** |       **38,186** |
 
-The dataset contains 11 landmark classes:
+### Dataset Preprocessing
 
-* Ajloun Castle
-* Al-Maghtas
-* Dead Sea
-* Jerash
-* Karak Castle
-* Petra
-* Qasr Amra
-* Umm Al-Jimal
-* Umm Qais
-* Wadi Mujib
-* Wadi Rum
+The dataset was prepared using the following preprocessing steps:
 
-### Preprocessing
+* Auto-Orient: Applied
+* Resize: Stretch to 512 × 512
+* Grayscale: Applied
 
-The dataset was preprocessed using Roboflow.
+### Data Augmentation
 
-* **Auto-Orient:** Applied
-* **Resize:** Stretch to 512×512
-* **Grayscale:** Applied
+The training dataset includes:
 
-### Augmentations
+* 3 outputs per training example
+* 90° clockwise and counter-clockwise rotation
+* Crop with 0% minimum zoom and 20% maximum zoom
+* Hue adjustment from -15° to +15°
+* Exposure adjustment from -10% to +10%
+* Blur up to 2.5 px
+* Noise up to 0.1% of pixels
+* Mosaic augmentation
 
-* **Outputs per training example:** 3
-* **90° Rotate:** Clockwise, Counter-Clockwise
-* **Crop:** 0% Minimum Zoom, 20% Maximum Zoom
-* **Hue:** Between -15° and +15°
-* **Exposure:** Between -10% and +10%
-* **Blur:** Up to 2.5px
-* **Noise:** Up to 0.1% of pixels
-* **Mosaic:** Applied
+Bounding-box augmentations include:
 
-### Bounding Box Augmentations
+* 90° rotation
+* Exposure adjustment
+* Blur
+* Noise
 
-* **90° Rotate:** Clockwise, Counter-Clockwise
-* **Exposure:** Between -10% and +10%
-* **Blur:** Up to 2.5px
-* **Noise:** Up to 0.1% of pixels
+### Dataset Access
 
-## AI Components
+[Access the Rawi AI Dataset](https://drive.google.com/drive/folders/1S6GLnbYDp-BcjjlVQ6u5d5s5VXLlDUgT?usp=sharing)
 
-### Object Detection
-
-Rawi uses a YOLO11m object detection model to identify Jordanian landmarks from input images.
-
-The trained m### Dataset
-
-The Rawi AI object detection dataset contains **11,997 images** across **11 Jordanian landmarks**.
-
-[📂 Access the Dataset](https://drive.google.com/drive/folders/1wJkB3o_Oi7vyjOb9TwWgVUlEW7WsPMEd?usp=sharing)
-
+---
 
 ## Model Evaluation
 
-The final YOLO11m model was evaluated on a validation set of 941 images containing 941 object instances.
+The final YOLO11m model was evaluated on a validation set containing **941 images and 941 object instances**.
 
-| Metric    | Score |
-| --------- | ----: |
-| Precision | 97.9% |
-| Recall    | 96.1% |
-| mAP@50    | 98.7% |
-| mAP@50-95 | 98.5% |
+| Metric    |     Score |
+| --------- | --------: |
+| Precision | **98.1%** |
+| Recall    | **96.4%** |
+| mAP@50    | **98.7%** |
+| mAP@50-95 | **98.6%** |
 
-### Per-Class mAP@50
+### Per-Class Performance
 
-| Landmark      | mAP@50 |
-| ------------- | -----: |
-| Ajloun Castle |  98.4% |
-| Al-Maghtas    |  99.4% |
-| Dead Sea      |  99.5% |
-| Jerash        |  99.5% |
-| Karak Castle  |  98.1% |
-| Petra         |  99.5% |
-| Qasr Amra     |  99.3% |
-| Umm Al-Jimal  |  99.3% |
-| Umm Qais      |  95.7% |
-| Wadi Mujib    |  97.9% |
-| Wadi Rum      |  99.4% |
+| Landmark      | Precision | Recall | mAP@50 | mAP@50-95 |
+| ------------- | --------: | -----: | -----: | --------: |
+| Ajloun Castle |     94.6% |  96.3% |  98.4% |     98.1% |
+| Al-Maghtas    |     98.9% |  95.7% |  99.4% |     99.2% |
+| Dead Sea      |     98.2% | 100.0% |  99.5% |     99.5% |
+| Jerash        |     98.7% |  99.2% |  99.5% |     99.0% |
+| Karak Castle  |     98.2% |  94.0% |  98.1% |     98.1% |
+| Petra         |    100.0% |  97.1% |  99.5% |     99.5% |
+| Qasr Amra     |     97.7% |  97.9% |  99.3% |     98.5% |
+| Umm Al-Jimal  |     99.9% |  96.9% |  99.2% |     99.2% |
+| Umm Qais      |     97.2% |  89.5% |  95.8% |     95.8% |
+| Wadi Mujib    |     98.8% |  94.3% |  98.0% |     98.0% |
+| Wadi Rum      |     96.4% |  99.1% |  99.4% |     99.4% |
+
+> Note: The reported metrics are validation results. The test set contains 563 images and has not been used for the metrics reported above.
 
 ### Confusion Matrix
 
-The normalized confusion matrix shows the detection behavior across the 11 landmark classes and highlights the main confusion patterns and missed detections.
+The normalized confusion matrix presents the detection behavior across the 11 landmark classes and highlights classification errors and missed detections.
 
 ![YOLO11m Confusion Matrix](evaluation/confusion_matrix_normalized.png)
 
+---
 
-### Story Generation
+## AI Story Generation
 
-Rawi generates tourism stories based on verified landmark facts.
+After detecting a landmark, Rawi AI generates a tourism-oriented story describing the location.
+
+The story generation system uses:
+
+**`openai/gpt-oss-120b`**
 
 Stories are available in:
 
-* Arabic
 * English
+* Arabic
 * French
 
-Three story lengths are supported:
+### Story Lengths
 
-* Short: 70–80 words
-* Medium: 110–130 words
-* Long: 160–190 words
+| Length | Target        |
+| ------ | ------------- |
+| Short  | 70-80 words   |
+| Medium | 110-130 words |
+| Long   | 160-190 words |
 
-The story generation prompt is stored in:
+The story-generation prompts are designed to produce:
 
-```text
-prompts/generate_story_facts.md
-```
+* Natural tourism narration
+* Factual landmark information
+* Text-to-speech-friendly content
+* Language-specific output
+* No unsupported facts
+* No unnecessary speculation
 
-### Hybrid Story Cache
+---
 
-To reduce repeated LLM usage and improve reliability during demonstrations and exhibitions, Rawi uses a hybrid story caching system.
+## Hybrid Story Generation
 
-The system follows this flow:
+Rawi AI uses a hybrid approach to improve response speed and reliability.
 
-```text
-Story Request
-     ↓
-Check Story Cache
-     ↓
-Story Found?
-   ↙       ↘
- Yes        No
- ↓          ↓
-Return     Generate
-Cached     with LLM
-Story        ↓
-             Save to Cache
-                ↓
-             Return Story
-```
-
-All combinations of the supported landmarks, languages, and story lengths can be pre-generated and stored in:
+Pre-generated stories are stored in:
 
 ```text
 stories_cache.json
 ```
 
-The current cache contains:
+The cache contains:
 
 ```text
-11 landmarks × 3 languages × 3 lengths = 99 stories
+11 landmarks
+× 3 languages
+× 3 story lengths
+= 99 pre-generated stories
 ```
 
-The pre-generated stories use:
+When a matching story is available, Rawi AI can use the cached version instead of generating a new response.
 
-```text
-openai/gpt-oss-120b
-```
+If a suitable cached story is unavailable, the system can generate a new story dynamically.
 
-If a requested story is not available in the cache, Rawi can dynamically generate it and save the result for future requests.
+---
 
-### RAG Question Answering
+## Rawi Chat
 
-Rawi Chat uses a Retrieval-Augmented Generation (RAG) system to answer questions about the detected landmark.
+Rawi Chat allows users to ask questions about Jordanian landmarks using natural language.
 
-The pipeline is:
+The chatbot uses a Retrieval-Augmented Generation architecture.
+
+### RAG Pipeline
 
 ```text
 User Question
-     ↓
+      |
+      v
 Query Rewriting
-     ↓
+      |
+      v
 FAISS Retrieval
-     ↓
+      |
+      v
 Relevant Landmark Context
-     ↓
+      |
+      v
 Answer Generation
-     ↓
+      |
+      v
 Final Answer
 ```
 
-The RAG knowledge base is stored in the `rag_data/` directory using pre-built FAISS indexes and corresponding chunk files.
+The RAG system uses:
 
-The system uses multilingual embeddings to retrieve relevant information for the user's question.
+* FAISS for vector retrieval
+* `intfloat/multilingual-e5-base` for embeddings
+* `openai/gpt-oss-20b` for answer generation
 
-### Query Rewriting
+The knowledge base is organized into landmark-specific information including:
 
-Rawi can rewrite conversational questions into standalone questions before retrieving information.
+* Overview
+* History
+* Facts
+* Landmarks
+* Landmark Details
+* Tourism information
+
+The current RAG knowledge base contains **420 indexed chunks** covering the supported landmarks.
+
+---
+
+## Query Rewriting
+
+Before retrieval, the user's question is processed through a query-rewriting stage.
+
+This transforms conversational questions into retrieval-friendly queries and helps maintain context across follow-up questions.
 
 For example:
 
 ```text
-"When was it built?"
+User:
+What about its history?
+
+        |
+        v
+
+Query Rewriting
+
+        |
+        v
+
+Retrieval query related to
+the history of the current landmark
 ```
 
-can be rewritten into a complete question referring to the currently detected landmark.
+This approach helps the retrieval system handle conversational references such as pronouns and follow-up questions.
 
-The query rewriting prompt is stored in:
+---
 
-```text
-prompts/query_rewriting.md
-```
+## Retrieval-Augmented Generation
 
-### Answer Generation
+The RAG system retrieves relevant information from the project's local knowledge base before generating an answer.
 
-After retrieving the relevant information, Rawi generates the final answer using the retrieved context.
+This allows Rawi Chat to ground its responses in the project's curated tourism data.
 
-The answer generation prompt is stored in:
+The answer-generation prompt instructs the model to:
 
-```text
-prompts/answer_generation.md
-```
+* Use the retrieved context
+* Answer in the requested language
+* Avoid unsupported information
+* Avoid guessing
+* Avoid inventing facts
+* Return a fallback response when sufficient information is unavailable
 
-The answer generation system is designed to rely on the retrieved knowledge rather than introducing unsupported information.
+---
 
-The current chat model is:
+## Multilingual Support
 
-```text
-openai/gpt-oss-20b
-```
+Rawi AI supports three languages:
 
-### Text-to-Speech
+| Language | Support |
+| -------- | :-----: |
+| English  |   Yes   |
+| Arabic   |   Yes   |
+| French   |   Yes   |
 
-Generated stories and responses can be converted into speech using the project's TTS component.
-
-TTS supports the multilingual tourism experience provided by Rawi.
-
-## Landmark Facts
-
-Rawi maintains structured landmark information separately from the RAG knowledge base.
-
-The facts include information such as:
+The selected language affects:
 
 * Landmark names
-* Arabic, English, and French names
-* Welcome messages
-* Story facts
-* Location
+* AI-generated stories
+* Chat responses
+* Information labels
+* Text-to-speech output
+
+---
+
+## Text-to-Speech
+
+Rawi AI converts generated stories into audio using Text-to-Speech technology.
+
+This allows users to listen to landmark stories while exploring the application.
+
+The feature supports the project's goal of providing an interactive digital tourism-guide experience.
+
+---
+
+## Landmark Information and Maps
+
+After detecting a landmark, Rawi AI displays additional information such as:
+
+* Landmark description
+* Historical information
+* Construction or historical period
 * Governorate
-* Construction or establishment information
-* UNESCO information
-* Best visiting time
-* Recommended visit time
-* Historical eras
+* UNESCO information where applicable
+* Best time to visit
+* Suggested visit time
 * Fun facts
+* Historical eras
+* Geographic location
 
-These facts are used by the application for landmark information and story generation.
+An interactive map is also provided to display the landmark's location.
 
-## Prompt Files
+---
 
-The main prompts are organized separately under:
+## User Interface
 
-```text
-prompts/
+Rawi AI is implemented as a Streamlit web application.
 
-├── generate_story_facts.md
-├── query_rewriting.md
-└── answer_generation.md
-```
+The application provides three main experiences.
+
+### Home
+
+Users can:
+
+* Upload an image
+* Capture an image
+* Select the desired language
+* Start exploring a Jordanian landmark
+
+### Result
+
+After detection, users can access:
+
+* Detected landmark
+* Detection confidence
+* AI-generated story
+* Landmark facts
+* Location
+* Interactive map
+* Audio narration
+
+### Rawi Chat
+
+Users can ask questions about Jordanian landmarks and receive context-grounded answers through the RAG pipeline.
+
+---
+
+## Technologies Used
+
+| Component            | Technology                    |
+| -------------------- | ----------------------------- |
+| Web Application      | Streamlit                     |
+| Object Detection     | YOLO11m                       |
+| Deep Learning        | PyTorch                       |
+| Computer Vision      | Ultralytics                   |
+| Story Generation LLM | OpenAI GPT-OSS 120B           |
+| RAG LLM              | OpenAI GPT-OSS 20B            |
+| Vector Search        | FAISS                         |
+| Embeddings           | intfloat/multilingual-e5-base |
+| Text-to-Speech       | Edge TTS                      |
+| Maps                 | Folium                        |
+| Programming Language | Python                        |
+| Dataset Platform     | Roboflow                      |
+| Deployment           | Streamlit Cloud               |
+
+---
 
 ## Project Structure
 
 ```text
 Rawi/
-│
+|
 ├── app.py
+├── model_rawi.py
 ├── home_page.py
 ├── result_page.py
 ├── chat_page.py
-├── model_rawi.py
-├── rag.py
+├── chat_labels.py
 ├── info_labels.py
-│
+├── rag.py
+|
 ├── facts.json
 ├── stories_cache.json
+|
 ├── generate_all_stories.py
-│
+|
+├── best.pt
+|
 ├── prompts/
-│   ├── generate_story_facts.md
-│   ├── query_rewriting.md
-│   └── answer_generation.md
-│
+|   ├── generate_story_facts.md
+|   ├── query_rewriting.md
+|   └── answer_generation.md
+|
 ├── rag_data/
-│   ├── *.index
-│   └── *.pkl
-│
-└── best.pt
+|   ├── *.index
+|   └── *.pkl
+|
+├── evaluation/
+|   └── confusion_matrix_normalized.png
+|
+└── README.md
 ```
 
-## Story Pre-generation
+---
 
-The project includes a script for generating the complete story cache:
+## Configuration
+
+API credentials are stored outside the source code using environment variables.
+
+For example:
 
 ```text
-generate_all_stories.py
+GROQ_API_KEY=your_api_key
 ```
 
-The script checks the existing cache before generating a story. This allows generation to resume without regenerating stories that already exist.
+The API key should never be committed to GitHub.
 
-This is useful for handling API limits and avoiding unnecessary LLM usage.
+For local development, environment variables can be stored in a `.env` file.
 
-## AI Models
+---
 
-### Object Detection
+## Running the Project Locally
 
-```text
-YOLO11m
+Clone the repository:
+
+```bash
+git clone https://github.com/joodshatnawi/Rawi.git
 ```
 
-Used for detecting the 11 supported Jordanian landmarks.
+Move into the project directory:
 
-### Story Generation
-
-```text
-openai/gpt-oss-120b
+```bash
+cd Rawi
 ```
 
-Used for generating and pre-generating tourism stories.
+Create a virtual environment:
 
-### RAG Chat
-
-```text
-openai/gpt-oss-20b
+```bash
+python -m venv .venv
 ```
 
-Used for query rewriting and dynamic answer generation in Rawi Chat.
+Activate the environment on Windows:
 
-### Embeddings
-
-```text
-intfloat/multilingual-e5-base
+```bash
+.venv\Scripts\activate
 ```
 
-Used for multilingual semantic retrieval in the RAG system.
+Install the required dependencies:
 
-## Multilingual Support
+```bash
+pip install -r requirements.txt
+```
 
-Rawi supports three languages:
+Run the Streamlit application:
 
-* Arabic
-* English
-* French
+```bash
+streamlit run app.py
+```
 
-The selected language affects the generated stories, landmark information, and conversational interaction.
+---
 
-## Project Status
+## Deployment
 
-Rawi AI is an actively developed project for 2026.
+Rawi AI is deployed as a Streamlit web application.
 
-The current version includes:
+### Live Demo
 
-* YOLO11m landmark detection
-* 11 Jordanian landmark classes
-* Multilingual tourism stories
-* 99 pre-generated story combinations
-* Hybrid story caching
-* Dynamic story generation fallback
-* RAG-based question answering
-* Conversational query rewriting
-* Multilingual embeddings
-* Text-to-speech
-* Landmark facts and visitor information
-* Interactive tourism experience
+https://rawi-ai.streamlit.app/
 
-### Future Improvements
+The deployed application provides the Rawi AI experience, including landmark recognition, AI storytelling, multilingual support, RAG-based conversational question answering, landmark information, maps, and text-to-speech.
+
+---
+
+## Project Objectives
+
+The main objectives of Rawi AI are to:
+
+1. Make information about Jordanian landmarks more accessible.
+2. Combine computer vision and generative AI in a practical tourism application.
+3. Provide multilingual tourism assistance.
+4. Deliver contextual and grounded answers through RAG.
+5. Provide an interactive alternative to traditional tourism information.
+6. Demonstrate the integration of modern AI technologies into a real-world application.
+
+---
+
+## Future Improvements
 
 Potential future improvements include:
 
-* Pre-generating and caching TTS audio for the 99 stories
-* Further RAG retrieval tuning
-* Additional Jordanian landmarks
-* Further UI and interaction improvements
-* Deployment and production optimization
+* Expanding the number of recognized Jordanian landmarks
+* Increasing dataset diversity with additional real-world images
+* Further evaluating the model on the unseen test set
+* Improving landmark-specific retrieval
+* Expanding the multilingual knowledge base
+* Adding richer tourism recommendations
+* Improving mobile usability
+* Adding additional accessibility features
+* Exploring advanced deployment and MLOps workflows
+
+---
+
+## Project Status
+
+**Current status: Functional prototype and deployed AI tourism application.**
+
+The current system supports landmark detection across 11 Jordanian landmarks, multilingual AI storytelling, RAG-based conversational question answering, landmark information, interactive maps, and text-to-speech.
+
+---
+
+## Project
+
+**Rawi AI - The Jordanian Digital Storyteller**
+
+Rawi AI combines:
+
+```text
+Computer Vision
+        +
+Generative AI
+        +
+Retrieval-Augmented Generation
+        +
+Multilingual NLP
+        +
+Text-to-Speech
+        +
+Interactive Web Application
+```
+
+The project demonstrates how modern AI technologies can be integrated into a practical application for exploring Jordanian cultural and historical landmarks.
