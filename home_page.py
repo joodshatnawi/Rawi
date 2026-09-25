@@ -1,38 +1,109 @@
+import base64
 import tempfile
 import streamlit as st
 from PIL import Image
+
+
+def get_image_base64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
 
 
 # ---------------- Home Page ----------------
 
 def page_home(rawi):
 
-    # ---------------- Title ----------------
-    st.title("Rawi — Your AI Guide to Jordan")
+    # ---------------- 3D CSS Styling ----------------
+    st.markdown("""
+        <style>
+        /* خلفية التطبيق */
+        .stApp {
+            background-color: #f4f2ef;
+        }
+
+        /* أزرار 3D ملونة بألوان الشعار */
+        .stButton > button {
+            background: linear-gradient(145deg, #c45b38, #8e3218) !important;
+            color: white !important;
+            font-weight: 600 !important;
+            border-radius: 12px !important;
+            border: none !important;
+            padding: 12px 24px !important;
+            box-shadow: 4px 4px 10px #d2cfc9, 
+                       -2px -2px 8px #ffffff !important;
+            transition: all 0.2s ease-in-out !important;
+            width: 100%;
+        }
+
+        /* تفاعل الأزرار عند التحويم والضغط */
+        .stButton > button:hover {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 14px #c2bcba, 
+                       -4px -4px 10px #ffffff !important;
+            background: linear-gradient(145deg, #d3643f, #9b371b) !important;
+        }
+        
+        .stButton > button:active {
+            transform: translateY(1px);
+            box-shadow: inset 2px 2px 5px #5e2110, 
+                        inset -2px -2px 5px #c45b38 !important;
+        }
+
+        /* تأثير Soft 3D غاطس لخيارات الراديو والقوائم المنسدلة */
+        div[data-baseweb="select"] > div, div[role="radiogroup"] {
+            background: #f4f2ef !important;
+            border-radius: 12px !important;
+            box-shadow: inset 3px 3px 6px #d2cfc9, inset -3px -3px 6px #ffffff !important;
+            border: none !important;
+            padding: 6px !important;
+        }
+
+        /* تحسين نصوص العناوين */
+        h1, h2, h3 {
+            color: #2b231f !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    # ---------------- Logo & Title ----------------
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        logo_base64 = get_image_base64("rawi_logo.svg.png")
+        
+        st.markdown(
+            f"""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="data:image/png;base64,{logo_base64}" width="210" style="display: block; margin: 0 auto 2px auto; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.15));">
+                <h2 style="margin: 0; font-weight: 600; color: #8e3218;">
+                    Your AI Guide to Jordan
+                </h2>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
     st.divider()
 
-
-    # ---------------- Image Source  ----------------
+    # ---------------- Image Source Selection ----------------
     st.markdown("### Discover a Landmark")
+
     image_source = st.radio(
         "Choose how you want to provide the image:",
         ["Upload Image", "Take a Photo"],
         horizontal=True
     )
-    # ---------------- Upload Image ----------------
 
+    # ---------------- Upload / Camera ----------------
     upload_data = None
 
     if image_source == "Upload Image":
-
         upload_data = st.file_uploader(
             "Choose an image:",
             type=["jpg", "jpeg", "png", "webp"]
         )
-    # ---------------- Take Photo ----------------
-    
     else:
-
         upload_data = st.camera_input(
             "Take a photo of the landmark"
         )
@@ -44,34 +115,36 @@ def page_home(rawi):
 
         # ---------------- Preview ----------------
         img = Image.open(upload_data)
-
         st.image(
             img,
             caption="Your Landmark",
             width="stretch"
         )
 
+        st.write("") # مسافة بسيطة أنيقة
 
-        # ---------------- Select Language ----------------
-        selected_language = st.selectbox(
-            "Choose Language",
-            ["العربية", "English", "Français"]
-        )
+        # ---------------- Preferences ----------------
+        col_lang, col_len = st.columns(2)
 
-        # ---------------- Story Length ----------------
-        story_length = st.selectbox(
-            " Story Length",
-            ["Short", "Medium", "Long"]
-        )
+        with col_lang:
+            selected_language = st.selectbox(
+                "Choose Language",
+                ["العربية", "English", "Français"]
+            )
+
+        with col_len:
+            story_length = st.selectbox(
+                "Story Length",
+                ["Short", "Medium", "Long"]
+            )
 
         st.divider()
 
         # ---------------- Start Tour ----------------
-        if st.button(" Start My  Tour"):
+        if st.button("Start My Tour"):
 
             with st.spinner("Rawi is identifying the landmark..."):
 
-                # Save image as temporary JPG
                 with tempfile.NamedTemporaryFile(
                     delete=False,
                     suffix=".jpg"
