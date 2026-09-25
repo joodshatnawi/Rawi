@@ -39,11 +39,7 @@ Detected Jordanian Landmark
 Story / Answer / TTS / Facts / Map
 ```
 
-### Dataset
-
-The Rawi AI object detection dataset contains **11,997 images** across **11 Jordanian landmarks**.
-
-### Dataset Split
+aset Split
 
 | Split      |     Images | Object Instances |
 | ---------- | ---------: | ---------------: |
@@ -98,43 +94,46 @@ The dataset was preprocessed using Roboflow.
 
 Rawi uses a YOLO11m object detection model to identify Jordanian landmarks from input images.
 
-The trained model supports 11 landmark classes and provides the detected landmark and confidence score to the rest of the system.
+The trained m### Dataset
+
+The Rawi AI object detection dataset contains **11,997 images** across **11 Jordanian landmarks**.
+
+[📂 Access the Dataset](https://drive.google.com/drive/folders/1wJkB3o_Oi7vyjOb9TwWgVUlEW7WsPMEd?usp=sharing)
+
 
 ## Model Evaluation
 
-The final YOLO11m model was evaluated on a validation set of 750 images
-containing 750 object instances.
+The final YOLO11m model was evaluated on a validation set of 941 images containing 941 object instances.
 
-| Metric | Score |
-|---|---:|
-| Precision | 92.7% |
-| Recall | 90.8% |
-| mAP@50 | 96.5% |
-| mAP@50-95 | 96.3% |
+| Metric    | Score |
+| --------- | ----: |
+| Precision | 97.9% |
+| Recall    | 96.1% |
+| mAP@50    | 98.7% |
+| mAP@50-95 | 98.5% |
 
 ### Per-Class mAP@50
 
-| Landmark | mAP@50 |
-|---|---:|
-| Ajloun Castle | 92.4% |
-| Al-Maghtas | 96.6% |
-| Dead Sea | 99.0% |
-| Jerash | 97.7% |
-| Karak Castle | 95.0% |
-| Petra | 98.6% |
-| Qasr Amra | 96.6% |
-| Umm Al-Jimal | 96.2% |
-| Umm Qais | 93.7% |
-| Wadi Mujib | 96.0% |
-| Wadi Rum | 99.1% |
+| Landmark      | mAP@50 |
+| ------------- | -----: |
+| Ajloun Castle |  98.4% |
+| Al-Maghtas    |  99.4% |
+| Dead Sea      |  99.5% |
+| Jerash        |  99.5% |
+| Karak Castle  |  98.1% |
+| Petra         |  99.5% |
+| Qasr Amra     |  99.3% |
+| Umm Al-Jimal  |  99.3% |
+| Umm Qais      |  95.7% |
+| Wadi Mujib    |  97.9% |
+| Wadi Rum      |  99.4% |
 
 ### Confusion Matrix
 
-The normalized confusion matrix shows the classification behavior
-across the 11 landmark classes and highlights the main confusion
-patterns and missed detections.
+The normalized confusion matrix shows the detection behavior across the 11 landmark classes and highlights the main confusion patterns and missed detections.
 
 ![YOLO11m Confusion Matrix](evaluation/confusion_matrix_normalized.png)
+
 
 ### Story Generation
 
