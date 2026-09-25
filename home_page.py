@@ -123,7 +123,22 @@ def page_home(rawi):
 
         st.write("") # مسافة بسيطة أنيقة
 
-        # ---------------- Preferences ----------------
+        # ---------------- Preferences Section Header ----------------
+        st.markdown(
+            """
+            <div style="margin-top: 10px; margin-bottom: 12px;">
+                <h4 style="margin: 0; color: #8e3218; font-weight: 600;">
+                    Customize Your Tour
+                </h4>
+                <p style="margin: 0; font-size: 0.88rem; color: #666;">
+                    Select your preferred language and story length
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        # ---------------- Preferences Inputs ----------------
         col_lang, col_len = st.columns(2)
 
         with col_lang:
