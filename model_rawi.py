@@ -15,6 +15,7 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 facts_path = os.path.join(BASE_DIR, "data","facts.json")
 PROMPT_DIR = os.path.join(BASE_DIR, "prompts")
+KNOWLEDGE_PATH = os.path.join(BASE_DIR,"data","knowledge.json")
 STORY_PROMPT_PATH = os.path.join(PROMPT_DIR, "story_generation.md")
 QUERY_REWRITING_PROMPT_PATH=os.path.join(PROMPT_DIR,"query_rewriting.md")
 ANSWER_GENERATION_PROMPT_PATH=os.path.join(PROMPT_DIR,"answer_generation.md")
@@ -23,6 +24,7 @@ class RAWI:
     def __init__(self):
         self.model=self.load_model()
         self.facts=self.load_facts()
+        self.knowledge=self.load_knowledge()
         self.client=self.load_client()
         self.story_prompt = self.load_story_prompt()
         
@@ -39,6 +41,16 @@ class RAWI:
         with open(facts_path,"r",encoding="utf-8")as f:
             return json.load(f)
 
+    # ---------------- Load Knowledge ----------------
+    @staticmethod
+    @st.cache_data
+    def load_knowledge():
+        with open(
+            KNOWLEDGE_PATH,
+            "r",
+            encoding="utf-8"
+        ) as f:
+            return json.load(f)
         # ---------------- Load Story Prompt ----------------
     @staticmethod
     def load_story_prompt():
@@ -318,6 +330,38 @@ class RAWI:
                 f"المستخدم: {item['question']}\n"
                 f"المساعد: {item['answer']}\n\n"
             )
+        # ---------------- Related Entities ----------------
+        
+        knowledge_key = {
+        "Petra": "petra",
+        "Jerash": "jerash",
+        "Ajloun_Castle": "ajloun_castle",
+        "wadi_Rum": "wadi_rum",
+        "Dead_Sea": "dead_sea",
+        "Um_AL_Jimal": "um_al_jimal",
+        "Qasr_Amra": "qasr_amra",
+        "Karak_Castle": "karak_castle",
+        "Al_Maghtas": "al_maghtas",
+        "Wadi_Mujib": "wadi_mujib",
+        "Um_Qais": "umm_qays"
+    }.get(detected_class)
+
+        landmark_data = self.knowledge.get(
+            knowledge_key,
+            {}
+        )
+        related_entities = landmark_data.get(
+            "content",
+            {}
+        ).get(
+            "Landmarks",
+            []
+        )
+
+        related_entities_text = "\n".join(
+            f"- {entity}"
+            for entity in related_entities
+        )
 
         with open(
             QUERY_REWRITING_PROMPT_PATH,
@@ -335,10 +379,15 @@ class RAWI:
 
     {detected_class}
 
+    Known Related Entities:
+
+    {related_entities_text}
+
     Current User Question:
 
     {question}
     """
+        
         completion = self.client.chat.completions.create(
             model="openai/gpt-oss-20b",
             messages=[
@@ -356,7 +405,10 @@ class RAWI:
             reasoning_effort="low"
         )
 
+
         rewritten_question = completion.choices[0].message.content
+
+        
         if rewritten_question:
             rewritten_question = rewritten_question.strip()
 
@@ -372,6 +424,7 @@ class RAWI:
                 question,
                 k=k
             )    
+
 
     # ---------------- Generate Answer ----------------
     def generate_answer(self, detected_class, language, question, history=None):
@@ -391,19 +444,37 @@ class RAWI:
             )
         needs_rewrite = False
 
-        if history:
-            follow_up_words = [
-                "هو", "هي", "هذا", "هذه", "ذلك", "تلك",
-                "له", "لها", "هناك",
-                "شو", "وشو", "وين", "كيف", "ليش", "متى", "مين",
-                "it", "he", "she", "they", "this", "that", "its",
-                "what about", "where is", "how", "why", "when"
-            ]
+        follow_up_words = [
+        "هذا", "هذه", "ذلك", "تلك", "هناك",
+        "شو", "وشو", "وين", "كيف", "ليش", "متى", "مين",
+        "it", "he", "she", "they", "this", "that", "its",
+        "what about", "where is", "how", "why", "when"
+    ]
 
-            needs_rewrite = any(
-                word in question.lower()
-                for word in follow_up_words
-            )
+        follow_up_phrases = [
+            "طيب",
+            "وماذا عن",
+            "ماذا عن",
+            "وبالنسبة",
+            "هل عليه",
+            "عليه"
+        ]
+
+        if history:
+
+            question_lower = question.lower()
+
+            needs_rewrite = (
+                any(
+                    word in question_lower
+                    for word in follow_up_words
+                )
+                or any(
+                    phrase in question_lower
+                    for phrase in follow_up_phrases
+                )
+            ) 
+
 
         if needs_rewrite:
             rewritten_question = self.rewrite_question(
@@ -412,6 +483,7 @@ class RAWI:
                 question,
                 history
             )
+            
         else:
             rewritten_question = question
         
@@ -437,10 +509,11 @@ class RAWI:
                 return "Désolé, je n'ai pas suffisamment d'informations pour répondre."
 
         context = "\n\n".join(
-            f"- {chunk['text']}"
+            f"[Section: {chunk['section']} | "
+            f"Subsection: {chunk.get('subsection') or 'General'}]\n"
+            f"{chunk['text']}"
             for chunk in context_list
-        )
-
+)
         # ---------------- System Prompt ----------------
 
         with open(
@@ -486,7 +559,7 @@ class RAWI:
         answer = completion.choices[0].message.content
 
         if not answer:
-            return "عذرًا، لا أملك معلومات كافية للإجابة."
+            return "هذه المعلومات غير متوفرة حاليًا."
         answer = answer.strip()
         return answer
 
