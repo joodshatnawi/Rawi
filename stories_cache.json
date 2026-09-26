@@ -31,14 +31,14 @@
         "landmark": "Ajloun_Castle",
         "language": "العربية",
         "length": "Medium",
-        "story": "مرحبًا بك في قلعة عجلون! تقع هذه القلعة على أحد جبال محافظة عجلون شمال الأردن. بُنيت عام 1184م على يد عز الدين أسامة، أحد قادة صلاح الدين الأيوبي، لتُحافظ على شمال الأردن وتراقب طرق التجارة بين الشام ووادي الأردن. بفضل موقعها الاستراتيجي، توفر إطلالات واسعة على الجبال والوديان المحيطة. داخلها توجد أبراج دفاعية وممرات حجرية وغرف سكن ومستودعات للؤن، بالإضافة إلى آبار وخزانات لجمع مياه الأمطار. تعرضت لأضرار زلزالية ثم أُعيد ترميمها، وأجرى المماليك توسعات بعد العصر الأيوبي. كانت القلعة جزءًا من شبكة القلاع الإسلامية التي دافعت عن المنطقة في العصور الوسطى. كما ساهمت في التصدي للحملات الصليبية ومنع تقدمها نحو الداخل. تحيط بها غابات عجلون الخلابة، وتُعد اليوم من أبرز المعالم التاريخية والسياحية في المملكة. استمتع باستكشاف المزيد حولك.",
+        "story": "مرحبًا بك في قلعة عجلون! تقع هذه القلعة على أحد جبال محافظة عجلون شمال الأردن. بُنيت عام 1184م على يد عز الدين أسامة، أحد قادة صلاح الدين الأيوبي، لتُحافظ على شمال الأردن وتراقب طرق التجارة بين الشام ووادي الأردن. بفضل موقعها الاستراتيجي، توفر إطلالات واسعة على الجبال والوديان المحيطة. داخلها توجد أبراج دفاعية وممرات حجرية وغرف سكن ومستودعات للمؤن بالإضافة إلى آبار وخزانات لجمع مياه الأمطار. تعرضت لأضرار زلزالية ثم أُعيد ترميمها، وأجرى المماليك توسعات بعد العصر الأيوبي. كانت القلعة جزءًا من شبكة القلاع الإسلامية التي دافعت عن المنطقة في العصور الوسطى. كما ساهمت في التصدي للحملات الصليبية ومنع تقدمها نحو الداخل. تحيط بها غابات عجلون الخلابة، وتُعد اليوم من أبرز المعالم التاريخية والسياحية في المملكة. استمتع باستكشاف المزيد حولك.",
         "model": "openai/gpt-oss-120b"
     },
     "Ajloun_Castle_العربية_Long": {
         "landmark": "Ajloun_Castle",
         "language": "العربية",
         "length": "Long",
-        "story": "مرحبًا بك في قلعة عجلون! نحن الآن على قمة أحد جبال محافظة عجلون شمال الأردن، حيث ارتفع هذا الصرح في عام 1184م على يد عز الدين أسامة، أحد قادة صلاح الدين الأيوبي. بُنيت لتأمين شمال البلاد ومراقبة طرق التجارة والاتصال بين الشام ووادي الأردن، وكانت لها دور بارز في التصدي للحملات الصليبية ومنع تقدمها نحو الداخل. موقعها الاستراتيجي يمنحنا إطلالات واسعة على الجبال والوديان المحيطة، وتحيط بها غابات عجلون التي تُعد من أجمل المناطق الطبيعية في الأردن. داخل الجدران نجد أبراجًا دفاعية وممرات حجرية وغرفًا للسكن، بالإضافة إلى مستودعات لتخزين المؤن. لضمان استمرارية الحياة أثناء الحصار، وفرت القلعة آبارًا وخزانات لجمع مياه الأمطار. تعرضت أجزاء منها لأضرار زلزالية، ثم خضعت للترميم في فترات لاحقة، كما أجرى المماليك توسعات وإضافات بعد العصر الأيوبي. اليوم، تُعد هذه البنية جزءًا من شبكة القلاع الإسلامية التي دافعت عن المنطقة في العصور الوسطى، وتُعتبر من أبرز المعالم التاريخية والسياحية في المملكة. استمتع باكتشاف المزيد حول هذا الصرح العريق!",
+        "story": "مرحبًا بك في قلعة عجلون! نحن الآن على قمة أحد جبال محافظة عجلون شمال الأردن، حيث ارتفع هذا الصرح في عام 1184م على يد عز الدين أسامة، أحد قادة صلاح الدين الأيوبي. بُنيت لتأمين شمال البلاد ومراقبة طرق التجارة والاتصال بين الشام ووادي الأردن، وكان لها دور بارز في التصدي للحملات الصليبية ومنع تقدمها نحو الداخل. موقعها الاستراتيجي يمنحنا إطلالات واسعة على الجبال والوديان المحيطة، وتحيط بها غابات عجلون التي تُعد من أجمل المناطق الطبيعية في الأردن. داخل الجدران نجد أبراجًا دفاعية وممرات حجرية وغرفًا للسكن، بالإضافة إلى مستودعات لتخزين المؤن. لضمان استمرارية الحياة أثناء الحصار، وفرت القلعة آبارًا وخزانات لجمع مياه الأمطار. تعرضت أجزاء منها لأضرار زلزالية، ثم خضعت للترميم في فترات لاحقة، كما أجرى المماليك توسعات وإضافات بعد العصر الأيوبي. اليوم، تُعد هذه البنية جزءًا من شبكة القلاع الإسلامية التي دافعت عن المنطقة في العصور الوسطى، وتُعتبر من أبرز المعالم التاريخية والسياحية في المملكة. استمتع باكتشاف المزيد حول هذا الصرح العريق!",
         "model": "openai/gpt-oss-120b"
     },
     "Ajloun_Castle_Français_Short": {
@@ -53,13 +53,6 @@
         "language": "Français",
         "length": "Medium",
         "story": "Bienvenue au château d'Ajloun ! Perché sur une montagne de la province d’Ajloun, il a été érigé en 1184 par le chef musulman ‘Az‑d‑Dîn Osama, lieutenant de Saladin. Sa mission était de protéger le nord de la Jordanie. Le château a joué un rôle majeur contre les croisades, empêchant leur avancée. Il offre aujourd’hui des vues larges sur les montagnes et les vallées environnantes. On y trouve des tours défensives, des passages de pierre, des chambres d’habitation et des entrepôts. Des puits et des citernes recueillaient l’eau de pluie pour les sièges. Après des dommages sismiques, il a été restauré et agrandi par les Mamelouks. Entouré des forêts d’Ajloun, il est aujourd’hui l’un des sites historiques et touristiques les plus remarquables du Royaume. Continuez votre découverte.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Ajloun_Castle_Français_Long": {
-        "landmark": "Ajloun_Castle",
-        "language": "Français",
-        "length": "Long",
-        "story": "Bienvenue au château d'Ajloun !  \n\nPerché sur l’une des montagnes de la province d’Ajloun, au nord de la Jordanie, le château s’élève depuis 1184 m, construit par le chef musulman — Az‑d‑Dîn Osama, l’un des commandants de Saladin. Sa position stratégique offre une vue étendue sur les montagnes et les vallées environnantes, idéale pour surveiller les routes commerciales entre le Levant et la vallée du Jourdain.  \n\nLes murs abritent des tours défensives, des passages de pierre, des chambres d’habitation et des entrepôts de provisions. Des puits et des citernes recueillent l’eau de pluie, assurant la survie lors d’un siège. Le fort a joué un rôle majeur contre les campagnes croisées, freinant leur avancée vers l’intérieur.  \n\nAprès l’époque ayyoubide, les Mamelouks ont ajouté des extensions et des aménagements. Des secousses sismiques ont endommagé certaines parties, puis des restaurations sont intervenues. Le château faisait partie d’un réseau de forteresses islamiques protégeant la région au Moyen Âge.  \n\nEntouré des forêts d’Ajloun, parmi les plus belles zones naturelles de Jordanie, le site est aujourd’hui l’un des monuments historiques et touristiques les plus remarquables du royaume.  \n\nContinuez votre exploration et laissez‑vous surprendre par ce lieu unique.",
         "model": "openai/gpt-oss-120b"
     },
     "Al_Maghtas_English_Short": {
@@ -94,7 +87,7 @@
         "landmark": "Al_Maghtas",
         "language": "العربية",
         "length": "Medium",
-        "story": "أهلًا بك في المغطس، أحد أقدس المواقع المسيحية في العالم! نحن الآن على ضفة شرق نهر الأردن، شمال البحر الميت، حيث يُعرف هذا المكان ببيت عنيا عبر الأردن. وفقًا للتقاليد، هنا عَمَدَ يوحنا المعمدان السيد المسيح. الحفريات التي بدأت عام 1996 كشفت عن كنائس وأديرة وبرك معمودية من الفترات الرومانية والبيزنطية، بالإضافة إلى قنوات مائية استُخدمت في الطقوس. يعلو التلة التي تُسمى خرار أو تلة النبي إيليا. خلال العصر البيزنطي كان مركزًا مهمًا للحج، وتعرض للفيضانات والزلازل فأعيد بناءه مرات عدة. بعد اتفاقية السلام عام 1994 أزيلت الألغام، ورُقّمت للترميم، ثم أدرجته اليونسكو ضمن التراث العالمي عام 2015. كل عام يأتي آلاف الحجاج، خاصة في عيد الغطاس. استمتع باكتشاف المزيد حول هذا التاريخ العريق.",
+        "story": "أهلًا بك في المغطس، أحد أقدس المواقع المسيحية في العالم! نحن الآن على ضفة شرق نهر الأردن، شمال البحر الميت، حيث يُعرف هذا المكان ببيت عنيا عبر الأردن. وفقًا للتقاليد، هنا عَمَدَ يوحنا المعمدان السيد المسيح. الحفريات التي بدأت عام 1996 كشفت عن كنائس وأديرة وبرك معمودية من الفترات الرومانية والبيزنطية، بالإضافة إلى قنوات مائية استُخدمت في الطقوس. وتعلو الموقع تلة تُسمى خرار أو تلة النبي إيليا. خلال العصر البيزنطي كان مركزًا مهمًا للحج، وتعرض للفيضانات والزلازل فأعيد بناؤه مرات عدة. بعد اتفاقية السلام عام 1994 أزيلت الألغام، وتهيأ الموقع للترميم، ثم أدرجته اليونسكو ضمن التراث العالمي عام 2015. كل عام يأتي آلاف الحجاج، خاصة في عيد الغطاس. استمتع باكتشاف المزيد حول هذا التاريخ العريق.",
         "model": "openai/gpt-oss-120b"
     },
     "Al_Maghtas_العربية_Long": {
@@ -150,7 +143,7 @@
         "landmark": "Dead_Sea",
         "language": "العربية",
         "length": "Short",
-        "story": "أهلًا بك في أخفض بقعة على وجه الأرض! يقع بين الأردن وفلسطين، وهو أشهر معالم المنطقة. ينخفض أكثر من 430 مترًا تحت مستوى سطح البحر، ومياهه مالحة عشرة أضعاف البحار العادية، لذا يطفو الزوار بسهولة دون سباحة. طينه الأسود غني بالمغنيسيوم والبوتاسيوم والكالسيوم، تُستَخدم في العلاج والعناية بالبشرة منذ آلاف السنين. تحيط به جبال الأردن من الشرق، وتمنح منظرًا خلّابًا عند غروب الشمس. لا تعيش فيه أسماك في البحر الميت بسبب ملوحته العالية؛ استمر في استكشافه.",
+        "story": "أهلًا بك في أخفض بقعة على وجه الأرض! يقع بين الأردن وفلسطين، وهو أشهر معالم المنطقة. ينخفض أكثر من 430 مترًا تحت مستوى سطح البحر، ومياهه مالحة عشرة أضعاف البحار العادية، لذا يطفو الزوار بسهولة دون سباحة. طينه الأسود غني بالمغنيسيوم والبوتاسيوم والكالسيوم، وتُستَخدم هذه المعادن في العلاج والعناية بالبشرة منذ آلاف السنين. تحيط به جبال الأردن من الشرق، وتمنح منظرًا خلّابًا عند غروب الشمس. لا تعيش فيه أسماك في البحر الميت بسبب ملوحته العالية؛ استمر في استكشافه." ,
         "model": "openai/gpt-oss-120b"
     },
     "Dead_Sea_العربية_Medium": {
@@ -164,35 +157,7 @@
         "landmark": "Dead_Sea",
         "language": "العربية",
         "length": "Long",
-        "story": "أهلًا بك في أخفض بقعة على وجه الأرض! أمامك موقع يمتد بين الأردن وفلسطين، وهو من أشهر المعالم الطبيعية في المنطقة. هنا تنخفض السطح إلى أكثر من 430 مترًا تحت مستوى البحر، ما يجعله أخفض نقطة على الأرض. مياهه شديدة الملوحة، تصل إلى عشرة أضعاف ملوحة البحار العادية، لذا فإن كثافتها العالية تسمح لك بالطفو بسهولة دون الحاجة إلى السباحة. \n\nالطين الأسود الذي يغطي القاع غني بالمعادن الطبيعية، وتحتوي مياهه على مغنيسيوم وبوتاسيوم وكالسيوم، وهي معادن يُستفاد منها في العلاج والعناية بالبشرة. لهذا السبب يُعد الموقع وجهة سياحية واستشفائية بارزة، يستقبل زوارًا من جميع أنحاء العالم. \n\nمن الشرق تحيط به جبال الأردن، فتُضيف منظرًا خلّابًا خاصة عند غروب الشمس. لا توجد أسماك أو كائنات بحرية كبيرة هنا بسبب ارتفاع الملوحة، وهذا هو سبب تسميته. منذ آلاف السنين استُخدمت موارده في الطب والتجميل، وكان معروفًا لدى الحضارات القديمة. \n\nاستمتع بالمنظر، جرب الطفو، واكتشف فوائد المعادن؛ ثم واصل استكشاف هذا المكان الفريد.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Dead_Sea_Français_Short": {
-        "landmark": "Dead_Sea",
-        "language": "Français",
-        "length": "Short",
-        "story": "Bienvenue au point le plus bas de la Terre ! Vous êtes au Mer Morte, situé entre la Jordanie et la Palestine, pour être la plus basse surface terrestre, plus de 430 m sous le niveau de la mer. Son eau, dix fois plus salée que les mers ordinaires, vous fait flotter sans effort. Le boue noir riche en magnésium, potassium et calcium attire les curistes du monde entier. Admirez les montagnes jordaniennes à l’ouest au coucher du soleil. Continuez votre exploration.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Dead_Sea_Français_Medium": {
-        "landmark": "Dead_Sea",
-        "language": "Français",
-        "length": "Medium",
-        "story": "Bienvenue au point le plus bas de la Terre !\n\nVous vous tenez au bord du Mer Morte, partagé entre la Jordanie et la Palestine, l’un des sites naturels les plus célèbres de la région. Ce bassin se situe plus de 430 mètres sous le niveau de la mer, ce qui en fait le point le plus bas de la surface terrestre. Son eau, dix fois plus salée que les mers ordinaires, possède une densité telle que vous flottez sans effort, sans même nager. Le sable noir riche en minéraux, notamment magnésium, potassium et calcium, est réputé pour les soins de la peau et les traitements thérapeutiques. Entouré à l’est par les montagnes jordaniennes, le paysage devient particulièrement spectaculaire au coucher du soleil. Continuez votre exploration et laissez‑vous émerveiller.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Dead_Sea_Français_Long": {
-        "landmark": "Dead_Sea",
-        "language": "Français",
-        "length": "Long",
-        "story": "Bienvenue au point le plus bas de la Terre !  \n\nImaginez le paysage où le Jordan et la Palestine se rejoignent, où s’étend le célèbre Mer Morte, la plus basse surface de notre planète, plus de 430 m sous le niveau de la mer. L’air porte une odeur saline, et l’eau, dix fois plus salée que les mers ordinaires, possède une densité telle que chaque pas vous fait flotter sans effort, comme si vous étiez porté par un coussin invisible.  \n\nLe sable noir qui tapisse le rivage cache une boue riche en minéraux – magnésium, potassium, calcium – que les civilisations anciennes utilisaient déjà pour leurs soins et leurs remèdes. Aujourd’hui, les visiteurs du monde entier viennent ici non seulement pour la sensation unique de flotter, mais aussi pour profiter de ces propriétés thérapeutiques et de beauté.  \n\nÀ l’est, les montagnes jordaniennes encadrent le lac, offrant des panoramas spectaculaires, surtout lorsque le soleil se couche et colore le ciel. Aucun poisson ne survit dans ces eaux hyper-salées, d’où le nom qui rappelle son caractère exceptionnel.  \n\nLe Mer Morte reste une destination touristique et de bien‑être majeure en Jordanie, un lieu où la nature, la santé et la beauté se rencontrent. Continuez votre exploration, le spectacle ne fait que commencer.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Jerash_English_Short": {
-        "landmark": "Jerash",
-        "language": "English",
-        "length": "Short",
-        "story": "Welcome to the City of a Thousand Columns! Jerash lies in northern Jordan, about 48 km from Amman. It is one of the best‑preserved Roman cities, founded in times. Known as Graea, it was a Decapolis city. You see the oval forum, the Street of Columns with stone pillars, two Roman theatres, and the temples of Artemis and Zeus. Despite earthquakes, much remains intact, with Greek, Roman, Byzantine, Islamic layers. The annual Jerash Festival attracts visitors worldwide. Explore and enjoy!",
+        "story": "أهلًا بك في أخفض بقعة على وجه الأرض! أمامك موقع يمتد بين الأردن وفلسطين، وهو من أشهر المعالم الطبيعية في المنطقة. هنا ينخفض سطح البحر الميت إلى أكثر من 430 مترًا تحت مستوى سطح البحر، ما يجعله أخفض نقطة على الأرض. مياهه شديدة الملوحة، تصل إلى عشرة أضعاف ملوحة البحار العادية، لذا فإن كثافتها العالية تسمح لك بالطفو بسهولة دون الحاجة إلى السباحة. \n\nالطين الأسود الذي يغطي القاع غني بالمعادن الطبيعية، وتحتوي مياهه على مغنيسيوم وبوتاسيوم وكالسيوم، وهي معادن يُستفاد منها في العلاج والعناية بالبشرة. لهذا السبب يُعد الموقع وجهة سياحية واستشفائية بارزة، يستقبل زوارًا من جميع أنحاء العالم. \n\nمن الشرق تحيط به جبال الأردن، فتُضيف منظرًا خلّابًا خاصة عند غروب الشمس. لا توجد أسماك أو كائنات بحرية كبيرة هنا بسبب ارتفاع الملوحة، وهذا هو سبب تسميته. منذ آلاف السنين استُخدمت موارده في الطب والتجميل، وكان معروفًا لدى الحضارات القديمة. \n\nاستمتع بالمنظر، جرب الطفو، واكتشف فوائد المعادن؛ ثم واصل استكشاف هذا المكان الفريد.",        
         "model": "openai/gpt-oss-120b"
     },
     "Jerash_English_Medium": {
@@ -234,21 +199,7 @@
         "landmark": "Jerash",
         "language": "Français",
         "length": "Short",
-        "story": "Bienvenue dans la ville aux mille colonnes !  \nJerash se situe à environ 48 kilomètres au nord d’Amman. C’est l’une des villes romaines les mieux conservées au monde, appelée Gerasa. Vous voyez l’oval forum, la rue des Colonnes, deux théâtres, ainsi que les temples d’Artémis et de Zeus. Malgré quelques séismes, des parties restent intactes, reflétant les civilisations grecque, romaine, byzantine et islamique. Chaque été, le festival de Jerash attire des visiteurs du monde entier. Continuez votre découverte.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Jerash_Français_Medium": {
-        "landmark": "Jerash",
-        "language": "Français",
-        "length": "Medium",
-        "story": "Bienvenue dans la ville aux mille colonnes ! Jerash se situe à environ quarante‑huit kilomètres au nord d'Amman. C’est l’une des villes romaines les mieux conservées au monde, née dans les temps anciens et florissante sous les influences grecque et romaine, connue sous le nom de Graça. Vous vous trouvez devant la célèbre place ovale, l’une des plus belles places romaines, et la rue des Colonnes qui relie les principaux monuments avec ses colonnes de pierre. Le site comprend deux théâtres, le théâtre sud et le théâtre nord, ainsi que les temples d’Artémis et de Zeus. Malgré plusieurs séismes, de parties restent intactes, témoignant des successions grecque, romaine, byzantine et islamique. Aujourd’hui, Jerash accueille chaque année le festival de culture et d’arts, attirant des visiteurs du monde entier. Continuez votre exploration.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Jerash_Français_Long": {
-        "landmark": "Jerash",
-        "language": "Français",
-        "length": "Long",
-        "story": "Bienvenue dans la ville aux mille colonnes ! \n\nImaginez que vous arrivez à Jerash, à 48 kilomètres au nord d'Amman. Cette cité, l’une des meilleures villes romaines conservées au monde, a vu ses premières colonies naître dans les temps anciens et s’épanouir sous les influences grecque et romaine. Autrefois appelée Graça, elle faisait partie du pacte du Décapole romain. En vous promenant, le regard se porte d’abord sur la célèbre place ovale, l’une des plus belles places romaines du globe. Le Street des Colonnes relie les monuments majeurs, ses immenses piliers de pierre vous guident vers le théâtre sud puis le théâtre nord, deux amphithéâtres romains. Vous apercevez aussi les temples d’Artémis et de Zeus, témoins de la foi antique. Malgré plusieurs séismes qui ont touché quelques édifices, de larges parties restent intactes, montrant la succession des civilisations grecque, romaine, byzantine et islamique. Aujourd’hui, Jerash accueille chaque année le festival de la culture et des arts, attirant des visiteurs du monde entier, et demeure l’un des sites touristiques et archéologiques majeurs de Jordanie. Continuez votre exploration et laissez‑vous surprendre.",
+        "story": "Bienvenue dans la ville aux mille colonnes ! \nJerash se situe à environ 48 kilomètres au nord d’Amman. C’est l’une des villes romaines les mieux conservées au monde, appelée Gerasa. Vous voyez la place ovale, la rue des Colonnes, deux théâtres, ainsi que les temples d’Artémis et de Zeus. Malgré quelques séismes, des parties restent intactes, reflétant les civilisations grecque, romaine, byzantine et islamique. Chaque été, le festival de Jerash attire des visiteurs du monde entier. Continuez votre découverte.",
         "model": "openai/gpt-oss-120b"
     },
     "Karak_Castle_English_Short": {
@@ -258,13 +209,6 @@
         "story": "Welcome to Karak Castle! The fortress stands in Karak, about 120 km south of Amman. Built from 1139 to 1142 during the Crusader era, it crowns a high rocky outcrop, so its walls follow the uneven stone. A moat surrounds it north and south, crossed by a bridge to a broken entrance. Inside, an upper courtyard holds a church, olive and grape presses, bakeries and a Mamluk palace; the lower level houses a museum of Karak artifacts. Enjoy exploring the site.",
         "model": "openai/gpt-oss-120b"
     },
-    "Karak_Castle_English_Medium": {
-        "landmark": "Karak_Castle",
-        "language": "English",
-        "length": "Medium",
-        "story": "Welcome to Karak Castle! The fortress stands in the city of Karak, south Jordan, about 120 km from Amman. Its construction began in 1139 and finished in 1142 during the Crusader period. Built on a",
-        "model": "openai/gpt-oss-120b"
-    },
     "Karak_Castle_English_Long": {
         "landmark": "Karak_Castle",
         "language": "English",
@@ -272,18 +216,11 @@
         "story": "Welcome to Karak Castle! The fortress sits in the city of Karak, south Jordan, about 120 kilometers from Amman. Its construction began in 1139 and finished in 1142 during the Crusader period. Built on a high rocky outcrop, the walls follow the irregular shape of the stone. Deep dry ditches protect the north and south sides, and a bridge over the ditch leads to a broken entrance that is hard for attackers to breach. Inside, an upper courtyard holds a church, olive and grape presses, bakeries, and a Mamluk palace. Below, subterranean halls and rooms now house a museum displaying artifacts from Karak Governorate. Crusader builders used gray‑pink stone, while later Ayyubid and Mamluk additions employed limestone. Saladin reclaimed the castle after his 1187 victory at Hattin, and the Ayyubids and Mamluks later reinforced it. Today the castle stands as one of the largest and most important historic forts in Jordan, bearing the layers of Crusader, Ayyubid and Mamluk civilizations. Take your time and explore every stone.",
         "model": "openai/gpt-oss-120b"
     },
-    "Karak_Castle_العربية_Short": {
-        "landmark": "Karak_Castle",
-        "language": "العربية",
-        "length": "Short",
-        "story": "أهلًا بك في قلعة الكرك! القلعة تقع في مدينة الكرك جنوب الأردن، على بعد مئة وعشرين كيلومترًا من عمّان. بُنيت بين عامي 1139 و1142 على نتوء صخري مرتفع، لذا أسوارها غير منتظمة لتتبع الصخور. استُخدم الحجر الرمادي والوردي في المرحلة الصليبية، ثم الحجر الجيري في الإضافات الأيوبية والمملوكية",
-        "model": "openai/gpt-oss-120b"
-    },
     "Karak_Castle_العربية_Medium": {
         "landmark": "Karak_Castle",
         "language": "العربية",
         "length": "Medium",
-        "story": "أهلًا بك في قلعة الكرك! تقع هذه القلعة في مدينة الكرك جنوب الأردن، على بعد حوالي مئة وعشرين كيلومترًا من عمّان. بُنيت بين عامي 1139 و1142 خلال الفترة الصليبية، فوق نتوء صخري مرتفع، لذا فإن أسوارها تتبع شكل الصخور غير المنتظمة. تحيط بها خنادق جافة عميقة من الشمال والجنوب، ويصل الزائر عبر جسر يعبر الخندق ثم مدخل منكسر يصعب اقتحامه. داخل الفناء العلوي توجد كنيسة ومعاصر زيتون وعنب ومخابز، بالإضافة إلى قصر مملوكي. تحت الأرض يضم الفناء السفلي قاعات وغرف، اليوم يتحول إلى متحف يعرض آثار المحافظة. استعادها صلاح الدين الأيوبي عام 1187، ثم أعاد الأيوبيون والمماليك تحصينها. استخدم في بناءه الحجر الرمادي والوردي في المرحلة الصليبية، ثم الحجر الجيري في الإضافات الأيوبية والمملوكية. ويُعد هذا الصرح أحد أكبر القلاع التاريخية. استمتع باستكشاف هذا الصرح التاريخي. تابع رحلتك لاكتشاف المزيد.",
+        "story": "أهلًا بك في قلعة الكرك! تقع هذه القلعة في مدينة الكرك جنوب الأردن، على بعد حوالي مئة وعشرين كيلومترًا من عمّان. بُنيت بين عامي 1139 و1142 خلال الفترة الصليبية، فوق نتوء صخري مرتفع، لذا فإن أسوارها تتبع شكل الصخور غير المنتظمة. تحيط بها خنادق جافة عميقة من الشمال والجنوب، ويصل الزائر عبر جسر يعبر الخندق ثم مدخل منكسر يصعب اقتحامه. داخل الفناء العلوي توجد كنيسة ومعاصر زيتون وعنب ومخابز، بالإضافة إلى قصر مملوكي. تحت الأرض، يضم الفناء السفلي قاعات وغرفًا، واليوم يتحول إلى متحف يعرض آثار المحافظة. استعادها صلاح الدين الأيوبي عام 1187، ثم أعاد الأيوبيون والمماليك تحصينها. استُخدم في بنائها الحجر الرمادي والوردي في المرحلة الصليبية، ثم الحجر الجيري في الإضافات الأيوبية والمملوكية. ويُعد هذا الصرح أحد أكبر القلاع التاريخية. استمتع باستكشاف هذا الصرح التاريخي. تابع رحلتك لاكتشاف المزيد.",
         "model": "openai/gpt-oss-120b"
     },
     "Karak_Castle_العربية_Long": {
@@ -300,32 +237,18 @@
         "story": "Bienvenue au château de Kerak ! À 120 km d’Amman, il fut construit entre 1139 et 1142 sur un éperon rocheux, ses murs suivant la pierre. Un fossé sec profond encercle le nord et le sud, traversé par un pont menant à une entrée brisée. Le haut comprend une cour avec une église et un palais mamelouk. Le sous‑sol abrite des salles souterraines, musée des vestiges de la province. Saladin le reprit en 1187, puis les Mamelouks le renforcèrent. Continuez votre découverte.",
         "model": "openai/gpt-oss-120b"
     },
-    "Karak_Castle_Français_Medium": {
-        "landmark": "Karak_Castle",
-        "language": "Français",
-        "length": "Medium",
-        "story": "Bienvenue au château de Kerak ! Vous vous tenez sur le promontoire rocheux qui domine la ville de Kerak, à 120 km d'Amman. La construction débuta en 1139 et s’acheva en 1142, sous les Croisés, avec du calcaire rose et gris. Les murs suivent la forme des rochers, entourés de fossés secs au nord et au sud, et l’accès se fait par un pont puis une porte brisée. Au sommet se trouve une cour avec une église, des oliveraies, des vignes et des boulangeries, et un palais mamelouk. Sous la cour, des salles souterraines abritent un musée des vestiges de la province. Après la victoire de Saladin à Hattin en 1187, les Ayyoubides les Mamelouks renforcèrent la forteresse. Ce site témoigne de la succession des civilisations croisées, ayyoubides et mameloukes. Continuez votre exploration.",
-        "model": "openai/gpt-oss-120b"
-    },
     "Karak_Castle_Français_Long": {
         "landmark": "Karak_Castle",
         "language": "Français",
         "length": "Long",
-        "story": "Bienvenue au château de Kerak ! Imaginez-vous sur le promontoire rocheux qui domine la ville de Kerak, à environ 120 kilomètres au sud d’Amman. La construction a commencé en 1139 et s’est achevée en 1142, sous les Croisés, avec des pierres grises et roses. Les murs suivent la forme irrégulière du rocher, entourés d’un profond fossé sec au nord et au sud. Pour franchir ce fossé, les visiteurs traversent un pont menant à une entrée brisée, difficile à percer. Au sommet du cour, vous découvrirez une église, des pressoirs d’olives et de raisins, ainsi que des fours, sans oublier le palais mamelouk qui domine la vue. En dessous, des salles et des chambres souterraines abritent aujourd’hui un musée présentant les vestiges de la province de Kerak. Après la victoire de Saladin à la bataille de Hattin en 1187, le fort a été repris, puis renforcé par les Ayyoubides et les Mamelouks. Le château de Kerak reste l’une des plus grandes forteresses historiques de Jordanie, témoin des civilisations croisées, ayyoubides et mameloukes. Continuez votre exploration.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Petra_English_Short": {
-        "landmark": "Petra",
-        "language": "English",
-        "length": "Short",
-        "story": "Welcome to the Rose City! Petra lies in Ma'an Governorate, southern Jordan. The Nabateans founded it two thousand years ago and made it their capital. It flourished as a trade hub linking Arabia with the Levant and Egypt. Its rose‑colored rock façades give it the nickname Rose City. The Siq, a narrow stone passage, leads to the Treasury, the photographed façade. Today Petra is a UNESCO World Heritage site, a New Seven Wonder, and a top tourist destination. Explore and feel its timeless wonder.",
+        "story": "Bienvenue au château de Kerak ! Imaginez-vous sur le promontoire rocheux qui domine la ville de Kerak, à environ 120 kilomètres au sud d’Amman. La construction a commencé en 1139 et s’est achevée en 1142, sous les Croisés, avec des pierres grises et roses. Les murs suivent la forme irrégulière du rocher, entourés d’un profond fossé sec au nord et au sud. Pour franchir ce fossé, les visiteurs traversent un pont menant à une entrée brisée, difficile à percer. Au sommet de la cour, vous découvrirez une église, des pressoirs d’olives et de raisins, ainsi que des fours, sans oublier le palais mamelouk qui domine la vue. En dessous, des salles et des chambres souterraines abritent aujourd’hui un musée présentant les vestiges de la province de Kerak. Après la victoire de Saladin à la bataille de Hattin en 1187, le fort a été repris, puis renforcé par les Ayyoubides et les Mamelouks. Le château de Kerak reste l’une des plus grandes forteresses historiques de Jordanie, témoin des civilisations croisées, ayyoubides et mameloukes. Continuez votre exploration.",
         "model": "openai/gpt-oss-120b"
     },
     "Petra_English_Medium": {
         "landmark": "Petra",
         "language": "English",
         "length": "Medium",
-        "story": "Welcome to the Rose City! Petra lies in Ma'an Governorate in southern Jordan. The Nabataeans founded it over two thousand years ago and made it their capital. It flourished as a trade hub linking Arabia with the Levant and Egypt. Its pink‑rock façades give it the nickname the Rose City. The Siq, a narrow rocky passage, leads visitors to the Treasury, the most photographed monument with a precisely carved façade. Inside the site you will also find the Nabataean theatre and royal tombs. The Nabataeans built an advanced system to collect and store rainwater. Petra joined the Roman Empire in 106 AD, was listed by UNESCO in 1985, chosen as a New Seven Wonder in 2007, and today remains a top tourist and archaeological destination. Take your time and explore.",
+        "story": "Welcome to the Rose City! Petra lies in Ma'an Governorate in southern Jordan. The Nabataeans founded it over two thousand years ago and made it their capital. It flourished as a trade hub linking Arabia with the Levant and Egypt. Its pink‑rock façades give it the nickname the Rose City. The Siq, a narrow rocky passage, leads visitors to the Treasury, the most photographed monument with a precisely carved façade. Inside the site you will also find the Nabataean theatre and royal tombs. The Nabataeans built an advanced system to collect and store rainwater. Petra joined the Roman Empire in 106 AD, was listed by UNESCO in 1985, chosen as one of the New Seven Wonders in 2007, and today remains a top tourist and archaeological destination. Take your time and explore.",
         "model": "openai/gpt-oss-120b"
     },
     "Petra_English_Long": {
@@ -342,13 +265,6 @@
         "story": "يا هلا بك في المدينة الوردية! البتراء تقع في محافظة معان جنوب الأردن، أسسها الأنباط قبل أكثر من ألفي عام وجعلوها عاصمة لمملكتهم. ازدهرت كمركز تجاري يربط الجزيرة العربية ببلاد الشام ومصر. يرحب بك السيق، ممر صخري ضيق يقود إلى الخزنة المشهورة بواجهتها المنحوتة. المدينة تضم الدير والمسرح النبطي والشارع المعمد والمقابر الملكية. أدرجتها اليونسكو عام 1985 واختيرت من عجائب الدنيا الجديدة. طور الأنباط نظامًا هندسيًا لتجميع مياه الأمطار وتخزينها. تعد من أهم الوجهات السياحية في الأردن. استمتع باكتشاف المزيد.",
         "model": "openai/gpt-oss-120b"
     },
-    "Petra_العربية_Medium": {
-        "landmark": "Petra",
-        "language": "العربية",
-        "length": "Medium",
-        "story": "يا هلا بك في المدينة الوردية! نحن الآن في محافظة معان جنوب الأردن، حيث أسس الأنباط هذه البقعة قبل أكثر من ألفي عام وجعلوها عاصمة لمملكتهم. ازدهرت كمركز تجاري يربط الجزيرة العربية ببلاد الشام ومصر، وما زالت مبانيها المنحوتة في الصخر الوردى تشهد على ذلك. نمر عبر السيق، الممر الصخري الضيق الذي يفتح على الخزنة، أشهر معالم الموقع بواجهتها الدقيقة. إلى جانبها، يبرز الدير والمس theatre النبطي والشارع المعمد والمقابر الملكية. الأنباط طوّروا نظامًا هندسيًا لتجميع مياه الأمطار وتخزينها. أصبحت جزءًا من الإمبراطورية الرومانية عام 106 م، أُدرجت على قائمة اليونسكو عام 1985، واختيرت من عجائب الدنيا الجديدة عام 2007. ستجد هنا مسارات تُظهر عبقرية الهندسة القديمة. اليوم، هي وجهة سياحية وأثرية رئيسية. استمتع باكتشاف المزيد!",
-        "model": "openai/gpt-oss-120b"
-    },
     "Petra_العربية_Long": {
         "landmark": "Petra",
         "language": "العربية",
@@ -361,13 +277,6 @@
         "language": "Français",
         "length": "Short",
         "story": "Bienvenue dans la ville rose ! Petra, située dans la province de Ma’an au sud de la Jordanie, fut fondée par les Nabatéens il y a plus de deux mille ans comme capitale. Elle devint un centre commercial reliant la péninsule arabique au Levant et à l’Égypte. Ses façades taillées dans la roche rose, dont la Khazna au bout du Siq, fascinent les visiteurs. Site UNESCO depuis 1985, merveille du monde moderne et destination majeure. Continuez votre découverte.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Petra_Français_Medium": {
-        "landmark": "Petra",
-        "language": "Français",
-        "length": "Medium",
-        "story": "Bienvenue dans la ville rose ! Imaginez la vallée du Jourdain où, il y a plus de deux mille ans, les Nabatéens fondèrent Petra, capitale de leur royaume. La cité s’épanouit comme carrefour commercial entre la péninsule Arabique, le Levant et l’Égypte. Vous pénétrez par le Siq, ce passage rocheux étroit qui mène à la fameuse Khazna, la façade taillée avec précision dans le grès rose. Autour, le monastère, le théâtre nabatéen, la rue encadrée et les tombes royales témoignent de l’ingéniosité nabatéenne, notamment leur système avancé de collecte et de stockage des eaux de pluie. En 106, l’Empire romain intègre Petra. Inscrite au patrimoine mondial de l’UNESCO en 1985, elle devient l’une des nouvelles merveilles du monde en 2007 et reste aujourd’hui une destination majeure. Continuez votre exploration.",
         "model": "openai/gpt-oss-120b"
     },
     "Petra_Français_Long": {
@@ -398,13 +307,6 @@
         "story": "Welcome to Qasr Amra! This desert palace sits in the eastern Jordanian desert, about 85 kilometers east of Amman. It was built in the early eighth century during the Umayyad era and is attributed to Caliph al‑Walid ibn Yazid. The Umayyads used it as a royal retreat, a hunting lodge and a place for leisure. Inside you will find a reception hall and a complete Umayyad bath, one of the oldest Islamic baths. The walls are covered with colorful frescoes, some of the finest examples of early Islamic art. The paintings show scenes of hunting, daily life, kings, stars and constellations. Above the bathing chamber, the ceiling bears an astronomical panel, among the oldest preserved sky drawings in the Islamic world. The palace is a striking example of Umayyad architecture in a desert setting. UNESCO listed Qasr Amra as a World Heritage site in 1985, recognizing it as one of the most important desert palaces the Umayyads built in the Levant. Take your time and explore the wonders of this historic site.",
         "model": "openai/gpt-oss-120b"
     },
-    "Qasr_Amra_العربية_Short": {
-        "landmark": "Qasr_Amra",
-        "language": "العربية",
-        "length": "Short",
-        "story": "أهلًا بك في قصر عمرة، جوهرة الفن الأموي! يقع هذا الصرح في الصحراء الشرقية، على بعد 85 كيلومترًا شرق عمّان. بُني في أوائل القرن الثامن بنسخة من عهد الخليفة الوليد بن يزيد، وكان يُستعمل كاستراحة ملكية ومركز صيد. يضم قاعة استقبال وحمامًا أمويًا متكاملًا، وسقف الحمام يحمل لوحة فلكية قديمة. جدرانه مزينة جداريات ملونة تصور الصيد والحياة اليومية والنجوم. أُدرج الموقع على لائحة التراث العالمي لليونسكو عام 1985. استمتع باكتشاف المزيد حول هذا القصر الفريد.",
-        "model": "openai/gpt-oss-120b"
-    },
     "Qasr_Amra_العربية_Medium": {
         "landmark": "Qasr_Amra",
         "language": "العربية",
@@ -431,13 +333,6 @@
         "language": "Français",
         "length": "Medium",
         "story": "Bienvenue à Qasr Amra ! Ce palais se trouve dans le désert oriental jordanien, à environ 85 km à l’est d’Amman. Il a été construit au début du VIIIᵉ siècle, à l’époque omeyyade, et on l’attribue au calife al‑Walid ibn Yazid. Le site servait de repos royal et de centre de chasse et de détente. Vous découvrirez une salle d’accueil et un bain omeyyade complet, l’un des plus anciens bains islamiques. Les murs sont décorés de fresques colorées, parmi les plus belles du premier art islamique, montrant chasse, vie quotidienne, rois, étoiles et constellations. Le plafond du bain porte une carte céleste, l’une des plus anciennes du monde islamique. Le palais illustre l’architecture omeyyade dans les zones désertiques et a été inscrit au patrimoine mondial de l’UNESCO en 1985. Continuez votre exploration.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Qasr_Amra_Français_Long": {
-        "landmark": "Qasr_Amra",
-        "language": "Français",
-        "length": "Long",
-        "story": "Bienvenue à Qasr Amra !\n\nLe palais se trouve dans le désert oriental jordanien, à environ 85 kilomètres à l’est d’Amman. Il a été construit au début du VIIIe siècle, à l’époque omeyyade, et on l’attribue au calife al‑Walid ibn Yazid. Le site servait de halte royale et de centre de chasse et de détente. On y découvre une salle d’accueil et un bain omeyyade complet, considéré comme l’un des plus anciens bains islamiques. Les murs sont décorés de fresques colorées, parmi les plus belles expressions de l’art islamique primitif. Ces fresques montrent des scènes de chasse, la vie quotidienne, des rois, des étoiles et des constellations. Le plafond de la salle de bain porte une carte céleste, l’une des plus anciennes représentations du ciel conservées dans le monde islamique. Le palais illustre l’architecture omeyyade dans les zones désertiques. En 1985, l’UNESCO l’a inscrit sur la liste du patrimoine mondial. Il figure parmi les palais désertiques les plus remarquables construits par les Omeyyades en Syrie.\n\nContinuez votre exploration.",
         "model": "openai/gpt-oss-120b"
     },
     "Um_AL_Jimal_English_Short": {
@@ -472,7 +367,7 @@
         "landmark": "Um_AL_Jimal",
         "language": "العربية",
         "length": "Medium",
-        "story": "أهلًا بك في الواحة السوداء! نحن الآن أمام موقع يقع في محافظة المفرق شمال الأردن، على بعد حوالي ستة وثمانين كيلومترًا من عمّان. تُبنى مبانيه من الحجر البازلتي الأسود، ما أكسبه هذا الاسم. بدأ كستوطنة نبطية ثم ازدهر في العصرين الروماني والبيزنطي، وكان محطة مهمة على طرق التجارة التي ربطت الجزيرة العربية ببلاد الشام. اليوم يمكنك رؤية أكثر من مئة وخمسين مبنى أثري محفوظ، تشمل منازل وكنائس وأبراج. في العصر البيزنطي أصبح مركزًا دينيًا يضم عددًا كبيرًا من الكنائس. الآثار هنا تظهر تعاقب الحضارات النبطية والرومانية والبيزنطية والأموية في مكان واحد. نظامه المتطور لتجميع مياه الأمطار يخزنها في برك وآبار وخزانات. بعد زلزال عام سبعمائة تسعة وأربعين، استقر الموقع وأدرجته اليونسكو ضمن التراث العالمي عام ألفين وأربعة وعشرين. استمتع باكتشاف كل ركن من هذا التاريخ المتراكم. استمر في استكشاف الموقع.",
+        "story": "أهلًا بك في الواحة السوداء! نحن الآن أمام موقع يقع في محافظة المفرق شمال الأردن، على بعد حوالي ستة وثمانين كيلومترًا من عمّان. تُبنى مبانيه من الحجر البازلتي الأسود، ما أكسبه هذا الاسم. بدأ كمستوطنة نبطية ثم ازدهر في العصرين الروماني والبيزنطي، وكان محطة مهمة على طرق التجارة التي ربطت الجزيرة العربية ببلاد الشام. اليوم يمكنك رؤية أكثر من مئة وخمسين مبنى أثري محفوظ، تشمل منازل وكنائس وأبراج. في العصر البيزنطي أصبح مركزًا دينيًا يضم عددًا كبيرًا من الكنائس. الآثار هنا تظهر تعاقب الحضارات النبطية والرومانية والبيزنطية والأموية في مكان واحد. نظامه المتطور لتجميع مياه الأمطار يخزنها في برك وآبار وخزانات.بعد زلزال عام سبعمائة وتسعة وأربعين، استقر الموقع وأدرجته اليونسكو ضمن التراث العالمي عام ألفين وأربعة وعشرين. استمتع باكتشاف كل ركن من هذا التاريخ المتراكم. استمر في استكشاف الموقع.",
         "model": "openai/gpt-oss-120b"
     },
     "Um_AL_Jimal_العربية_Long": {
@@ -493,14 +388,14 @@
         "landmark": "Um_AL_Jimal",
         "language": "Français",
         "length": "Medium",
-        "story": "Bienvenue dans l'Oasis Noire ! Vous êtes à la Maféq, à 86 km d'Amman, devant Umm al‑Jimal, appelée Oasis Noire pour ses pierres basaltiques noires. D’abord colonie nabatéenne, elle s’est développée sous les empires romain et byzantin, devenant un carrefour commercial entre la péninsule arabique et le Levant. Plus de cent cinquante édifices subsistent : maisons, églises, tours, témoins d’une architecture unique. Les habitants y ont installé un système avancé de collecte et de stockage des eaux de pluie dans bassins, puits et citernes. Au temps byzantin, la ville était un centre religieux riche en églises, puis habitée sous les Omeyyades jusqu’au tremblement de terre de 749 qui a entraîné son déclin. En 2024, l’UNESCO a inscrit Umm al‑Jimal au patrimoine mondial. Continuez votre découverte.",
+        "story": "Bienvenue dans l'Oasis Noire ! Vous êtes à Mafraq, à 86 km d'Amman, devant Umm al-Jimal, appelée Oasis Noire pour ses pierres basaltiques noires. D’abord colonie nabatéenne, elle s’est développée sous les empires romain et byzantin, devenant un carrefour commercial entre la péninsule arabique et le Levant. Plus de cent cinquante édifices subsistent : maisons, églises et tours, témoins d’une architecture unique. Les habitants y ont installé un système avancé de collecte et de stockage des eaux de pluie dans des bassins, des puits et des citernes. Au temps byzantin, la ville était un centre religieux riche en églises, puis habitée sous les Omeyyades jusqu’au tremblement de terre de 749 qui a entraîné son déclin. En 2024, l’UNESCO a inscrit Umm al-Jimal au patrimoine mondial. Continuez votre découverte.",
         "model": "openai/gpt-oss-120b"
     },
     "Um_AL_Jimal_Français_Long": {
         "landmark": "Um_AL_Jimal",
         "language": "Français",
         "length": "Long",
-        "story": "Bienvenue dans l'Oasis Noire !  \nEn vous approchant d’Umm al‑Jimal, vous sentez le souffle du temps sur les pierres noires de basalte qui composent ses bâtiments. Située dans la province de Mafraq, à environ 86 km d’Amman, la ville porte le surnom de « ouasis noire » à cause de ces édifices. Elle débuta comme une colonie nabatéenne, puis connut un essor sous les empires romain et byzantin, devenant un point clé sur les routes commerciales reliant la péninsule arabique au Levant.  \n\nAujourd’hui, plus de 150 vestiges subsistent : maisons, églises, tours, tous témoins d’une histoire superposée. Les habitants avaient mis au point un système avancé de collecte des eaux de pluie, stockées dans des bassins, puits et citernes. Sous la domination byzantine, le site se transforma en un centre religieux avec de nombreuses églises. Il resta occupé pendant l’ère omeyyade, jusqu’au tremblement de terre dévastateur de 749 ap. J‑C., qui provoqua son déclin.  \n\nLes ruines d’Umm al‑Jimal illustrent la succession des civilisations nabatéenne, romaine, byzantine et omeyyade en un seul lieu. Inscrite au patrimoine mondial de l’UNESCO en 2024, elle continue d’attirer les curieux.  \nContinuez votre exploration, le passé vous attend.",
+        "story": "Bienvenue dans l'Oasis Noire !  \nEn vous approchant d’Umm al‑Jimal, vous sentez le souffle du temps sur les pierres noires de basalte qui composent ses bâtiments. Située dans la province de Mafraq, à environ 86 km d’Amman, la ville porte le surnom d’ « ouasis noire » à cause de ces édifices. Elle débuta comme une colonie nabatéenne, puis connut un essor sous les empires romain et byzantin, devenant un point clé sur les routes commerciales reliant la péninsule arabique au Levant.  \n\nAujourd’hui, plus de 150 vestiges subsistent : maisons, églises, tours, tous témoins d’une histoire superposée. Les habitants avaient mis au point un système avancé de collecte des eaux de pluie, stockées dans des bassins, puits et citernes. Sous la domination byzantine, le site se transforma en un centre religieux avec de nombreuses églises. Il resta occupé pendant l’ère omeyyade, jusqu’au tremblement de terre dévastateur de 749 ap. J‑C., qui provoqua son déclin.  \n\nLes ruines d’Umm al‑Jimal illustrent la succession des civilisations nabatéenne, romaine, byzantine et omeyyade en un seul lieu. Inscrite au patrimoine mondial de l’UNESCO en 2024, elle continue d’attirer les curieux.  \nContinuez votre exploration, le passé vous attend.",
         "model": "openai/gpt-oss-120b"
     },
     "Um_Qais_English_Short": {
@@ -566,34 +461,6 @@
         "story": "Bienvenue à Umm Qays, où les vestiges de l’ancienne ville de Gadara rencontrent la nature et des vues panoramiques.  \n\nEn arrivant, vous remarquez que le village se situe dans le gouvernorat d’Irbid, à environ 28 km de la ville d’Irbid, perché sur une hauteur qui domine la vallée du Jourdain, le fleuve Yarmouk, le lac Tibériade et les hauteurs du Golan. Autrefois appelée Gadara, elle faisait partie des cités de la Décapole et a connu un essor comme centre culturel, artistique et poétique.  \n\nLe site archéologique se distingue par l’usage du basalte noir dans de nombreux édifices, dont le théâtre occidental, l’un des monuments les plus remarquables. Vous traversez la rue des Colonnes et la rue Décomanos Maximus, typiques du plan romain, puis vous apercevez les ruines des thermes, du nymphéum, du passage des furies, des marchés et des entrepôts. Des églises et d’autres bâtiments témoignent de la présence chrétienne à l’époque byzantine.  \n\nLe musée, installé dans la maison ottomane dite « Maison des Roshan », expose statues, mosaïques, poteries, sarcophages et éléments architecturaux. Un mémorial gravé du poète Arabios rappelle la fugacité de la vie.  \n\nLes sources chaudes de Al‑Hamma, réputées depuis l’Antiquité pour leurs vertus curatives, se trouvent à proximité. Umm Qays, traversée par les civilisations grecque, romaine, byzantine, islamique et ottomane, combine aujourd’hui ruines, paysages et expériences locales.  \n\nContinuez votre exploration et laissez‑vous surprendre par ce lieu unique.",
         "model": "openai/gpt-oss-120b"
     },
-    "Wadi_Mujib_English_Short": {
-        "landmark": "Wadi_Mujib",
-        "language": "English",
-        "length": "Short",
-        "story": "Welcome to Wadi Mujib, the lowest nature reserve in the world! This Jordanian valley flows into the Dead Sea and was historically called the Arnon River, part of Moab’s northern border. Its depth reaches about 500 meters, with parts 410 meters below sea level. Over 300 plant species and many mammals and birds thrive here, and famous Siq Trail follows the water through rocky cliffs. The reserve was founded in 1985. The Siq Trail is an adventure route. Come explore!",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Wadi_Mujib_English_Medium": {
-        "landmark": "Wadi_Mujib",
-        "language": "English",
-        "length": "Medium",
-        "story": "Welcome to Wadi Mujib, the lowest nature reserve in the world! This Jordanian canyon empties into the Dead Sea and was historically called the Arnon River, once part of Moab’s northern border. Its walls plunge about 500 meters, while some protected areas lie 410 meters below sea level, making it world’s lowest biosphere reserve. Established in 1985 and run by Royal Society for the Conservation of Nature, the park hosts more than 300 plant species and many mammals and birds, thanks to a 1,300‑meter elevation range and flowing tributaries. Rocky cliffs shelter the Nubian ibex, and the valley serves as a key stop for migratory birds. Popular trails include the Siq path, the 20‑meter waterfall route, and a 100‑meter rope slide over the gorge. Explore and feel the adventure yourself.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Wadi_Mujib_English_Long": {
-        "landmark": "Wadi_Mujib",
-        "language": "English",
-        "length": "Long",
-        "story": "Welcome to Wadi Mujib, the lowest nature reserve in the world! This Jordanian valley flows into the Dead Sea and was historically called the River Arnon, part of Moab’s northern border. Its deepest points reach about 500 m, while some protected areas lie 410 m below sea level, making it the world’s lowest biosphere reserve. Established in 1985 and managed by the Royal Society for the Conservation of Nature, the reserve has high biodiversity thanks to an elevation range of roughly 1,300 m and water from many tributaries. Over 300 plant species and numerous mammals and birds are recorded, and the rocky",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Wadi_Mujib_العربية_Short": {
-        "landmark": "Wadi_Mujib",
-        "language": "العربية",
-        "length": "Short",
-        "story": "أهلًا بك في وادي الموجب، أخفض محمية طبيعية في العالم! يقع الوادي في الأردن وينتهي في البحر الميت، ويصل عمقه إلى حوالي 500 متر، بينما تنخفض بعض أجزائه إلى 410 متر تحت مستوى سطح البحر. تأسست المحمية عام 1985 وتدار من الجمعية الملكية لحماية الطبيعة. يضم أكثر من 300 نوع نباتي، ومنحدرات صخرية موطن للوعل النوبي، ومسار السيق يضم شلالًا بارتفاع عشرين مترًا. يمكن",
-        "model": "openai/gpt-oss-120b"
-    },
     "Wadi_Mujib_العربية_Medium": {
         "landmark": "Wadi_Mujib",
         "language": "العربية",
@@ -613,20 +480,6 @@
         "language": "Français",
         "length": "Short",
         "story": "Bienvenue à Wadi Mujib, la réserve naturelle la plus basse du monde ! Ce canyon jordanien, autrefois appelé rivière Arnon, s’enfonce jusqu’à 500 m de profondeur, certaines parties étant 410 m sous le niveau de la mer. Fondée en 1985, la réserve abrite plus de 300 espèces végétales, des mammifères, des oiseaux migrateurs et le rare oual nubien sur ses falaises. Vous pouvez suivre le sentier du canyon, admirer la chute de 20 m et profiter des activités d’aventure. Continuez votre exploration.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Wadi_Mujib_Français_Medium": {
-        "landmark": "Wadi_Mujib",
-        "language": "Français",
-        "length": "Medium",
-        "story": "Bienvenue à Wadi Mujib, la réserve naturelle la plus basse du monde ! Ce canyon jordanien, appelé le fleuve Arnon, marque la frontière nord du royaume de Moab. Il s’enfonce jusqu’à 500 m de profondeur, certaines parties à 410 m sous le niveau de la mer, ce qui en fait la plus basse réserve naturelle du globe. Créée en 1985 et gérée par la Royal Society for the Conservation of Nature, la réserve abrite plus de 300 espèces végétales ainsi que de nombreux mammifères et oiseaux, dont le vautour nubien sur falaises. Le sentier du Siq serpente entre les rochers, suit l’eau et culmine avec une chute de 20 m. D’autres parcours offrent vues sur la mer Morte, baignades, glissades de 100 m et rencontres avec oiseaux migrateurs. Wadi Mujib vous attend pour explorer ses merveilles.",
-        "model": "openai/gpt-oss-120b"
-    },
-    "Wadi_Mujib_Français_Long": {
-        "landmark": "Wadi_Mujib",
-        "language": "Français",
-        "length": "Long",
-        "story": "Bienvenue à Wadi Mujib, la réserve naturelle la plus basse du monde !  \n\nImaginez‑vous au cœur de la Jordanie, où le wadi se jette dans la mer Morte. Autrefois appelé le fleuve Arnon, il formait la frontière nord du royaume de Moab. Aujourd’hui, la réserve du Mujib, créée en 1985 et gérée par la Royal Society for the Conservation of Nature, s’étend de 410 m sous le niveau de la mer à plus de 500 m de profondeur, soit un dénivelé d’environ 1300 m. Cette variation crée une biodiversité exceptionnelle : plus de 300 genres de plantes, de nombreux mammifères et oiseaux, et les falaises rocheuses abritent le rare oual nubien.  \n\nLe wadi est une escale majeure pour les oiseaux migrateurs entre l’Afrique et l’Europe. Les sentiers d’aventure vous guident à travers des paysages variés : le sentier du Siq serpente entre les rochers le long du cours d’eau, le sentier du Chute offre une chute de 20 m, et le sentier du Badan donne une vue sur la mer Morte où l’oual nubien peut être observé. Le sentier du Hidan relie les mares naturelles à l’ancienne moulin à blé, tandis que le parcours du Maqly vous conduit à la confluence des rivières Mujib et Hidan, en passant par des bassins et une cascade.  \n\nDes activités comme la marche aquatique, la natation, le glissade sur corde de près de 100 m, ou le zip‑line au-dessus du canyon complètent l’expérience. Wadi Mujib est aujourd’hui l’une des destinations phares du tourisme écologique et d’aventure en Jordanie.  \n\nContinuez à explorer ce lieu unique.",
         "model": "openai/gpt-oss-120b"
     },
     "wadi_Rum_English_Short": {
@@ -654,14 +507,14 @@
         "landmark": "wadi_Rum",
         "language": "العربية",
         "length": "Short",
-        "story": "حيّاك الله في وادي القمر! يقع الوادي في جنوب الأردن، نحو سبعين كيلومترًا شمال العقبة. صخوره الحمراء وجباله الرملية الشاهقة تمنحه مظهرًا يشبه سطح القمر. كان مسارًا تجاريًا للأنباط، وتحتوي صخوره على نقوش صخرية قديمة. أدرج في قائمة التراث العالمي لليونسكو عام 2011. لا يزال يقطنه بدو يحافظون على عاداتهم. اليوم يُستقبل الزوار بسيارات الدفع الرباعي، ركوب الجمال، ومراقبة النجوم الصافية. كما استُخدم لتصوير أفلام عالمية، وهو وجهة مشهورة لتسلق الجبال. استمتع باكتشافه واستمر في استكشافه.",
+        "story": "حيّاك الله في وادي القمر! يقع الوادي في جنوب الأردن، نحو سبعين كيلومترًا شمال العقبة. صخوره الحمراء وجباله الرملية الشاهقة تمنحه مظهرًا يشبه سطح القمر. كان مسارًا تجاريًا للأنباط، وتحتوي صخوره على نقوش صخرية قديمة. أدرج في قائمة التراث العالمي لليونسكو عام 2011. لا يزال يقطنه بدو يحافظون على عاداتهم. اليوم يُستقبل الزوار بسيارات الدفع الرباعي، وركوب الجمال، ومراقبة النجوم في الليالي الصافية. كما استُخدم لتصوير أفلام عالمية، وهو وجهة مشهورة لتسلق الجبال. استمتع باكتشاف الوادي.",
         "model": "openai/gpt-oss-120b"
     },
     "wadi_Rum_العربية_Medium": {
         "landmark": "wadi_Rum",
         "language": "العربية",
         "length": "Medium",
-        "story": "حيّاك الله في وادي القمر! يقع هذا الوادي في جنوب الأردن ضمن محافظة العقبة، على بعد نحو سبعين كيلومترًا شمال مدينة العقبة. يُسمّى بهذا الاسم لأن تضاريسه الصحراوية تشبه سطح القمر، حيث ترتفع الجبال الرملية وتلمع الصخورات الجرانيتية والحجرية الحمراء. كان مسارًا مهمًا لطرق التجارة القديمة للأنباط، وتنتشر فيه نقوش وصور صخرية تعود إلى آلاف السنين. اليوم يضم أقواسًا صخرية طبيعية، كهوفًا وتكوينات جيولوجية مميزة، ويستضيف قبائل بدوية ما زالت تحافظ على عاداتها. أُدرج على قائمة التراث العالمي لليونسكو عام 2011، ويشتهر بجولات الدفع الرباعي، ركوب الجمال، ومراقبة النجوم الصافية. استُخدم الموقع لتصوير أفلام عالمية، وهو الآن وجهة مفضلة لمحبي المغامرة مثل التخييم وتسلق الجبال. يستقطب زوارًا من مختلف أنحاء العالم. استمتع بالمناظر وتابع استكشافك.",
+        "story": "حيّاك الله في وادي القمر! يقع هذا الوادي في جنوب الأردن ضمن محافظة العقبة، على بعد نحو سبعين كيلومترًا شمال مدينة العقبة. يُسمّى بهذا الاسم لأن تضاريسه الصحراوية تشبه سطح القمر، حيث ترتفع الجبال الرملية وتظهر الصخور الجرانيتية والحمراء. كان مسارًا مهمًا لطرق التجارة القديمة للأنباط، وتنتشر فيه نقوش وصور صخرية تعود إلى آلاف السنين. اليوم يضم أقواسًا صخرية طبيعية، كهوفًا وتكوينات جيولوجية مميزة، ويستضيف قبائل بدوية ما زالت تحافظ على عاداتها. أُدرج على قائمة التراث العالمي لليونسكو عام 2011، ويشتهر بجولات الدفع الرباعي، وركوب الجمال، ومراقبة النجوم في الليالي الصافية. استُخدم الموقع لتصوير أفلام عالمية، وهو الآن وجهة مفضلة لمحبي المغامرة مثل التخييم وتسلق الجبال. يستقطب زوارًا من مختلف أنحاء العالم. استمتع بالمناظر وتابع استكشافك.",
         "model": "openai/gpt-oss-120b"
     },
     "wadi_Rum_العربية_Long": {
@@ -685,11 +538,158 @@
         "story": "Bienvenue dans la vallée de la Lune ! Le Wadi Rum s'étend dans le sud de la Jordanie, à environ soixante‑dix kilomètres au nord d’Aqaba. Son paysage désertique, parsemé de dunes, de rochers granitiques rouges et d’arcs naturels, rappelle la surface de la Lune, d’où son nom. Jadis halte des caravanes nabatéennes, le désert conserve des gravures et dessins rupestres qui témoignent de la présence humaine depuis des millénaires. Aujourd’hui, les tribus bédouines y vivent encore, préservant leurs coutumes. Inscrit au patrimoine mondial de l’UNESCO depuis 2011, le site attire les amateurs d’aventure, de camping, d’escalade et de safaris en 4×4, ainsi que les cinéastes du monde entier. Le ciel clair invite à l’observation des étoiles. Continuez votre exploration.",
         "model": "openai/gpt-oss-120b"
     },
+    "Wadi_Mujib_العربية_Short": {
+        "landmark": "Wadi_Mujib",
+        "language": "العربية",
+        "length": "Short",
+        "story": "أهلًا بك في وادي الموجب، أخفض محمية طبيعية في العالم! يقع هذا الوادي في الأردن ويصب في البحر الميت، ويُعرف تاريخيًا باسم نهر أرنون. عمقه يصل إلى 500 متر، وبعض أجزائه على 410 أمتار تحت سطح البحر. تأسست المحمية عام 1985 وتدار من الجمعية الملكية لحماية الطبيعة. تنوعها الحيوي كبير بفرق ارتفاع 1300 متر وتدفق مياه عدة روافد، مع أكثر من 300 جنس نباتي ووعل نوبي على المنحدرات. استمتع بالمشي المائي أو الانزلاق على الحبل فوق الوادي. استكشف المزيد!",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Ajloun_Castle_Français_Long": {
+        "landmark": "Ajloun_Castle",
+        "language": "Français",
+        "length": "Long",
+        "story": "Bienvenue au château d'Ajloun ! Perché sur l’une des montagnes de la province d’Ajloun, au nord de la Jordanie, le château s’élève depuis 1184, construit par le chef musulman : ‘Az‑d‑Dîn Osama, l’un des commandants de Saladin. Sa mission était de protéger le nord du pays et de surveiller les routes commerciales entre le Levant et la vallée du Jourdain. Le fort a joué un rôle majeur contre les campagnes croisées, freinant leur avancée vers l’intérieur. En vous promenant, vous remarquez les tours défensives, les passages de pierre et les salles d’habitation, ainsi que les entrepôts où l’on stockait les provisions. Des puits et des citernes recueillaient l’eau de pluie, assurant la vie pendant un siège. Le site a subi des dommages sismiques, puis a été restauré à plusieurs reprises. Les Mamelouks y ont ajouté des extensions après l’époque ayyoubide. Le château faisait partie d’un réseau de forteresses islamiques défendant la région au Moyen Âge. Il est entouré aujourd’hui par les forêts d’Ajloun, parmi les plus belles zones naturelles de Jordanie. Aujourd’hui, il figure parmi les monuments historiques et touristiques majeurs du royaume. Continuez votre exploration.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Dead_Sea_Français_Short": {
+        "landmark": "Dead_Sea",
+        "language": "Français",
+        "length": "Short",
+        "story": "Bienvenue au point le plus bas de la Terre ! Le Mer Morte s'étend entre la Jordanie et la Palestine, célèbre comme la plus basse surface terrestre, plus de 430 mètres sous le niveau de la mer. Son eau, dix fois plus salée que les mers ordinaires, rend la flottaison. Boue noir riche en magnésium, potassium et calcium attire les visiteurs pour le soin de la peau. Entouré de montagnes jordaniennes, le coucher du soleil offre un panorama. Continuez votre exploration.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Dead_Sea_Français_Medium": {
+        "landmark": "Dead_Sea",
+        "language": "Français",
+        "length": "Medium",
+        "story": "Bienvenue au point le plus bas de la Terre ! Le Mer Morte s’étend entre la Jordanie et la Palestine, célèbre pour être la plus basse surface terrestre, plus de 430 mètres sous le niveau de la mer. Ses eaux, dix fois plus salées que les mers ordinaires, sont si denses que l’on flotte sans effort. Le sable noir riche en minéraux, notamment magnésium, potassium et calcium, attire les visiteurs pour leurs bienfaits sur la peau et la santé. Aucun poisson ne survit ici à cause de cette salinité extrême, d’où son nom. Entouré à l’est par les montagnes jordaniennes, le paysage devient spectaculaire au coucher du soleil. Ce lieu reste une destination touristique et de soins reconnue mondialement. Continuez votre exploration.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Dead_Sea_Français_Long": {
+        "landmark": "Dead_Sea",
+        "language": "Français",
+        "length": "Long",
+        "story": "Bienvenue au point le plus bas de la Terre !  \n\nImaginez-vous debout sur les rives du Mer Morte, ce lac qui s’étend entre la Jordanie et la Palestine, célèbre parmi les merveilles naturelles de la région. Vous sentez immédiatement l’air chargé d’une odeur saline, rappel que l’eau ici est environ dix fois plus salée que les mers ordinaires. Cette densité exceptionnelle vous pousse à flotter sans effort, comme si le corps était soutenu par une main invisible.  \n\nLe sable noir qui borde le rivage cache une boue riche en minéraux, notamment du magnésium, du potassium et du calcium, connus pour leurs vertus thérapeutiques et de soin de la peau. Depuis des millénaires, les civilisations anciennes exploitaient ces ressources pour la médecine et la beauté. Aujourd’hui, le site attire des visiteurs du monde entier, tant pour le bien‑être que pour le paysage.  \n\nÀ l’est, les montagnes jordaniennes encadrent le lac, offrant des panoramas spectaculaires, surtout lorsque le soleil se couche et colore le ciel. Aucun poisson ne survit ici, la salinité étant trop élevée, d’où le nom qui évoque la mort.  \n\nLaissez‑vous immerger dans cette expérience unique, où la nature et le bien‑être se rencontrent. Continuez votre découverte.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Jerash_English_Short": {
+        "landmark": "Jerash",
+        "language": "English",
+        "length": "Short",
+        "story": "Welcome to the City of a Thousand Columns! Jerash lies in northern Jordan, about 48 km from Amman. It is one of the best‑preserved Roman cities in the world, founded in ancient times and flourishing in Greek and Roman eras. The oval forum, among Roman squares, opens onto the Street of Columns. Two Roman theatres, the southern and northern, and temples of Artemis and Zeus still stand. Jerash today is a tourist and archaeological site. Explore and feel its history.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Jerash_Français_Medium": {
+        "landmark": "Jerash",
+        "language": "Français",
+        "length": "Medium",
+        "story": "Bienvenue dans la ville aux mille colonnes ! Jerash se situe à environ 48 kilomètres au nord d’Amman, en Jordanie. C’est l’une des villes romaines les mieux conservées au monde, connue sous le nom de Gerasa. Vous découvrez la célèbre place ovale, la rue des Colonnes, deux théâtres, ainsi que les temples d’Artémis et de Zeus. Le site témoigne des influences grecque et romaine et faisait partie de la Décapole. Malgré plusieurs séismes, de nombreuses parties de la ville antique restent bien conservées. Prenez le temps d’explorer ses monuments et d’admirer les vestiges de cette cité historique.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Jerash_Français_Long": {
+        "landmark": "Jerash",
+        "language": "Français",
+        "length": "Long",
+        "story": "Bienvenue dans la ville aux mille colonnes !\n\nImaginez que vous arrivez à Jerash, à environ quarante‑huit kilomètres au nord d’Amman. Cette cité, l’une des meilleures villes romaines préservées au monde, a vu ses premières colonies naître dans les temps anciens et s’épanouir sous les influences grecque et romaine. Autrefois appelée Graça, elle faisait partie du pacte du Décapolis romain. En vous promenant, le regard se porte d’abord sur la célèbre place ovale, l’une des plus belles places romaines, puis sur le rue des Colonnes qui relie les monuments majeurs avec ses imposantes colonnes de pierre. Vous découvrirez deux théâtres romains, le théâtre sud et le théâtre nord, ainsi que les temples d’Artémis et de Zeus. Malgré plusieurs séismes qui ont touché certains édifices, de larges parties restent intactes, témoignant des successions grecque, romaine, byzantine et islamique. Chaque année, le festival de Jerash pour la culture et les arts attire des visiteurs du monde entier. Aujourd’hui, Jerash figure parmi les sites touristiques et archéologiques les plus importants de Jordanie. Continuez votre exploration et laissez‑vous émerveiller.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Karak_Castle_English_Medium": {
+        "landmark": "Karak_Castle",
+        "language": "English",
+        "length": "Medium",
+        "story": "Welcome to Karak Castle! The fortress sits in the city of Karak, south Jordan, about 120 kilometers from Amman. Construction began in 1139 and finished in 1142 during the Crusader period. Built on a high rocky outcrop, its walls follow the irregular shape of the stone. A moat runs on the north and south sides, and a bridge over the moat leads to an entrance that is hard for attackers. Inside, a courtyard holds a church, olive and grape presses, bakeries, a Mamluk palace. Below, halls and rooms house a museum of Karak’s artifacts. The castle was reclaimed by Saladin after the 1187 Battle of Hattin, and later fortified by Ayyubids and Mamluks. It stands as one of Jordan’s largest and important castles. Explore and feel history around you.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Karak_Castle_العربية_Short": {
+        "landmark": "Karak_Castle",
+        "language": "العربية",
+        "length": "Short",
+        "story": "أهلًا بك في قلعة الكرك! تقع هذه القلعة في مدينة الكرك جنوب الأردن، على بعد حوالي مئة وعشرين كيلومترًا من عمّان. بُنيت بين عامي 1139 و1142 خلال الفترة الصليبية على نتوء صخري مرتفع، فصارت أسوارها غير منتظمة لتلتزم بملامح الصخر. تحيط بها خنادق جافة عميقة من الشمال والجنوب، ويصل إليها زوار عبر جسر ومدخل منكسر. داخل الفناء العلوي توجد كنيسة ومخابز، وتحت الأرض متحف يعرض آثار المحافظة. استكشف المزيد هنا.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Karak_Castle_Français_Medium": {
+        "landmark": "Karak_Castle",
+        "language": "Français",
+        "length": "Medium",
+        "story": "Bienvenue au château de Kerak ! Vous vous tenez dans la ville de Kerak, au sud de la Jordanie, à environ 120 km d’Amman. La construction de la forteresse a commencé en 1139 et s’est terminée en 1142, à l’époque des Croisés. Édifiée sur un éperon rocheux, ses murs suivent la forme irrégulière du rocher, tandis qu’un profond fossé sec protège le nord et le sud. L’accès se fait par un pont qui franchit le fossé, puis par une entrée brisée difficile à percer. Au sommet, une vaste cour comprend une église, des pressoirs à olives et à raisins, des fours et un palais mamelouk. En dessous, des salles souterraines abritent aujourd’hui un musée présentant les vestiges de la province. Le calcaire rose a servi aux Croisés, tandis que le calcaire blanc a été utilisé par les Ayyoubides et les Mamelouks. Saladin reconquit le site après la bataille de Hattin en 1187, puis les Ayyoubides et les Mamelouks le renforcèrent. Ce château témoigne des civilisations successives. Continuez votre exploration et laissez-vous surprendre par chaque pierre.",        
+        "model": "openai/gpt-oss-120b"
+    },
+    "Petra_English_Short": {
+        "landmark": "Petra",
+        "language": "English",
+        "length": "Short",
+        "story": "Welcome to the Rose City! Petra lies in Ma'an Governorate, southern Jordan. The Nabateans founded it over two thousand years ago as their capital and it thrived as a trade link between Arabia, the Levant and Egypt. Its pink‑rock façades earned the nickname Rose City. The narrow Siq leads to the Treasury, the most photographed monument. UNESCO listed Petra in 1985 and it was chosen as a New 7 Wonders site in 2007. Explore and enjoy.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Petra_العربية_Medium": {
+        "landmark": "Petra",
+        "language": "العربية",
+        "length": "Medium",
+        "story": "يا هلا بك في المدينة الوردية! تقع هذه البقعة في محافظة معان جنوب الأردن. أسسها الأنباط قبل أكثر من ألفي عام وجعلوها عاصمة لمملكتهم، ثم ازدهرت كمركز تجاري يربط الجزيرة العربية ببلاد الشام ومصر. ما يميزها هو المباني المنحوتة في الصخور الوردية، ومن أشهر معالمها المدخل الضيق المعروف بالسيق، الذي يفتح الطريق إلى الخزنة ذات الواجهة المنحوتة بدقة. داخل المدينة تجد الدير، المسرح النبطي، الشارع المعمد، والمقابر الملكية. الأنباط طوروا نظامًا هندسيًا لتجميع مياه الأمطار وتخزينها. في عام 106 م أصبحت جزءًا من الإمبراطورية الرومانية، أدرجت ضمن التراث العالمي لليونسكو عام 1985، واختيرت من عجائب الدنيا السبع الجديدة عام 2007. اليوم هي وجهة سياحية وأثرية رئيسية. ستشعر بأصوات الماضي بين الصخور. لا تفوت فرصة التقاط صور للمناظر الخلابة. استمتع باكتشاف المزيد!",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Petra_Français_Medium": {
+        "landmark": "Petra",
+        "language": "Français",
+        "length": "Medium",
+        "story": "Bienvenue dans la ville rose ! Imaginez la vallée où, il y a plus de deux mille ans, les Nabatéens ont fondé Petra, capitale de leur royaume. La cité s’est développée comme un carrefour commercial entre la péninsule Arabique, le Levant et l’Égypte. Vous pénétrez par le Siq, ce passage étroit taillé dans la roche, qui s’ouvre sur la Khazna, la façade sculptée dans le grès rose. Autour, le monastère, le théâtre nabatéen, la rue et les tombes royales témoignent de l’architecture nabatéenne. Les Nabatéens ont même créé un système ingénieux pour capter et stocker l’eau de pluie. En 106, la ville rejoint l’Empire romain, puis, en 1985, elle devient site UNESCO et, en 2007, l’une des merveilles du monde. Aujourd’hui, Petra attire les voyageurs du monde entier. Continuez votre découverte.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Qasr_Amra_العربية_Short": {
+        "landmark": "Qasr_Amra",
+        "language": "العربية",
+        "length": "Short",
+        "story": "أهلًا بك في قصر عمرة، جوهرة الفن الأموي! يقع هذا القصر في الصحراء الشرقية الأردنية، على بعد حوالي 85 كيلومترًا شرق عمّان. بُني في أوائل القرن الثامن الميلادي ويُنسب إلى الخليفة الوليد بن يزيد، وكان يُستعمل كاستراحة ملكية ومركز للصيد. يضم قاعة استقبال وحمامًا أمويًا من أقدم الحمامات الإسلامية، وسقف غرفة الاستحمام يحمل لوحة فلكية قديمة. تزين الجدران جداريات ملونة تصور مشاهد الصيد والحياة اليومية والنجوم. تم إدراجه على قائمة التراث العالمي عام 1985. استمتع باكتشاف المزيد.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Qasr_Amra_Français_Long": {
+        "landmark": "Qasr_Amra",
+        "language": "Français",
+        "length": "Long",
+        "story": "Bienvenue à Qasr Amra ! Imaginez le sable chaud de la désert oriental jordanien, à environ 85 kilomètres à l’est d’Amman, où se dresse ce palais du VIIIe siècle. Construit sous le califat de Walid ibn Yazid, il servait de halte royale, de centre de chasse et de lieu de détente. En franchissant l’entrée, vous découvrez une salle d’accueil majestueuse et un bain omeyyade complet, l’un des plus anciens bains islamiques connus. Les murs s’animent de fresques colorées, parmi les plus belles expressions de l’art islamique primitif, montrant des scènes de chasse, la vie quotidienne, des rois, des étoiles et des constellations. Le plafond de la salle de bain porte une carte céleste, l’une des plus anciennes représentations du ciel conservées dans le monde islamique. L’architecture du palais illustre le style omeyyade adapté aux environnements désertiques. En 1985, l’UNESCO a inscrit Qasr Amra sur la liste du patrimoine mondial, le reconnaissant comme l’un des plus importants palais désertiques des Omeyyades en Syrie. Continuez votre exploration et laissez‑vous émerveiller.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Wadi_Mujib_English_Short": {
+        "landmark": "Wadi_Mujib",
+        "language": "English",
+        "length": "Short",
+        "story": "Welcome to Wadi Mujib, the lowest nature reserve in the world! This Jordanian valley flows into the Dead Sea and was historically called the Arnon River, part of Moab’s northern border. Its depth reaches about 500 meters, with some protected areas 410 meters below sea level. Established in 1985, the reserve hosts over 300 plant species, many mammals, birds, and the Nubian ibex on rocky cliffs. Adventure trails like the Siq and waterfall path await you. Come explore!",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Wadi_Mujib_English_Medium": {
+        "landmark": "Wadi_Mujib",
+        "language": "English",
+        "length": "Medium",
+        "story": "Welcome to Wadi Mujib, the lowest nature reserve in the world! This Jordanian valley flows into the Dead Sea and was historically called the River Arnon, part of Moab’s northern border. Its depth reaches about 500 meters, and some protected areas lie 410 meters below sea level, making it the world’s lowest biosphere reserve. Established in 1985, the reserve is managed by the Royal Society for the Conservation of Nature and benefits from a 1,300‑meter elevation range and water from several tributaries. Over 300 plant species and many mammals and birds are recorded, and the rocky cliffs host the Nubian ibex. The Siq Trail follows the watercourse between cliffs, and the Waterfall Trail drops about 20 meters. A 100‑meter zip line adds adventure. Wadi Mujib is a destination. Explore it.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Wadi_Mujib_English_Long": {
+        "landmark": "Wadi_Mujib",
+        "language": "English",
+        "length": "Long",
+        "story": "Welcome to Wadi Mujib, the lowest nature reserve in the world! This Jordanian valley flows into the Dead Sea and was historically called the Arnon River, forming part of Moab’s northern border. Its depth reaches about 500 meters, while some protected areas lie 410 meters below sea level, making the reserve the lowest natural reserve on Earth. Established in 1985, the Mujib Biosphere Reserve is managed by the Royal Society for the Conservation of Nature and boasts great biodiversity thanks to an elevation range of roughly 1,300 meters and water flowing through many tributaries. Over 300 plant species and numerous mammals and birds have been recorded, and the rocky cliffs host the Nubian ibex. The canyon is a key stop for migratory birds between Africa and Europe. Adventure seekers love the Siq Trail, which follows the watercourse between cliffs, and the Waterfall Trail where a 20‑meter fall drops. The Badan Trail offers views of the Dead Sea and sightings of the ibex. Rope‑slide sections stretch about 100 meters above the gorge. Today Wadi Mujib stands as a top eco‑tourism and adventure destination in Jordan. Come and explore!",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Wadi_Mujib_Français_Medium": {
+        "landmark": "Wadi_Mujib",
+        "language": "Français",
+        "length": "Medium",
+        "story": "Bienvenue à Wadi Mujib, la réserve naturelle la plus basse du monde !  \nCe canyon jordanien se jette dans la mer Morte et porte le nom historique de rivière Arnon, autrefois frontière nord du royaume de Moab. Sa profondeur atteint près de 500 m, tandis que certaines parties de la réserve se trouvent à 410 m sous le niveau de la mer, ce qui en fait la plus basse réserve naturelle du globe. Créée en 1985 et gérée par la Royal Society for the Conservation of Nature, la zone abrite plus de 300 espèces végétales, de nombreux mammifères et oiseaux, et constitue un arrêt crucial pour les oiseaux migrateurs entre l’Afrique et l’Europe. Les falaises rocheuses offrent le refuge du babouin nubien, et les sentiers comme le « Marrakech » ou le « Moulaki » mènent aux rencontres d’eaux, aux chutes de 20 m et aux vues sur la mer Morte. Aujourd’hui, Wadi Mujib attire les amateurs d’aventures, de marche aquatique, de baignade et de tyrolienne. Continuez votre exploration et laissez‑vous surprendre par ce lieu unique.",
+        "model": "openai/gpt-oss-120b"
+    },
+    "Wadi_Mujib_Français_Long": {
+        "landmark": "Wadi_Mujib",
+        "language": "Français",
+        "length": "Long",
+        "story": "Bienvenue à Wadi Mujib, la réserve naturelle la plus basse du monde !  \n\nImaginez‑vous au cœur de la Jordanie, où le wadi se jette dans la mer Morte. Autrefois appelé le fleuve Arnon, il formait la frontière nord du royaume de Moab. Aujourd’hui, la réserve du bassin de Mujib, créée en 1985 et gérée par la Royal Society for the Conservation of Nature, s’étend de 410 m sous le niveau de la mer à plus de 500 m de profondeur, offrant un dénivelé d’environ 1 300 m.  \n\nCette variation d’altitude et le passage de plusieurs affluents créent une biodiversité exceptionnelle : plus de 300 genres de plantes, de nombreux mammifères et oiseaux, ainsi que le fameux oual nubien qui habite les falaises rocheuses. Le wadi est aussi une escale importante pour les oiseaux migrateurs entre l’Afrique et l’Europe.  \n\nParmi les sentiers, le canyon « Marrakech » serpente entre les rochers le long du cours d’eau, tandis que le sentier du « Chute » dévoile une cascade de 20 m. Le parcours du « Malaqi » conduit aux confluences des rivières Mujib et Hidan, en traversant des mares naturelles et une chute. Le sentier du « Badan » offre des vues sur la mer Morte et la possibilité d’observer le oual nubien. Le sentier du « Hidan » suit les mares et se termine près d’une ancienne meunerie à blé.  \n\nDes activités d’aventure comme la marche aquatique, la natation, le saut à la corde sur une ligne de près de 100 m, ou le glisse‑corde, complètent l’expérience. Aujourd’hui, Wadi Mujib est l’une des destinations phares du tourisme écologique et d’aventure en Jordanie.  \n\nContinuez à explorer ce lieu unique.",
+        "model": "openai/gpt-oss-120b"
+    },
     "wadi_Rum_Français_Long": {
         "landmark": "wadi_Rum",
         "language": "Français",
         "length": "Long",
-        "story": "Bienvenue dans la vallée de la Lune ! \n\nEn vous approchant du sud de la Jordanie, à environ soixante‑dix kilomètres au nord d’Aqaba, vous découvrez le vaste Wadi Rum. Son paysage désertique, parsemé de dunes et de rochers rouges, rappelle la surface de la Lune, d’où son nom de vallée du Ciel. D’immenses arches naturelles, des grottes sculptées et des formations granitiques se dressent sous un ciel d’une clarté exceptionnelle. \n\nCe lieu était autrefois une étape cruciale sur les routes commerciales des Nabatéens, et les gravures et dessins gravés dans la pierre témoignent de la présence humaine depuis des millénaires. Aujourd’hui, les tribus bédouines continuent d’y vivre, préservant leurs coutumes ancestrales. \n\nClassé au patrimoine mondial de l’UNESCO depuis 2011, Wadi Rum attire les amateurs d’aventure, de camping, d’escalade et de safaris en 4×4. Son décor spectaculaire a servi de décor à de nombreux films internationaux, et les soirées sous les étoiles offrent une expérience inoubliable. \n\nContinuez votre exploration, le désert vous attend.",
+        "story": "Bienvenue dans la vallée de la Lune !  \n\nWadi Rum s'étend dans le sud de la Jordanie, à soixante‑dix kilomètres au nord d’Aqaba, dans la gouvernorat d’Aqaba. Son paysage désertique, aux dunes et aux rochers rouges, rappelle la surface de la Lune, d’où son nom de vallée du Lune. D’immenses montagnes de sable côtoient des formations granitiques et calcaires, des arches naturelles, des grottes et d’autres structures géologiques remarquables.  \n\nDepuis des millénaires, les caravanes nabatéennes traversaient ce passage, faisant de Wadi Rum une halte importante sur les routes commerciales anciennes. Les parois portent encore des gravures et des dessins rupestres qui témoignent de la vie des hommes d’autrefois. Aujourd’hui, les tribus bédouines continuent d’habiter la région, préservant leurs coutumes et leurs traditions.  \n\nClassé au patrimoine mondial de l’UNESCO depuis 2011, le site attire les amateurs d’aventure, de camping, d’escalade et de safaris en 4×4. Il a servi de décor à de nombreux films internationaux, et ses ciels clairs offrent des nuits étoilées idéales pour l’observation des astres.  \n\nVenez explorer ce paysage unique et laissez‑vous émerveiller.",
         "model": "openai/gpt-oss-120b"
     }
 }
