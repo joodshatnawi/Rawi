@@ -168,6 +168,6 @@ def result_page():
 
     # ---------------- Back Button ----------------
     st.write("")
-    if st.button("⬅️ Back to Main Page"):
+    if st.button("Back to Main Page"):
         st.session_state.page = "home"
         st.rerun()
