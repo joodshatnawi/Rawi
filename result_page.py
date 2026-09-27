@@ -13,7 +13,7 @@ def result_page():
         st.error("No result found")
         st.stop()
 
-    # ---------------- 3D CSS Styling ----------------
+    # ---------------- 3D CSS Styling & Layout Polish ----------------
     st.markdown("""
         <style>
         .stApp {
@@ -34,12 +34,14 @@ def result_page():
         .story-box {
             background: #faf6f0;
             color: #2b231f;
-            padding: 22px;
+            padding: 20px 24px;
             border-radius: 14px;
             border-left: 5px solid #8e3218;
             box-shadow: inset 2px 2px 5px #d2cfc9, inset -2px -2px 5px #ffffff;
             line-height: 1.8;
-            font-size: 16px;
+            font-size: 15.5px;
+            max-height: 380px;
+            overflow-y: auto;
         }
 
         /* الأزرار بتقنية 3D */
@@ -49,7 +51,7 @@ def result_page():
             font-weight: 600 !important;
             border-radius: 12px !important;
             border: none !important;
-            padding: 10px 20px !important;
+            padding: 10px 22px !important;
             box-shadow: 4px 4px 10px #d2cfc9, -2px -2px 8px #ffffff !important;
             transition: all 0.2s ease-in-out !important;
         }
@@ -63,14 +65,17 @@ def result_page():
         /* كروت المعلومات والمقاييس */
         div[data-testid="stMetric"] {
             background: #f4f2ef;
-            padding: 12px;
-            border-radius: 12px;
-            box-shadow: 3px 3px 8px #d2cfc9, -3px -3px 8px #ffffff;
+            padding: 14px 16px;
+            border-radius: 14px;
+            box-shadow: 4px 4px 10px #d2cfc9, -4px -4px 10px #ffffff;
+            margin-bottom: 12px;
         }
 
         h1, h2, h3 {
             color: #2b231f !important;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
         }
         </style>
     """, unsafe_allow_html=True)
@@ -86,14 +91,14 @@ def result_page():
     with header2:
         st.metric("Confidence", f"{float(data['confidence']) * 100:.1f}%")
 
-    st.write("")
+    st.markdown("---")
 
     # ---------------- Main Layout (Image + Story) ----------------
-    left, right = st.columns([1.2, 1])
+    left, right = st.columns([1.1, 1], gap="medium")
 
     # ---------------- Landmark Image ----------------
     with left:
-        st.image(data["image"], width="stretch")
+        st.image(data["image"], use_container_width=True)
 
     # ---------------- Story & Audio ----------------
     with right:
@@ -138,36 +143,40 @@ def result_page():
     labels = info_labels[selected_language]
     unesco = labels[info["unesco"]]
 
-    c1, c2 = st.columns(2)
+    # توزيع التخزين على 3 أعمدة بدلاً من 2 لتحسين المظهر على الشاشات الواسعة
+    c1, c2, c3 = st.columns(3)
 
     with c1:
         st.metric(labels["built"], info.get("built", "Not available"))
-        st.metric(labels["unesco"], unesco)
-        st.metric(labels["best_time"], info.get("best_time", "Not available"))
-    with c2:
         st.metric(labels["governorate"], info["governorate"])
+
+    with c2:
+        st.metric(labels["unesco"], unesco)
         st.metric(labels["visit_time"], info.get("visit_time", "Not available"))
 
-    st.write("")
-
-    # ---------------- Fun Fact Section ----------------
-    st.subheader("🎲 Fun Fact")
-
-    if st.button("🎲 Show Fun Fact"):
-        st.info(data["fun_fact"])
+    with c3:
+        st.metric(labels["best_time"], info.get("best_time", "Not available"))
 
     st.write("")
 
-    # ---------------- Ask Rawi AI Section ----------------
-    st.subheader("💬 Ask Rawi AI")
-    st.write("Have questions about this landmark?")
+    # ---------------- Fun Fact & Actions Sections ----------------
+    col_fact, col_chat = st.columns(2, gap="large")
 
-    if st.button("💬 Start Chatting"):
-        st.session_state.page = "chat"
-        st.rerun()
+    with col_fact:
+        st.subheader("🎲 Fun Fact")
+        if st.button("🎲 Show Fun Fact"):
+            st.info(data["fun_fact"])
+
+    with col_chat:
+        st.subheader("💬 Ask Rawi AI")
+        st.write("Have questions about this landmark?")
+        if st.button("💬 Start Chatting"):
+            st.session_state.page = "chat"
+            st.rerun()
 
     # ---------------- Back Button ----------------
     st.write("")
-    if st.button("Back to Main Page"):
+    st.markdown("---")
+    if st.button(" Back to Main Page"):
         st.session_state.page = "home"
         st.rerun()
