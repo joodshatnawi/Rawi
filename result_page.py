@@ -98,7 +98,7 @@ def result_page():
 
     # ---------------- Landmark Image ----------------
     with left:
-        st.image(data["image"], use_container_width=True)
+        st.image(data["image"], width='stretch')
 
     # ---------------- Story & Audio ----------------
     with right:
@@ -177,6 +177,6 @@ def result_page():
     # ---------------- Back Button ----------------
     st.write("")
     st.markdown("---")
-    if st.button(" Back to Main Page"):
+    if st.button("Back to Home"):
         st.session_state.page = "home"
         st.rerun()
