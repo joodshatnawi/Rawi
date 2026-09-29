@@ -3,7 +3,6 @@ import folium
 from streamlit_folium import st_folium
 from data.info_labels import info_labels
 
-
 # ---------------- Result Page ----------------
 def result_page():
 
@@ -12,6 +11,7 @@ def result_page():
     if data is None:
         st.error("No result found")
         st.stop()
+    
 
     # ---------------- 3D CSS Styling & Layout Polish ----------------
     st.markdown("""
@@ -180,3 +180,57 @@ def result_page():
     if st.button("Back to Home"):
         st.session_state.page = "home"
         st.rerun()
+
+    # ---------------- Reset Scroll Position ----------------
+    visit = st.session_state.get("result_visit", 0)
+
+    st.html(
+        f"""
+        <div id="rawi-scroll-reset-{visit}"></div>
+
+        <script>
+        (() => {{
+
+            function forceScrollTop() {{
+
+                const selectors = [
+                    'section[data-testid="stMain"]',
+                    'section.main',
+                    '[data-testid="stAppViewContainer"]',
+                    'div[data-testid="stAppViewContainer"]'
+                ];
+
+                selectors.forEach(selector => {{
+                    const element = document.querySelector(selector);
+
+                    if (element) {{
+                        element.scrollTop = 0;
+                    }}
+                }});
+
+                window.scrollTo(0, 0);
+
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }}
+
+            // Immediately
+            forceScrollTop();
+
+            // After Streamlit renders
+            requestAnimationFrame(() => {{
+                forceScrollTop();
+            }});
+
+            // After Folium/component rendering
+            setTimeout(forceScrollTop, 100);
+            setTimeout(forceScrollTop, 300);
+            setTimeout(forceScrollTop, 700);
+            setTimeout(forceScrollTop, 1200);
+
+        }})();
+        </script>
+        """,
+        unsafe_allow_javascript=True
+    )
+
