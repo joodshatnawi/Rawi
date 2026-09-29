@@ -13,6 +13,13 @@ def get_image_base64(path):
 
 def page_home(rawi):
 
+    if "last_upload_signature" not in st.session_state:
+        st.session_state.last_upload_signature = None
+
+    if "scroll_to_customize" not in st.session_state:
+        st.session_state.scroll_to_customize = False
+
+
     # ---------------- 3D CSS Styling ----------------
     st.markdown("""
         <style>
@@ -108,6 +115,20 @@ def page_home(rawi):
             "Take a photo of the landmark"
         )
 
+    # ---------------- Detect a new uploaded image ----------------
+    if upload_data is None:
+        st.session_state.last_upload_signature = None
+    else:
+        upload_signature = (
+            upload_data.name,
+            upload_data.size
+        )
+
+        if st.session_state.get("last_upload_signature") != upload_signature:
+            st.session_state.last_upload_signature = upload_signature
+            st.session_state.scroll_to_customize = True
+
+
     # ---------------- If Image Exists ----------------
     if upload_data is not None:
 
@@ -122,6 +143,12 @@ def page_home(rawi):
         )
 
         st.write("") # مسافة بسيطة أنيقة
+
+        # ----------------Anchor before Customize Your Tour ----------------
+
+        st.html("""
+        <div id="rawi-customize-tour"></div>
+    """)
 
         # ---------------- Preferences Section Header ----------------
         st.markdown(
@@ -206,7 +233,7 @@ def page_home(rawi):
                     "length": story_length,
                     "fun_fact": fun_fact,
                 }
-
+                st.session_state.result_visit = st.session_state.get("result_visit", 0) + 1
                 st.session_state.page = "result"
                 st.rerun()
 
@@ -225,3 +252,45 @@ def page_home(rawi):
                         "The landmark could not be recognized."
                     )
                 )
+            # ---------------- Auto Scroll to Customize ----------------
+    if (
+        st.session_state.get("scroll_to_customize", False)
+        and upload_data is not None
+    ):
+
+        st.html(
+            """
+            <script>
+            (() => {
+
+                function scrollToCustomize() {
+
+                    const target = document.getElementById(
+                        "rawi-customize-tour"
+                    );
+
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                }
+
+                scrollToCustomize();
+
+                requestAnimationFrame(() => {
+                    scrollToCustomize();
+                });
+
+                setTimeout(scrollToCustomize, 150);
+                setTimeout(scrollToCustomize, 400);
+                setTimeout(scrollToCustomize, 800);
+
+            })();
+            </script>
+            """,
+            unsafe_allow_javascript=True
+        )
+
+        st.session_state.scroll_to_customize = False
