@@ -89,8 +89,10 @@ def result_page():
         st.subheader(f"📍 {data['landmark']}")
 
     with header2:
-        st.metric("Confidence", f"{float(data['confidence']) * 100:.1f}%")
-
+        if data["confidence"] is not None:
+            st.metric("Confidence", f"{float(data['confidence']) * 100:.1f}%")
+        else:
+            st.metric("Selection", "Manual")
     st.markdown("---")
 
     # ---------------- Main Layout (Image + Story) ----------------
