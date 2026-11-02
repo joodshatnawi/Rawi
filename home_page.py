@@ -98,54 +98,63 @@ def page_home(rawi):
 
     image_source = st.radio(
         "Choose how you want to provide the image:",
-        ["Upload Image", "Take a Photo"],
-        horizontal=True
+        ["Upload Image", "Take a Photo","Choose from Sidebar"],
+        horizontal=True,
+        key="image_source"
     )
 
     # ---------------- Upload / Camera ----------------
     upload_data = None
+    image_path = None
 
     if image_source == "Upload Image":
         upload_data = st.file_uploader(
             "Choose an image:",
-            type=["jpg", "jpeg", "png", "webp"]
+            type=["jpg", "jpeg", "png", "webp"],
+            key="uploaded_image"
         )
-    else:
+
+    elif image_source == "Take a Photo":
         upload_data = st.camera_input(
-            "Take a photo of the landmark"
+            "Take a photo of the landmark",
+            key="camera_image"
         )
 
-    # ---------------- Detect a new uploaded image ----------------
-    if upload_data is None:
-        st.session_state.last_upload_signature = None
     else:
-        upload_signature = (
-            upload_data.name,
-            upload_data.size
-        )
+        selected_landmark = st.session_state.get("selected_landmark")
 
-        if st.session_state.get("last_upload_signature") != upload_signature:
-            st.session_state.last_upload_signature = upload_signature
-            st.session_state.scroll_to_customize = True
+        if selected_landmark:
+            for ext in [".jpg", ".jpeg", ".png"]:
+                path = f"landmarks/{selected_landmark}{ext}"
 
+                try:
+                    with open(path, "rb"):
+                        image_path = path
+                        break
+                except FileNotFoundError:
+                    continue
 
-    # ---------------- If Image Exists ----------------
+            if image_path:
+                st.image(
+                    image_path,
+                    caption=selected_landmark.replace("_", " "),
+                    width="stretch"
+                )
+            else:
+                st.error("Landmark image not found.")
+        else:
+            st.info("Please choose a landmark from the Sidebar.")
+        # ---------------- Image Preview ----------------
     if upload_data is not None:
-
-        st.divider()
-
-        # ---------------- Preview ----------------
-        img = Image.open(upload_data)
         st.image(
-            img,
-            caption="Your Landmark",
+            upload_data,
+            caption="Image Preview",
             width="stretch"
         )
 
-        st.write("") # مسافة بسيطة أنيقة
+    if upload_data is not None or image_path is not None:
 
         # ----------------Anchor before Customize Your Tour ----------------
-
         st.html("""
         <div id="rawi-customize-tour"></div>
     """)
@@ -187,35 +196,55 @@ def page_home(rawi):
 
             with st.spinner("Rawi is identifying the landmark..."):
 
-                with tempfile.NamedTemporaryFile(
-                    delete=False,
-                    suffix=".jpg"
-                ) as tmp_file:
+                if upload_data is not None:
+                    with tempfile.NamedTemporaryFile(
+                        delete=False,
+                        suffix=".jpg"
+                    ) as tmp_file:
 
-                    tmp_file.write(
-                        upload_data.getbuffer()
-                    )
-
-                    image_path = tmp_file.name
+                        tmp_file.write(upload_data.getbuffer())
+                        image_path = tmp_file.name
 
                 # ---------------- Analyze ----------------
-                (
-                    image,
-                    story,
-                    audio,
-                    confidence,
-                    landmark_name,
-                    lat,
-                    lon,
-                    info,
-                    detected_class,
-                    fun_fact
-                ) = rawi.analyze(
-                    image_path,
-                    selected_language,
-                    story_length
-                )
+                if image_source == "Choose from Sidebar":
 
+                    (
+                        image,
+                        story,
+                        audio,
+                        confidence,
+                        landmark_name,
+                        lat,
+                        lon,
+                        info,
+                        detected_class,
+                        fun_fact
+                    ) = rawi.analyze_selected_landmark(
+                        image_path,
+                        st.session_state.selected_landmark,
+                        selected_language,
+                        story_length
+                    )
+
+                else:
+
+                    (
+                        image,
+                        story,
+                        audio,
+                        confidence,
+                        landmark_name,
+                        lat,
+                        lon,
+                        info,
+                        detected_class,
+                        fun_fact
+                    ) = rawi.analyze(
+                        image_path,
+                        selected_language,
+                        story_length
+                    )
+                
             # ---------------- Detection Successful ----------------
             if image is not None:
 
