@@ -186,53 +186,34 @@ def result_page():
     # ---------------- Reset Scroll Position ----------------
     visit = st.session_state.get("result_visit", 0)
 
-    st.html(
-        f"""
-        <div id="rawi-scroll-reset-{visit}"></div>
-
+    st.components.v1.html(
+        """
         <script>
-        (() => {{
+        (() => {
+            const resetScroll = () => {
+                const main = window.parent.document.querySelector(
+                    '[data-testid="stMain"]'
+                );
 
-            function forceScrollTop() {{
+                if (main) {
+                    main.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "instant"
+                    });
+                }
 
-                const selectors = [
-                    'section[data-testid="stMain"]',
-                    'section.main',
-                    '[data-testid="stAppViewContainer"]',
-                    'div[data-testid="stAppViewContainer"]'
-                ];
+                window.parent.scrollTo(0, 0);
+            };
 
-                selectors.forEach(selector => {{
-                    const element = document.querySelector(selector);
+            resetScroll();
 
-                    if (element) {{
-                        element.scrollTop = 0;
-                    }}
-                }});
+            requestAnimationFrame(resetScroll);
 
-                window.scrollTo(0, 0);
-
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }}
-
-            // Immediately
-            forceScrollTop();
-
-            // After Streamlit renders
-            requestAnimationFrame(() => {{
-                forceScrollTop();
-            }});
-
-            // After Folium/component rendering
-            setTimeout(forceScrollTop, 100);
-            setTimeout(forceScrollTop, 300);
-            setTimeout(forceScrollTop, 700);
-            setTimeout(forceScrollTop, 1200);
-
-        }})();
+            setTimeout(resetScroll, 300);
+            setTimeout(resetScroll, 700);
+        })();
         </script>
         """,
-        unsafe_allow_javascript=True
+        height=0
     )
-
