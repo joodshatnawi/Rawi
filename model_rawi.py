@@ -57,7 +57,7 @@ class RAWI:
         with open(STORY_PROMPT_PATH, "r", encoding="utf-8") as f:
             return f.read()
                 
-        # ---------------- Detect Landmark ----------------
+    # ---------------- Detect Landmark ----------------
     def detect_landmark(self,image_path):
         results =self.model(image_path,
                             conf=0.25,
@@ -557,7 +557,6 @@ class RAWI:
     )
 
         answer = completion.choices[0].message.content
-
         if not answer:
             return "هذه المعلومات غير متوفرة حاليًا."
         answer = answer.strip()
@@ -613,6 +612,45 @@ class RAWI:
             story,
             audio,
             confidence,
+            landmark_name,
+            latitude,
+            longitude,
+            info,
+            detected_class,
+            fun_fact
+        )
+
+    def analyze_selected_landmark(self, image_path, detected_class, language, story_length):
+
+        # Load landmark data
+        landmark = self.facts[detected_class]
+
+        landmark_name = landmark["name"][language]
+        info = landmark["info"]
+        latitude = landmark["location"]["lat"]
+        longitude = landmark["location"]["lon"]
+
+        # Load image
+        image = Image.open(image_path).convert("RGB")
+
+        # Generate story
+        story = self.generate_story(
+            detected_class,
+            language,
+            story_length
+        )
+
+        # Generate Fun Fact
+        fun_fact = self.generate_fun_fact(detected_class, language)
+
+        # Generate audio
+        audio = self.generate_audio(story, language)
+
+        return (
+            image,
+            story,
+            audio,
+            None,
             landmark_name,
             latitude,
             longitude,
